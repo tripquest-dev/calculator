@@ -1,0 +1,59 @@
+Service Code,Service Description,Fee
+SEA,Serengeti NP fee for adults,82.6
+SEK,Serengeti NP fee for kids,23.6
+LMA,Lake Manyara fee for adults,59
+LMK,Lake Manyara fee for kids,17.7
+TAA,Tarangire NP fee for adults,59
+TAK,Tarangire NP fee for kids,17.7
+ARPA,Arusha NP fee for adults,59
+ARPK,Arusha NP fee for kids,17.7
+LEA,Lake Eyasi fee for adults,75
+LEK,Lake Eyasi fee for adults,65
+LNA,Lake Natron fee for adults,130
+LNK,Lake Natron fee for kids,80
+NGA,Ngorongoro entry fee for adults,70.8
+NGK,Ngorongoro entry fee for kids,23.6
+NCV,Ngorongoro Crater Vehicle,295
+WA,Water ,1
+SF,Service fee for adults and kids,70
+LC3,Land cruiser price under 3 days ,250
+LC4,Land cruiser price 3days and above 3 days ,200
+MV,Masai Village Visit,25
+WT,Walking Tour,30
+HAB,Hot air balloon safari,530
+MTA,MT wa mbu actvities,95
+MVV,Masai Village visit,35
+HAB,Hot Air balloon safari ,540
+CRW,Crater Rim Walk ,40
+EL,Extra Lunch for flying in ,35
+PL,Packed lunch ,10
+FACS,Flight from ARK to SEU,190
+FANS,Flight from ARK to NSE,305
+FCSAR,Flight from SEU to ARK,270
+FNSAR,Flight from NSE to ARK,345
+FZCS,Flight from ZNZ to SEU,235
+FZNS,Flight from ZNZ to NSE,305
+FCSZN,Flight from SEU to ZNZ,460
+FNSZN,Flight from NSE to ZNZ,535
+FAZN,Flight from ARK to ZNZ,235
+FZNAR,Flight from ZNZ to ARK,225
+FARDR,Flight from ARK to Dar Es Salaam,235
+FCSDR,Flight from SEU to Dar Es Salaam,460
+FNSDR,Flight from NSE to Dar Es Salaam,535
+ARMS,Transfer cost (Arusha to Moshi and vice versa ),50
+ARARK,Transfer cost (Arusha to ARK and vice versa ),20
+ARJRO,Transfer cost( (Arusha to JRO and vice versa ),25
+ZNZHX,Transfer cost( (Zanzibar airport to any hotels at Zanzibar) - both the sides,70
+ZNZH,Transfer cost( (Zanzibar airport to any hotels at Zanzibar and vice versa ),35
+SWAR,Serval Wildlife Sanctuary (pickup and drop Arusha),240
+SWMS,Serval Wildlife Sanctuary (pickup and drop Moshi),200
+ARMCT,"Moshi City Tour (Coffee Plantation, Matreuni Falls, Hotsprings) from Arusha",180
+ACT,"Arusha City Tour (Masai Market, Cultural Museum, and Snake Park)",200
+MSMCT,"Moshi City Tour (Coffee Plantation, Matreuni Falls, Hotsprings) from Moshi",150
+KRA,"Activities in Karatu (Masai Village Visit, Coffee Plantation)",50
+ARKR,Transfer to Karatu from Arusha (Vice versa),200
+FARNBO,Arusha to Nairobi Flight (vice versa),140
+FZNNBO,Zanzibar to Nairobi Flight (Vice Versa),140
+FCSNBO,Seronera to Nairobi Flight,330
+FNSNBO,Kogatende to Nairobi Flight,330
+ARRNBO,Tansfer Arusha to Nairobi by Road (vice versa) per group below 6,150

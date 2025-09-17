@@ -1,0 +1,946 @@
+class,hotelname,location,daterange,singlerate,doubleRate,tripleRate
+1,Eileens Trees Inn(Standard Room) (M),Lake Manyara,"01/01/25-31/03/25,01/06/25-31/12/25",100,140,190
+1,Eileens Trees Inn(Standard Room) (M),Lake Manyara,01/04/25-31/05/25,70,120,170
+1,Eileens Trees Inn(Standard Room) (M),Lake Manyara,"01/01/26-31/03/26,01/06/26-31/12/26",0,0,0
+1,Eileens Trees Inn(Standard Room) (M),Lake Manyara,01/04/26-31/05/26,0,0,0
+1,Kankari Lodge (Bungalow) (M),Lake Manyara,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",90,158,200
+1,Kankari Lodge (Bungalow) (M),Lake Manyara,"01/04/25-31/05/25,01/11/25-30/11/25",71,125,161
+1,Kankari Lodge (Bungalow) (M),Lake Manyara,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+1,Kankari Lodge (Bungalow) (M),Lake Manyara,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+1,Omega View Hotel and Resort (M),Lake Manyara,01/01/25-31/12/25,92,153,180
+1,Omega View Hotel and Resort (M),Lake Manyara,01/01/26-31/12/26,0,0,0
+2,Marera Valley Lodge (M),Lake Manyara,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",104,191,249
+2,Marera Valley Lodge (M),Lake Manyara,"01/04/25-31/05/25,01/11/25-30/11/25",80,149,191
+2,Marera Valley Lodge (M),Lake Manyara,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Marera Valley Lodge (M),Lake Manyara,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+2,Bougainvillea safari Lodge (M),Lake Manyara,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",104,191,249
+2,Bougainvillea safari Lodge (M),Lake Manyara,"01/04/25-31/05/25,01/11/25-30/11/25",80,149,191
+2,Bougainvillea safari Lodge (M),Lake Manyara,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Bougainvillea safari Lodge (M),Lake Manyara,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+2,Country Lodge (M),Lake Manyara,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",101,181,238
+2,Country Lodge (M),Lake Manyara,"01/04/25-31/05/25,01/11/25-30/11/25",80,149,191
+2,Country Lodge (M),Lake Manyara,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Country Lodge (M),Lake Manyara,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+3,Mawe Mawe lake manyara (M),Lake Manyara,01/01/25-31/12/25,160,250,375
+3,Mawe Mawe lake manyara (M),Lake Manyara,01/01/26-31/12/26,0,0,0
+3,Manyara Safari Lodge (Standard Rooms),Lake Manyara,"01/01/25-28/02/25,01/12/25-31/12/25",130,220,300
+3,Manyara Safari Lodge (Standard Rooms),Lake Manyara,"01/03/25-31/03/25,01/06/25-30/06/25,01/10/25-31/10/25",110,180,240
+3,Manyara Safari Lodge (Standard Rooms),Lake Manyara,"01/04/25-31/05/25,01/11/25-30/11/25",70,130,195
+3,Manyara Safari Lodge (Standard Rooms),Lake Manyara,01/07/25-30/09/25,140,240,330
+3,Manyara Safari Lodge (Standard Rooms),Lake Manyara,"01/01/26-28/02/26,01/12/26-31/12/26",0,0,0
+3,Manyara Safari Lodge (Standard Rooms),Lake Manyara,"01/03/26-31/03/26,01/06/26-30/06/26,01/10/26-31/10/26",0,0,0
+3,Manyara Safari Lodge (Standard Rooms),Lake Manyara,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+3,Manyara Safari Lodge (Standard Rooms),Lake Manyara,01/07/26-30/09/26,0,0,0
+3,Migombani Camp (Cottages),Lake Manyara,"01/01/25-31/03/25,01/06/25-31/10/25,16/12/25-31/12/25",177,233,300
+3,Migombani Camp (Cottages),Lake Manyara,"01/04/25-31/05/25,01/11/25-15/12/25",142,193,255
+3,Migombani Camp (Cottages),Lake Manyara,"01/01/26-31/03/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+3,Migombani Camp (Cottages),Lake Manyara,"01/04/26-31/05/26,01/11/26-15/12/26",0,0,0
+4,Manyara Serena Safari Lodge,Lake Manyara,"01/01/25-31/01/25,01/03/25-31/03/25,01/11/25-22/12/25",238,317,476
+4,Manyara Serena Safari Lodge,Lake Manyara,"01/02/25-28/02/25,01/06/25-31/10/25",180,475,713
+4,Manyara Serena Safari Lodge,Lake Manyara,01/04/25-31/05/25,190,253,380
+4,Manyara Serena Safari Lodge,Lake Manyara,23/12/25-31/12/25,410,545,820
+4,Manyara Serena Safari Lodge,Lake Manyara,"01/01/26-31/01/26,01/03/26-31/03/26,01/11/26-22/12/26",0,0,0
+4,Manyara Serena Safari Lodge,Lake Manyara,"01/02/26-28/02/26,01/06/26-31/10/26",0,0,0
+4,Manyara Serena Safari Lodge,Lake Manyara,01/04/26-31/05/26,0,0,0
+4,Manyara Serena Safari Lodge,Lake Manyara,23/12/26-31/12/26,0,0,0
+4,Escarpment Luxury Lodge Lake Manyara ,Lake Manyara,"01/01/25-28/02/25,01/06/25-31/10/25,21/12/25-31/12/25",320,460,670
+4,Escarpment Luxury Lodge Lake Manyara ,Lake Manyara,01/03/25-31/03/25,270,380,540
+4,Escarpment Luxury Lodge Lake Manyara ,Lake Manyara,"01/04/25-31/05/25,01/11/25-20/12/25",225,310,430
+4,Escarpment Luxury Lodge Lake Manyara ,Lake Manyara,"01/01/26-28/02/26,01/06/26-31/10/26,21/12/26-31/12/26",0,0,0
+4,Escarpment Luxury Lodge Lake Manyara ,Lake Manyara,01/03/26-31/03/26,0,0,0
+4,Escarpment Luxury Lodge Lake Manyara ,Lake Manyara,"01/04/26-31/05/26,01/11/26-20/12/26",0,0,0
+4,Manyara Best View Lodge (Silver Room) (M),Lake Manyara,"01/07/25-31/08/25,01/12/25-31/12/25",235,360,540
+4,Manyara Best View Lodge (Silver Room) (M),Lake Manyara,"01/01/25-28/02/25,01/06/25-30/06/25,01/09/25-30/11/25",210,300,450
+4,Manyara Best View Lodge (Silver Room) (M),Lake Manyara,01/03/25-31/05/25,186,240,360
+4,Manyara Best View Lodge (Silver Room) (M),Lake Manyara,"01/07/26-31/08/26,01/12/26-31/12/26",0,0,0
+4,Manyara Best View Lodge (Silver Room) (M),Lake Manyara,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-30/11/26",0,0,0
+4,Manyara Best View Lodge (Silver Room) (M),Lake Manyara,01/03/26-31/05/26,0,0,0
+5,Lake Manyara Kilimamoja Lodge (Standard Room),Lake Manyara,"01/01/25-31/03/25,01/06/25-30/06/25,01/11/25-19/12/25",475,596,834.4
+5,Lake Manyara Kilimamoja Lodge (Standard Room),Lake Manyara,"01/07/25-30/10/25,20/12/25-31/12/25",628,662,926.8
+5,Lake Manyara Kilimamoja Lodge (Standard Room),Lake Manyara,01/04/25-31/05/25,317,398,557.2
+5,Lake Manyara Kilimamoja Lodge (Standard Room),Lake Manyara,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",0,0,0
+5,Lake Manyara Kilimamoja Lodge (Standard Room),Lake Manyara,"01/07/26-30/10/26,20/12/26-31/12/26",0,0,0
+5,Lake Manyara Kilimamoja Lodge (Standard Room),Lake Manyara,01/04/26-31/05/26,0,0,0
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,01/01/25-31/03/25,631,844,1139.4
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,01/04/25-31/05/25,396,530,715.5
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,01/06/25-31/10/25,718,960,1296
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,01/11/25-19/12/25,424,568,766.8
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,20/12/25-30/12/25,843,1126,1520.1
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,01/01/26-31/03/26,0,0,0
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,01/04/26-31/05/26,0,0,0
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,01/06/26-31/10/26,0,0,0
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,01/11/26-19/12/26,0,0,0
+6,Neptune Ngorongoro Lodge (M),Lake Manyara,20/12/26-30/12/26,0,0,0
+,,,,,,
+1,Eileens Trees Inn(Standard Room) (T),Tarangire,"01/01/25-31/03/25,01/06/25-31/12/25",100,140,190
+1,Eileens Trees Inn(Standard Room) (T),Tarangire,01/04/25-31/05/25,70,120,170
+1,Eileens Trees Inn(Standard Room) (T),Tarangire,"01/01/26-31/03/26,01/06/26-31/12/26",0,0,0
+1,Eileens Trees Inn(Standard Room) (T),Tarangire,01/04/26-31/05/26,0,0,0
+1,Kankari Lodge (Bungalow) (T),Tarangire,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",90,158,200
+1,Kankari Lodge (Bungalow) (T),Tarangire,"01/04/25-31/05/25,01/11/25-30/11/25",71,125,161
+1,Kankari Lodge (Bungalow) (T),Tarangire,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+1,Kankari Lodge (Bungalow) (T),Tarangire,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+1,Omega View Hotel and Resort (T),Tarangire,01/01/25-31/12/25,92,153,180
+1,Omega View Hotel and Resort (T),Tarangire,01/01/26-31/12/26,0,0,0
+2,Sangaiwe Tented Lodge (WMA),Tarangire,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",184.5,295,405.5
+2,Sangaiwe Tented Lodge (WMA),Tarangire,"01/04/25-31/05/25,01/11/25-30/11/25",152.5,242,330.5
+2,Sangaiwe Tented Lodge (WMA),Tarangire,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Sangaiwe Tented Lodge (WMA),Tarangire,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+2,Burunge Tented Lodge (Tent) (WMA),Tarangire,"01/01/25-31/03/25,01/06/25-31/10/25,16/12/25-31/12/25",230.5,333,379.5
+2,Burunge Tented Lodge (Tent) (WMA),Tarangire,01/11/25-15/12/25,206.5,299,337.5
+2,Burunge Tented Lodge (Tent) (WMA),Tarangire,01/04/25-31/05/25,181.5,267,295.5
+2,Burunge Tented Lodge (Tent) (WMA),Tarangire,"01/01/26-31/03/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+2,Burunge Tented Lodge (Tent) (WMA),Tarangire,01/11/26-15/12/26,0,0,0
+2,Burunge Tented Lodge (Tent) (WMA),Tarangire,01/04/26-31/05/26,0,0,0
+2,Tarangire Osupuko Lodge (WMA),Tarangire,"01/01/25-31/03/25,01/06/25-31/10/25,15/12/25-31/12/25",186.5,313,464.5
+2,Tarangire Osupuko Lodge (WMA),Tarangire,"01/04/25-31/05/25,01/11/25-14/12/25",160.5,261,386.5
+2,Tarangire Osupuko Lodge (WMA),Tarangire,"01/01/26-31/03/26,01/06/26-31/10/26,15/12/26-31/12/26",0,0,0
+2,Tarangire Osupuko Lodge (WMA),Tarangire,"01/04/26-31/05/26,01/11/26-14/12/26",0,0,0
+3,Lake Burunge Baobab Tented Lodge (WMA),Tarangire,"01/01/25-31/03/25,01/06/25-31/10/25,16/12/25-31/12/25",260.5,393,439.5
+3,Lake Burunge Baobab Tented Lodge (WMA),Tarangire,01/11/25-15/12/25,236.5,359,1081.5
+3,Lake Burunge Baobab Tented Lodge (WMA),Tarangire,01/04/25-31/05/25,211.5,327,355.5
+3,Lake Burunge Baobab Tented Lodge (WMA),Tarangire,"01/01/26-31/03/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+3,Lake Burunge Baobab Tented Lodge (WMA),Tarangire,01/11/26-15/12/26,0,0,0
+3,Lake Burunge Baobab Tented Lodge (WMA),Tarangire,01/04/26-31/05/26,0,0,0
+3,Tarangire Simba Lodge (WMA),Tarangire,"01/01/25-31/03/25,01/11/25-15/12/25",231.5,344,505.5
+3,Tarangire Simba Lodge (WMA),Tarangire,"01/06/25-31/10/25,16/12/25-31/12/25",254.5,379,558.5
+3,Tarangire Simba Lodge (WMA),Tarangire,01/04/25-31/05/25,199.5,279,408.5
+3,Tarangire Simba Lodge (WMA),Tarangire,"01/01/26-31/03/26,01/11/26-15/12/26",0,0,0
+3,Tarangire Simba Lodge (WMA),Tarangire,"01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+3,Tarangire Simba Lodge (WMA),Tarangire,01/04/26-31/05/26,0,0,0
+4,Angata Tarangire Camp,Tarangire,"01/01/25-31/03/25,15/06/25-14/09/25,10/12/25-31/12/25",322,427,547
+4,Angata Tarangire Camp,Tarangire,"01/04/25-14/06/25,15/09/25-09/12/25",262,367,527
+4,Angata Tarangire Camp,Tarangire,"01/01/26-31/03/26,15/06/26-14/09/26,10/12/26-31/12/26",0,0,0
+4,Angata Tarangire Camp,Tarangire,"01/04/26-14/06/26,15/09/26-09/12/26",0,0,0
+4,Mbali Mbali Tarangire River Camp ( Safari tent / Family Safari tent) (WMA),Tarangire,"01/01/25-28/02/25,01/06/25-30/06/25",239.5,389,518.5
+4,Mbali Mbali Tarangire River Camp ( Safari tent / Family Safari tent) (WMA),Tarangire,"01/07/25-31/10/25,21/12/25-31/12/25",264.5,399,527.5
+4,Mbali Mbali Tarangire River Camp ( Safari tent / Family Safari tent) (WMA),Tarangire,"01/03/25-31/03/25,01/11/25-20/12/25",219.5,369,503.5
+4,Mbali Mbali Tarangire River Camp ( Safari tent / Family Safari tent) (WMA),Tarangire,01/04/25-31/05/25,155.5,301,425.5
+4,Mbali Mbali Tarangire River Camp ( Safari tent / Family Safari tent) (WMA),Tarangire,"01/01/26-28/02/26,01/06/26-30/06/26",0,0,0
+4,Mbali Mbali Tarangire River Camp ( Safari tent / Family Safari tent) (WMA),Tarangire,"01/07/26-31/10/26,21/12/26-31/12/26",0,0,0
+4,Mbali Mbali Tarangire River Camp ( Safari tent / Family Safari tent) (WMA),Tarangire,"01/03/26-31/03/26,01/11/26-20/12/26",0,0,0
+4,Mbali Mbali Tarangire River Camp ( Safari tent / Family Safari tent) (WMA),Tarangire,01/04/26-31/05/26,0,0,0
+5,Tarangire Sopa Lodge (inside),Tarangire,"01/01/25-31/03/25,01/06/25-30/06/25,01/11/25-21/12/25",278,455,606
+5,Tarangire Sopa Lodge (inside),Tarangire,"01/07/25-31/10/25,22/12/25-31/12/25",310,504,669
+5,Tarangire Sopa Lodge (inside),Tarangire,01/04/25-31/05/25,191,321,436
+5,Tarangire Sopa Lodge (inside),Tarangire,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-21/12/26",0,0,0
+5,Tarangire Sopa Lodge (inside),Tarangire,"01/07/26-31/10/26,22/12/26-31/12/26",0,0,0
+5,Tarangire Sopa Lodge (inside),Tarangire,01/04/26-31/05/26,0,0,0
+5,Tarangire Safari Lodge (inside),Tarangire,"01/01/25-31/03/25,01/06/25-31/12/25",326,552,828
+5,Tarangire Safari Lodge (inside),Tarangire,01/04/25-31/05/25,211,322,483
+5,Tarangire Safari Lodge (inside),Tarangire,"01/01/26-31/03/26,01/06/26-31/12/26",0,0,0
+5,Tarangire Safari Lodge (inside),Tarangire,01/04/26-31/05/26,0,0,0
+6,Tarangire Kuro Treetops Lodge (Inside),Tarangire,"01/01/25-31/03/25,01/06/25-30/06/25,01/11/25-19/12/25",905,1178,1661
+6,Tarangire Kuro Treetops Lodge (Inside),Tarangire,"01/07/25-30/10/25,20/12/25-31/12/25",1009,1308,1843
+6,Tarangire Kuro Treetops Lodge (Inside),Tarangire,01/04/25-31/05/25,692,912,1288.6
+6,Tarangire Kuro Treetops Lodge (Inside),Tarangire,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",0,0,0
+6,Tarangire Kuro Treetops Lodge (Inside),Tarangire,"01/07/26-30/10/26,20/12/26-31/12/26",0,0,0
+6,Tarangire Kuro Treetops Lodge (Inside),Tarangire,01/04/26-31/05/26,0,0,0
+6,Elewana Tarangire Treetops (Tree House) (WMA),Tarangire,"01/01/25-31/03/25,01/06/25-30/06/25,01/11/25-19/12/25",869.5,1181,1354.5
+6,Elewana Tarangire Treetops (Tree House) (WMA),Tarangire,"01/07/25-30/10/25,20/12/25-31/12/25",1026.5,1391,1592.5
+6,Elewana Tarangire Treetops (Tree House) (WMA),Tarangire,01/04/25-31/05/25,635.5,869,1004.5
+6,Elewana Tarangire Treetops (Tree House) (WMA),Tarangire,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",0,0,0
+6,Elewana Tarangire Treetops (Tree House) (WMA),Tarangire,"01/07/26-30/10/26,20/12/26-31/12/26",0,0,0
+6,Elewana Tarangire Treetops (Tree House) (WMA),Tarangire,01/04/26-31/05/26,0,0,0
+,,,,,,
+1,Eileens Trees Inn(Standard Room) (N),Ngorongoro,"01/01/25-31/03/25,01/06/25-31/12/25",100,140,190
+1,Eileens Trees Inn(Standard Room) (N),Ngorongoro,01/04/25-31/05/25,70,120,170
+1,Eileens Trees Inn(Standard Room) (N),Ngorongoro,"01/01/26-31/03/26,01/06/26-31/12/26",0,0,0
+1,Eileens Trees Inn(Standard Room) (N),Ngorongoro,01/04/26-31/05/26,0,0,0
+1,Kankari Lodge (Bungalow) (N),Ngorongoro,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",90,158,200
+1,Kankari Lodge (Bungalow) (N),Ngorongoro,"01/04/25-31/05/25,01/11/25-30/11/25",71,125,161
+1,Kankari Lodge (Bungalow) (N),Ngorongoro,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+1,Kankari Lodge (Bungalow) (N),Ngorongoro,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+1,Omega View Hotel and Resort (N),Ngorongoro,01/01/25-31/12/25,92,153,180
+1,Omega View Hotel and Resort (N),Ngorongoro,01/01/26-31/12/26,0,0,0
+2,Marera Valley Lodge (N),Ngorongoro,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",104,191,249
+2,Marera Valley Lodge (N),Ngorongoro,"01/04/25-31/05/25,01/11/25-30/11/25",80,149,191
+2,Marera Valley Lodge (N),Ngorongoro,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Marera Valley Lodge (N),Ngorongoro,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+2,Bougainvillea safari Lodge (N),Ngorongoro,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",104,191,249
+2,Bougainvillea safari Lodge (N),Ngorongoro,"01/04/25-31/05/25,01/11/25-30/11/25",80,149,191
+2,Bougainvillea safari Lodge (N),Ngorongoro,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Bougainvillea safari Lodge (N),Ngorongoro,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+2,Country Lodge (N),Ngorongoro,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",101,181,238
+2,Country Lodge (N),Ngorongoro,"01/04/25-31/05/25,01/11/25-30/11/25",80,149,191
+2,Country Lodge (N),Ngorongoro,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Country Lodge (N),Ngorongoro,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+3,Ngorongoro Kuhama Camp,Ngorongoro,"01/01/25-31/03/25,01/07/25-31/10/25,01/12/25-31/12/25",238,358,537
+3,Ngorongoro Kuhama Camp,Ngorongoro,01/11/25-30/11/25,228,346,519
+3,Ngorongoro Kuhama Camp,Ngorongoro,"01/01/26-31/03/26,01/07/26-31/10/26,01/12/26-31/12/26",0,0,0
+3,Ngorongoro Kuhama Camp,Ngorongoro,01/11/26-30/11/26,0,0,0
+3,Ngorongoro Marera Mountain View Lodge,Ngorongoro,"01/01/25-15/03/25,01/07/25-31/12/25",185,295,390
+3,Ngorongoro Marera Mountain View Lodge,Ngorongoro,16/03/25-30/06/25,175,278,366
+3,Ngorongoro Marera Mountain View Lodge,Ngorongoro,"01/01/26-15/03/26,01/07/26-31/12/26",0,0,0
+3,Ngorongoro Marera Mountain View Lodge,Ngorongoro,16/03/26-30/06/26,0,0,0
+4,Angata Ngorongoro Camp,Ngorongoro,"01/01/25-31/03/25,15/06/25-14/09/25,10/12/25-31/12/25",308,418,460
+4,Angata Ngorongoro Camp,Ngorongoro,"01/04/25-14/06/25,15/09/25-09/12/25",268,368,406
+4,Angata Ngorongoro Camp,Ngorongoro,"01/01/26-31/03/26,15/06/26-14/09/26,10/12/26-31/12/26",0,0,0
+4,Angata Ngorongoro Camp,Ngorongoro,"01/04/26-14/06/26,15/09/26-09/12/26",0,0,0
+4,Ngorongoro Tortlis Camp,Ngorongoro,"01/01/25-28/02/25,01/06/25-30/06/25",252,392,567
+4,Ngorongoro Tortlis Camp,Ngorongoro,"01/07/25-01/10/25,16/12/25-31/12/25",292,472,687
+4,Ngorongoro Tortlis Camp,Ngorongoro,"01/03/25-31/05/25,01/11/25-15/12/25",177,342,507
+4,Ngorongoro Tortlis Camp,Ngorongoro,"01/01/26-28/02/26,01/06/26-30/06/26",0,0,0
+4,Ngorongoro Tortlis Camp,Ngorongoro,"01/07/26-01/10/26,16/12/26-31/12/26",0,0,0
+4,Ngorongoro Tortlis Camp,Ngorongoro,"01/03/26-31/05/26,01/11/26-15/12/26",0,0,0
+4,Embalakai Authentic Camp Ngorongoro,Ngorongoro,"01/01/25-28/02/25,01/06/25-31/10/25,16/12/25-31/12/25",290,460,570
+4,Embalakai Authentic Camp Ngorongoro,Ngorongoro,"01/03/25-31/03/25,01/11/25-15/12/25",240,380,510
+4,Embalakai Authentic Camp Ngorongoro,Ngorongoro,01/04/25-31/05/25,215,330,470
+4,Embalakai Authentic Camp Ngorongoro,Ngorongoro,"01/01/26-28/02/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+4,Embalakai Authentic Camp Ngorongoro,Ngorongoro,"01/03/26-31/03/26,01/11/26-15/12/26",0,0,0
+4,Embalakai Authentic Camp Ngorongoro,Ngorongoro,01/04/26-31/05/26,0,0,0
+5,Ngorongoro Serena Safari Lodge,Ngorongoro,"01/01/25-31/01/25,01/03/25-31/03/25,01/11/25-22/12/25",268,357,536
+5,Ngorongoro Serena Safari Lodge,Ngorongoro,"01/02/25-28/02/25,01/06/25-31/10/25",495,660,990
+5,Ngorongoro Serena Safari Lodge,Ngorongoro,01/04/25-31/05/25,202,268,403
+5,Ngorongoro Serena Safari Lodge,Ngorongoro,23/12/25-31/12/25,548,730,1095
+5,Ngorongoro Serena Safari Lodge,Ngorongoro,"01/01/26-31/01/26,01/03/26-31/03/26,01/11/26-22/12/26",0,0,0
+5,Ngorongoro Serena Safari Lodge,Ngorongoro,"01/02/26-28/02/26,01/06/26-31/10/26",0,0,0
+5,Ngorongoro Serena Safari Lodge,Ngorongoro,01/04/26-31/05/26,0,0,0
+5,Ngorongoro Serena Safari Lodge,Ngorongoro,23/12/26-31/12/26,0,0,0
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (N),Ngorongoro,"01/01/25-31/03/25,01/06/25-30/06/25,01/11/25-19/12/25",457,574,803.6
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (N),Ngorongoro,"01/07/25-30/10/25,20/12/25-31/12/25",830,640,896
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (N),Ngorongoro,01/04/25-31/05/25,299,376,526.4
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (N),Ngorongoro,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",0,0,0
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (N),Ngorongoro,"01/07/26-30/10/26,20/12/26-31/12/26",0,0,0
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (N),Ngorongoro,01/04/26-31/05/26,0,0,0
+6,Sanctuary Ngorongoro Crater Camp,Ngorongoro,01/01/25-31/03/25,327,643,911.6
+6,Sanctuary Ngorongoro Crater Camp,Ngorongoro,01/06/25-31/12/25,755,1003,1424.6
+6,Sanctuary Ngorongoro Crater Camp,Ngorongoro,01/01/26-31/03/26,0,0,0
+6,Sanctuary Ngorongoro Crater Camp,Ngorongoro,01/06/26-31/12/26,0,0,0
+6,Lemala Ngorongoro Camp,Ngorongoro,"01/01/25-28/02/25,01/06/25-30/09/25,20/12/25-31/12/25",720,1008,1059
+6,Lemala Ngorongoro Camp,Ngorongoro,01/10/25-19/12/25,336,672,708
+6,Lemala Ngorongoro Camp,Ngorongoro,01/03/25-31/05/25,259,518,546
+6,Lemala Ngorongoro Camp,Ngorongoro,"01/01/26-28/02/26,01/06/26-30/09/26,20/12/26-31/12/26",0,0,0
+6,Lemala Ngorongoro Camp,Ngorongoro,01/10/26-19/12/26,0,0,0
+6,Lemala Ngorongoro Camp,Ngorongoro,01/03/26-31/05/26,0,0,0
+,,,,,,
+1,Tukaone Camp,Central Serengeti,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",220.8,361.6,509.4
+1,Tukaone Camp,Central Serengeti,"01/04/25-31/05/25,01/11/25-30/11/25",200.8,301.6,422.4
+1,Tukaone Camp,Central Serengeti,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+1,Tukaone Camp,Central Serengeti,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+1,Kilima Valley Tented Lodge,Central Serengeti,01/01/25-31/12/25,235.8,371.6,512.4
+1,Kilima Valley Tented Lodge,Central Serengeti,01/01/26-31/12/26,0,0,0
+2,Tanzania Bush Camp Central Serengeti,Central Serengeti,"01/01/25-28/02/25,01/06/25-31/10/25,16/12/25-31/12/25",260.8,441.6,632.4
+2,Tanzania Bush Camp Central Serengeti,Central Serengeti,"01/03/25-31/05/25,01/11/25-15/12/25",250.8,421.6,602.4
+2,Tanzania Bush Camp Central Serengeti,Central Serengeti,"01/01/26-28/02/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+2,Tanzania Bush Camp Central Serengeti,Central Serengeti,"01/03/26-31/05/26,01/11/26-15/12/26",0,0,0
+2,Embalakai Authentic Camp Central Serengeti,Central Serengeti,"01/01/25-28/02/25,01/07/25-30/09/25,16/12/25-31/12/25",268.8,441.6,605.4
+2,Embalakai Authentic Camp Central Serengeti,Central Serengeti,"01/03/25-31/03/25,01/06/25-30/06/25,01/10/25-31/10/25",258.8,421.6,575.4
+2,Embalakai Authentic Camp Central Serengeti,Central Serengeti,"01/04/25-31/05/25,01/11/25-15/12/25",240.8,383.6,557.4
+2,Embalakai Authentic Camp Central Serengeti,Central Serengeti,"01/01/26-28/02/26,01/07/26-30/09/26,16/12/26-31/12/26",0,0,0
+2,Embalakai Authentic Camp Central Serengeti,Central Serengeti,"01/03/26-31/03/26,01/06/26-30/06/26,01/10/26-31/10/26",0,0,0
+2,Embalakai Authentic Camp Central Serengeti,Central Serengeti,"01/04/26-31/05/26,01/11/26-15/12/26",0,0,0
+2,Zawadi Camp serengeti,Central Serengeti,"01/01/25-28/02/25,01/06/25-30/06/25,01/09/25-31/10/25,01/12/25-31/12/25",250.8,401.6,572.4
+2,Zawadi Camp serengeti,Central Serengeti,01/07/25-31/08/25,330.8,461.6,617.4
+2,Zawadi Camp serengeti,Central Serengeti,"01/03/25-31/05/25,01/11/25-30/11/25",220.8,381.6,542.4
+2,Zawadi Camp serengeti,Central Serengeti,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Zawadi Camp serengeti,Central Serengeti,01/07/26-31/08/26,0,0,0
+2,Zawadi Camp serengeti,Central Serengeti,"01/03/26-31/05/26,01/11/26-30/11/26",0,0,0
+3,Suenos De Africa Bush Camp,Central Serengeti,"01/01/25-28/02/25,01/06/25-31/10/25,20/12/25-31/12/25",265.8,481.6,722.4
+3,Suenos De Africa Bush Camp,Central Serengeti,"01/03/25-31/05/25,01/11/25-19/12/25",220.8,421.6,632.4
+3,Suenos De Africa Bush Camp,Central Serengeti,"01/01/26-28/02/26,01/06/26-31/10/26,20/12/26-31/12/26",0,0,0
+3,Suenos De Africa Bush Camp,Central Serengeti,"01/03/26-31/05/26,01/11/26-19/12/26",0,0,0
+3,Acacia Central Camp,Central Serengeti,"01/01/25-28/02/25,01/06/25-31/10/25,01/12/25-31/12/25",298.8,499.6,671.4
+3,Acacia Central Camp,Central Serengeti,"01/03/25-31/05/25,01/11/25-30/11/25",260.8,421.6,602.4
+3,Acacia Central Camp,Central Serengeti,"01/01/26-28/02/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+3,Acacia Central Camp,Central Serengeti,"01/03/26-31/05/26,01/11/26-30/11/26",0,0,0
+4,The Singing grass serengeti Bush camp,Central Serengeti,"01/01/25-28/02/25,01/06/25-30/06/25,01/09/25-31/10/25,01/12/25-15/12/25",424.8,616.6,851.4
+4,The Singing grass serengeti Bush camp,Central Serengeti,"01/07/25-31/08/25,16/12/25-31/12/25",500.8,716.6,1043.4
+4,The Singing grass serengeti Bush camp,Central Serengeti,"01/03/25-31/05/25,01/11/25-30/11/25",388.8,556.6,779.4
+4,The Singing grass serengeti Bush camp,Central Serengeti,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-31/10/26,01/12/26-15/12/26",0,0,0
+4,The Singing grass serengeti Bush camp,Central Serengeti,"01/07/26-31/08/26,16/12/26-31/12/26",0,0,0
+4,The Singing grass serengeti Bush camp,Central Serengeti,"01/03/26-31/05/26,01/11/26-30/11/26",0,0,0
+4,Lahia tented lodge - Premium (Tents),Central Serengeti,"01/01/25-31/03/25,01/06/25-31/10/25,16/12/25-31/12/25",523.8,761.6,1011.4
+4,Lahia tented lodge - Premium (Tents),Central Serengeti,01/11/25-15/12/25,451.8,665.6,888.4
+4,Lahia tented lodge - Premium (Tents),Central Serengeti,01/04/25-31/05/25,378.8,567.6,762.4
+4,Lahia tented lodge - Premium (Tents),Central Serengeti,"01/01/26-31/03/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+4,Lahia tented lodge - Premium (Tents),Central Serengeti,01/11/26-15/12/26,0,0,0
+4,Lahia tented lodge - Premium (Tents),Central Serengeti,01/04/26-31/05/26,0,0,0
+4,Malaika Seronera Luxury Camp,Central Serengeti,"01/01/25-28/02/25,01/06/25-31/10/25,01/12/25-31/12/25",430.8,719.6,992.4
+4,Malaika Seronera Luxury Camp,Central Serengeti,"01/03/25-31/05/25,01/11/25-30/11/25",260.8,479.6,665.4
+4,Malaika Seronera Luxury Camp,Central Serengeti,"01/01/26-28/02/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+4,Malaika Seronera Luxury Camp,Central Serengeti,"01/03/26-31/05/26,01/11/26-30/11/26",0,0,0
+5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,"01/01/25-28/02/25,01/09/25-31/10/25",710.8,1056.6,2682.9
+5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,"01/06/25-31/08/25,22/12/25-31/12/25",865.8,1276.6,3276.9
+5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,"01/03/25-31/05/25,01/11/25-21/12/25",475.8,721.6,1778.4
+5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,"01/01/26-28/02/26,01/09/26-31/10/26",0,0,0
+5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,"01/06/26-31/08/26,22/12/26-31/12/26",0,0,0
+5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,"01/03/26-31/05/26,01/11/26-21/12/6",0,0,0
+5,Ole Serai Luxury Camp - Turner Springs,Central Serengeti,"01/01/25-31/03/25,01/06/25-30/06/25,01/11/25-19/12/25",809.8,1067.6,1508.8
+5,Ole Serai Luxury Camp - Turner Springs,Central Serengeti,"01/07/25-30/10/25,20/12/25-31/12/25",879.8,1155.6,1632
+5,Ole Serai Luxury Camp - Turner Springs,Central Serengeti,01/04/25-31/05/25,564.8,761.6,1080.4
+5,Ole Serai Luxury Camp - Turner Springs,Central Serengeti,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",0,0,0
+5,Ole Serai Luxury Camp - Turner Springs,Central Serengeti,"01/07/26-30/10/26,20/12/26-31/12/26",0,0,0
+5,Ole Serai Luxury Camp - Turner Springs,Central Serengeti,01/04/26-31/05/26,0,0,0
+5,Ole Serai Luxury Camp - Moru Kopjes,Central Serengeti,"01/01/25-31/03/25,01/06/25-30/06/25,01/11/25-19/12/25",703.8,935.6,1324
+5,Ole Serai Luxury Camp - Moru Kopjes,Central Serengeti,"01/07/25-30/10/25,20/12/25-31/12/25",774.8,1023.6,1447.2
+5,Ole Serai Luxury Camp - Moru Kopjes,Central Serengeti,01/04/25-31/05/25,492.8,671.6,954.4
+5,Ole Serai Luxury Camp - Moru Kopjes,Central Serengeti,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",0,0,0
+5,Ole Serai Luxury Camp - Moru Kopjes,Central Serengeti,"01/07/26-30/10/26,20/12/26-31/12/26",0,0,0
+5,Ole Serai Luxury Camp - Moru Kopjes,Central Serengeti,01/04/26-31/05/26,0,0,0
+6,Four Seasons Safari Lodge (Horizon Room),Central Serengeti,"01/01/25-28/02/25,01/06/25-31/10/25,16/12/25-31/12/25",1185.8,1526.6,2047.4
+6,Four Seasons Safari Lodge (Horizon Room),Central Serengeti,01/11/25-15/12/25,905.8,1246.6,1767.4
+6,Four Seasons Safari Lodge (Horizon Room),Central Serengeti,01/03/25-31/05/25,625.8,966.6,1487.4
+6,Four Seasons Safari Lodge (Horizon Room),Central Serengeti,"01/01/26-28/02/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+6,Four Seasons Safari Lodge (Horizon Room),Central Serengeti,01/11/26-15/12/26,0,0,0
+6,Four Seasons Safari Lodge (Horizon Room),Central Serengeti,01/03/26-31/05/26,0,0,0
+,,,,,,
+1,"Sero tented camp, Kogatende",North Serengeti,01/06/25-31/10/25,235.8,431.6,612.4
+1,"Sero tented camp, Kogatende",North Serengeti,01/06/26-31/10/26,0,0,0
+1,"Heritage Camp, Kogatende",North Serengeti,15/06/25-31/10/25,230.8,441.6,632.4
+1,"Heritage Camp, Kogatende",North Serengeti,15/06/26-31/10/26,0,0,0
+2,"Tanzania Bush Camp, Kogatende",North Serengeti,01/06/25-31/10/25,290.8,501.6,722.4
+2,"Tanzania Bush Camp, Kogatende",North Serengeti,01/06/26-31/10/26,0,0,0
+2,"Pure Migration Camp - Kogatende , Sense of wilderness",North Serengeti,01/07/25-31/10/25,275.8,501.6,725.4
+2,"Pure Migration Camp - Kogatende , Sense of wilderness",North Serengeti,01/07/26-31/10/26,0,0,0
+2,"Untamed Migration Camp, Kogatende",North Serengeti,01/06/25-31/10/25,280.8,501.6,752.4
+2,"Untamed Migration Camp, Kogatende",North Serengeti,01/06/26-31/10/26,0,0,0
+3,"Angata Migration Camp, Kogatende",North Serengeti,01/07/25-31/10/25,348.8,549.6,652.4
+3,"Angata Migration Camp, Kogatende",North Serengeti,01/07/26-31/10/26,0,0,0
+3,"Acacia Migration Camp, Kogatende",North Serengeti,01/06/25-31/10/25,359.8,619.6,854.4
+3,"Acacia Migration Camp, Kogatende",North Serengeti,01/06/26-31/10/26,0,0,0
+4,"Nyikani Migration Camp, Kogatende",North Serengeti,01/06/25-30/06/25,230.8,461.6,692.4
+4,"Nyikani Migration Camp, Kogatende",North Serengeti,01/07/25-30/09/25,470.8,681.6,1022.4
+4,"Nyikani Migration Camp, Kogatende",North Serengeti,01/10/25-31/10/25,265.8,531.6,797.4
+4,"Nyikani Migration Camp, Kogatende",North Serengeti,01/06/26-30/06/26,0,0,0
+4,"Nyikani Migration Camp, Kogatende",North Serengeti,01/07/26-30/09/26,0,0,0
+4,"Nyikani Migration Camp, Kogatende",North Serengeti,01/10/26-31/10/26,0,0,0
+4,"Esirai Migraton Camp, Kogatende",North Serengeti,01/06/25-31/10/25,532.8,745.6,1118.4
+4,"Esirai Migraton Camp, Kogatende",North Serengeti,01/06/26-31/10/26,0,0,0
+5,Mara Under Canvas Camp - Premium (Tent),North Serengeti,01/06/25-30/11/25,635.8,909.6,1200.4
+5,Mara Under Canvas Camp - Premium (Tent),North Serengeti,01/06/26-30/11/26,0,0,0
+5,Malaika Mara River Camp,North Serengeti,01/07/25-31/10/25,458.8,833.6,1148.4
+5,Malaika Mara River Camp,North Serengeti,01/07/26-31/10/26,0,0,0
+5,"Nasikia Migration Camp, Kogatende",North Serengeti,01/06/25-31/10/25,465.8,809.6,1190.4
+5,"Nasikia Migration Camp, Kogatende",North Serengeti,01/06/26-31/10/26,0,0,0
+6,Mara Mara Tented Lodge - Premium (Tents),North Serengeti,01/07/25-31/10/25,895.8,1255.6,1641.4
+6,Mara Mara Tented Lodge - Premium (Tents),North Serengeti,01/07/26-31/10/26,0,0,0
+6,Kaskaz Mara Camp,North Serengeti,01/06/25-31/10/25,700.8,1251.6,1832.4
+6,Kaskaz Mara Camp,North Serengeti,01/06/26-31/10/26,0,0,0
+6,Ole Serai Luxury Camp - Kogatende,North Serengeti,01/07/25-31/10/25,1126.8,1463.6,2063.2
+6,Ole Serai Luxury Camp - Kogatende,North Serengeti,01/06/25-30/06/25,1004.8,1311.6,1850.4
+6,Ole Serai Luxury Camp - Kogatende,North Serengeti,01/07/26-31/10/26,0,0,0
+6,Ole Serai Luxury Camp - Kogatende,North Serengeti,01/06/26-30/06/26,0,0,0
+,,,,,,
+1,"Sero tented camp, Ndutu",Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",235.8,431.6,612.4
+1,"Sero tented camp, Ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+1,"Heritage Camp, Ndutu",Ndutu,"01/01/25-31/03/25,15/12/25-31/12/25",230.8,441.6,632.4
+1,"Heritage Camp, Ndutu",Ndutu,"01/01/26-31/03/26,15/12/26-31/12/26",0,0,0
+1,Ndutu Savannah Camp,Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",290.8,471.6,617.4
+1,Ndutu Savannah Camp,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+2,"Tanzania Bush Camps,ndutu",Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",290.8,501.6,722.4
+2,"Tanzania Bush Camps,ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+2,"Pure Migration Camp - Ndutu, Sense of wilderness",Ndutu,"01/01/25-15/04/25,01/12/25-31/12/25",275.8,501.6,725.4
+2,"Pure Migration Camp - Ndutu, Sense of wilderness",Ndutu,"01/01/26-15/04/26,01/12/26-31/12/26",0,0,0
+2,"Untamed Migration Camp, Ndutu",Ndutu,"01/01/25-30/04/25,01/12/25-31/12/25",280.8,501.6,752.4
+2,"Untamed Migration Camp, Ndutu",Ndutu,"01/01/26-30/04/26,01/12/26-31/12/26",0,0,0
+3,"Angata Migration Camp, Ndutu",Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",348.8,549.6,652.4
+3,"Angata Migration Camp, Ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+3,"Acacia Migration Camp, Ndutu",Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",335.8,571.6,752.4
+3,"Acacia Migration Camp, Ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+3,"Nyikani Migration Camp, Ndutu",Ndutu,"01/01/25-15/04/25,01/12/25-31/12/25",265.8,531.6,797.4
+3,"Nyikani Migration Camp, Ndutu",Ndutu,"01/01/26-15/04/26,01/12/26-31/12/26",0,0,0
+4,Ndutu Safari Lodge,Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",477.8,715.6,905.4
+4,Ndutu Safari Lodge,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+4,Lake Ndutu luxury tented lodge,Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",516.8,789.6,1037.4
+4,Lake Ndutu luxury tented lodge,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+4,"Nasikia Migration Camp, Ndutu",Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",465.8,809.6,1190.4
+4,"Nasikia Migration Camp, Ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+5,Karibu Woodlands,Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",520.8,911.6,1367.4
+5,Karibu Woodlands,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+5,Lake Masek Tented Lodge - Premium (Tent),Ndutu,"01/01/25-31/03/25,01/12/25-31/12/25",683.8,995.6,1292.4
+5,Lake Masek Tented Lodge - Premium (Tent),Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",0,0,0
+6,Lemala Ndutu Camp,Ndutu,"01/01/25-31/03/25,20/12/25-31/12/25",895.8,1297.6,1427.4
+6,Lemala Ndutu Camp,Ndutu,01/12/25-19/12/25,301.8,603.6,698.4
+6,Lemala Ndutu Camp,Ndutu,"01/01/26-31/03/26,20/12/26-31/12/26",0,0,0
+6,Lemala Ndutu Camp,Ndutu,01/12/26-19/12/26,0,0,0
+,,,,,,
+1,Mbalageti Serengeti Lodge (Lodge Room) (1),Western Serengeti,"01/06/25-31/08/25,21/12/25-31/12/25",295.8,441.6,737.4
+1,Mbalageti Serengeti Lodge (Lodge Room) (1),Western Serengeti,"01/06/26-31/08/26,21/12/26-31/12/26",0,0,0
+2,Mbalageti Serengeti Lodge (Lodge Room) (2),Western Serengeti,"01/06/25-31/08/25,21/12/25-31/12/25",295.8,441.6,737.4
+2,Mbalageti Serengeti Lodge (Lodge Room) (2),Western Serengeti,"01/06/26-31/08/26,21/12/26-31/12/26",0,0,0
+3,Kirawira Serena Camp (1),Western Serengeti,"01/01/25-28/02/25,01/05/25-31/05/25,01/11/25-22/12/25",356,473.6,711
+3,Kirawira Serena Camp (1),Western Serengeti,01/03/25-30/04/25,263,349.6,525
+3,Kirawira Serena Camp (1),Western Serengeti,01/06/25-31/10/25,518,689.6,1035
+3,Kirawira Serena Camp (1),Western Serengeti,23/12/25-31/12/25,408,543.6,816
+3,Kirawira Serena Camp (1),Western Serengeti,"01/01/26-28/02/26,01/05/26-31/05/26,01/11/26-22/12/26",0,0,0
+3,Kirawira Serena Camp (1),Western Serengeti,01/03/26-30/04/26,0,0,0
+3,Kirawira Serena Camp (1),Western Serengeti,01/06/26-31/10/26,0,0,0
+3,Kirawira Serena Camp (1),Western Serengeti,23/12/26-31/12/26,0,0,0
+4,Kirawira Serena Camp (2),Western Serengeti,"01/01/25-28/02/25,01/05/25-31/05/25,01/11/25-22/12/25",356,473.6,711
+4,Kirawira Serena Camp (2),Western Serengeti,01/03/25-30/04/25,263,349.6,525
+4,Kirawira Serena Camp (2),Western Serengeti,01/06/25-31/10/25,518,689.6,1035
+4,Kirawira Serena Camp (2),Western Serengeti,23/12/25-31/12/25,408,543.6,816
+4,Kirawira Serena Camp (2),Western Serengeti,"01/01/26-28/02/26,01/05/26-31/05/26,01/11/26-22/12/26",0,0,0
+4,Kirawira Serena Camp (2),Western Serengeti,01/03/26-30/04/26,0,0,0
+4,Kirawira Serena Camp (2),Western Serengeti,01/06/26-31/10/26,0,0,0
+4,Kirawira Serena Camp (2),Western Serengeti,23/12/26-31/12/26,0,0,0
+5,Asanja Grumeti Camp,Western Serengeti,"01/01/25-28/02/25,01/06/25-31/10/25,20/12/25-31/12/25",580.8,821.6,1232.4
+5,Asanja Grumeti Camp,Western Serengeti,"01/03/25-31/05/25,01/11/25-19/12/25",460.8,661.6,992.4
+5,Asanja Grumeti Camp,Western Serengeti,"01/01/26-28/02/26,01/06/26-31/10/26,20/12/26-31/12/26",0,0,0
+5,Asanja Grumeti Camp,Western Serengeti,"01/03/26-31/05/26,01/11/26-19/12/26",0,0,0
+6,Cherero Camp,Western Serengeti,"01/01/25-14/03/25,16/05/25-31/05/25,01/10/25-17/12/25",870.8,1201.6,1802.4
+6,Cherero Camp,Western Serengeti,"01/06/25-30/09/25,18/12/25-31/12/25",1050.8,1441.6,2162.4
+6,Cherero Camp,Western Serengeti,15/03/25-15/05/25,670.8,941.6,1412.4
+6,Cherero Camp,Western Serengeti,"01/01/26-14/03/26,16/05/26-31/05/26,01/10/26-17/12/26",0,0,0
+6,Cherero Camp,Western Serengeti,"01/06/26-30/09/26,18/12/26-31/12/26",0,0,0
+6,Cherero Camp,Western Serengeti,15/03/26-15/05/26,0,0,0
+,,,,,,
+1,Lake Eyasi Safari Lodge (1),Lake Eyasi,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",150,245,345
+1,Lake Eyasi Safari Lodge (1),Lake Eyasi,"01/04/25-31/05/25,01/11/25-30/11/25",104,170,243
+1,Lake Eyasi Safari Lodge (1),Lake Eyasi,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+1,Lake Eyasi Safari Lodge (1),Lake Eyasi,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+2,Lake Eyasi Safari Lodge (2),Lake Eyasi,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",150,245,345
+2,Lake Eyasi Safari Lodge (2),Lake Eyasi,"01/04/25-31/05/25,01/11/25-30/11/25",104,170,243
+2,Lake Eyasi Safari Lodge (2),Lake Eyasi,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Lake Eyasi Safari Lodge (2),Lake Eyasi,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+3,Kisima Ngeda Camp (1),Lake Eyasi,"01/01/25-15/03/25,01/06/25-31/12/25",385,534,801
+3,Kisima Ngeda Camp (1),Lake Eyasi,16/03/25-31/05/25,293,406,609
+3,Kisima Ngeda Camp (1),Lake Eyasi,"01/01/26-15/03/26,01/06/26-31/12/26",0,0,0
+3,Kisima Ngeda Camp (1),Lake Eyasi,16/03/26-31/05/26,0,0,0
+4,Kisima Ngeda Camp (2),Lake Eyasi,"01/01/25-15/03/25,01/06/25-31/12/25",385,534,801
+4,Kisima Ngeda Camp (2),Lake Eyasi,16/03/25-31/05/25,293,406,609
+4,Kisima Ngeda Camp (2),Lake Eyasi,"01/01/26-15/03/26,01/06/26-31/12/26",0,0,0
+4,Kisima Ngeda Camp (2),Lake Eyasi,16/03/26-31/05/26,0,0,0
+5,Ziwani Lodge (1),Lake Eyasi,"01/01/25-28/02/25,01/06/25-31/10/25,15/12/25-31/12/25",520.5,694,1041
+5,Ziwani Lodge (1),Lake Eyasi,"01/03/25-31/05/25,01/11/25-14/12/25",367.5,490,735
+5,Ziwani Lodge (1),Lake Eyasi,"01/01/26-28/02/26,01/06/26-31/10/26,15/12/26-31/12/26",0,0,0
+5,Ziwani Lodge (1),Lake Eyasi,"01/03/26-31/05/26,01/11/26-14/12/26",0,0,0
+6,Ziwani Lodge (2),Lake Eyasi,"01/01/25-28/02/25,01/06/25-31/10/25,15/12/25-31/12/25",520.5,694,1041
+6,Ziwani Lodge (2),Lake Eyasi,"01/03/25-31/05/25,01/11/25-14/12/25",367.5,490,735
+6,Ziwani Lodge (2),Lake Eyasi,"01/01/26-28/02/26,01/06/26-31/10/26,15/12/26-31/12/26",0,0,0
+6,Ziwani Lodge (2),Lake Eyasi,"01/03/26-31/05/26,01/11/26-14/12/26",0,0,0
+,,,,,,
+1,Africa Safari Lake Natron (Safari Comfort),Lake Natron,"01/01/25-14/03/25,16/05/25-30/06/25,01/09/25-31/12/25",172.5,263,359.5
+1,Africa Safari Lake Natron (Safari Comfort),Lake Natron,01/07/25-31/08/25,179.5,277,380.5
+1,Africa Safari Lake Natron (Safari Comfort),Lake Natron,15/03/25-15/05/25,139.5,205,281.5
+1,Africa Safari Lake Natron (Safari Comfort),Lake Natron,"01/01/26-14/03/26,16/05/26-30/06/26,01/09/26-31/12/26",0,0,0
+1,Africa Safari Lake Natron (Safari Comfort),Lake Natron,01/07/26-31/08/26,0,0,0
+1,Africa Safari Lake Natron (Safari Comfort),Lake Natron,15/03/26-15/05/26,0,0,0
+2,Masai Giraffe Eco Lodge,Lake Natron,"01/01/25-30/06/25,01/11/25-31/12/25",160.5,237,341.5
+2,Masai Giraffe Eco Lodge,Lake Natron,01/07/25-31/10/25,171.5,267,386.5
+2,Masai Giraffe Eco Lodge,Lake Natron,"01/01/26-30/06/26,01/11/26-31/12/26",0,0,0
+2,Masai Giraffe Eco Lodge,Lake Natron,01/07/26-31/10/26,0,0,0
+3,Natron River Camp (Standard),Lake Natron,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",162.5,290,394.5
+3,Natron River Camp (Standard),Lake Natron,01/11/26-30/11/26,150.2,267.9,364.9
+3,Natron River Camp (Standard),Lake Natron,01/04/26-31/05/26,137.9,245.8,335.3
+3,Natron River Camp (Standard),Lake Natron,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+3,Natron River Camp (Standard),Lake Natron,01/11/26-30/11/26,0,0,0
+3,Natron River Camp (Standard),Lake Natron,01/04/26-31/05/26,0,0,0
+4,Halisi Natron Camp (1),Lake Natron,01/01/25-31/12/25,269.5,409,608.5
+4,Halisi Natron Camp (1),Lake Natron,01/01/26-31/12/26,0,0,0
+5,Halisi Natron Camp 2),Lake Natron,01/01/25-31/12/25,269.5,409,608.5
+5,Halisi Natron Camp (2),Lake Natron,01/01/26-31/12/26,0,0,0
+6,Lake Natron Camp (Luxury Tent),Lake Natron,"01/01/25-31/01/25,01/03/25-31/05/25,01/11/25-31/12/25",374.5,489,728.5
+6,Lake Natron Camp (Luxury Tent),Lake Natron,"01/02/25-28/02/25,01/06/25-31/10/25",444.5,629,938.5
+6,Lake Natron Camp (Luxury Tent),Lake Natron,"01/01/26-31/01/26,01/03/26-31/05/26,01/11/26-31/12/26",0,0,0
+6,Lake Natron Camp (Luxury Tent),Lake Natron,"01/02/26-28/02/26,01/06/26-31/10/26",0,0,0
+,,,,,,
+1,Eileens Trees Inn(Standard Room) (K),Karatu,"01/01/25-31/03/25,01/06/25-31/12/25",100,140,190
+1,Eileens Trees Inn(Standard Room) (K),Karatu,01/04/25-31/05/25,70,120,170
+1,Eileens Trees Inn(Standard Room) (K),Karatu,"01/01/26-31/03/26,01/06/26-31/12/26",0,0,0
+1,Eileens Trees Inn(Standard Room) (K),Karatu,01/04/26-31/05/26,0,0,0
+1,Kankari Lodge (Bungalow) (K),Karatu,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",90,158,200
+1,Kankari Lodge (Bungalow) (K),Karatu,"01/04/25-31/05/25,01/11/25-30/11/25",71,125,161
+1,Kankari Lodge (Bungalow) (K),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+1,Kankari Lodge (Bungalow) (K),Karatu,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+1,Omega View Hotel and Resort (K),Karatu,01/01/25-31/12/25,92,153,180
+1,Omega View Hotel and Resort (K),Karatu,01/01/26-31/12/26,0,0,0
+2,Marera Valley Lodge (K),Karatu,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",104,191,249
+2,Marera Valley Lodge (K),Karatu,"01/04/25-31/05/25,01/11/25-30/11/25",80,149,191
+2,Marera Valley Lodge (K),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Marera Valley Lodge (K),Karatu,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+2,Bougainvillea safari Lodge (K),Karatu,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",104,191,249
+2,Bougainvillea safari Lodge (K),Karatu,"01/04/25-31/05/25,01/11/25-30/11/25",80,149,191
+2,Bougainvillea safari Lodge (K),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Bougainvillea safari Lodge (K),Karatu,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+2,Country Lodge (K),Karatu,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",101,181,238
+2,Country Lodge (K),Karatu,"01/04/25-31/05/25,01/11/25-30/11/25",80,149,191
+2,Country Lodge (K),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Country Lodge (K),Karatu,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+3,Mawe Mawe lake manyara (K),Karatu,01/01/25-31/12/25,160,250,375
+3,Mawe Mawe lake manyara (K),Karatu,01/01/26-31/12/26,0,0,0
+3,Karatu Simba Lodge,Karatu,"01/01/25-31/03/25,01/06/25-31/12/25",155,240,355
+3,Karatu Simba Lodge,Karatu,01/04/25-31/05/25,110,185,272
+3,Karatu Simba Lodge,Karatu,"01/01/26-31/03/26,01/06/26-31/12/26",0,0,0
+3,Karatu Simba Lodge,Karatu,01/04/26-31/05/26,0,0,0
+3,Tloma Lodge (Standard Room),Karatu,"01/01/25-31/03/25,01/06/25-31/10/25,16/12/25-31/12/25",216,296,382
+3,Tloma Lodge (Standard Room),Karatu,01/11/25-15/12/25,183,252,325
+3,Tloma Lodge (Standard Room),Karatu,01/04/25-31/05/25,150,208,271
+3,Tloma Lodge (Standard Room),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+3,Tloma Lodge (Standard Room),Karatu,01/11/26-15/12/26,0,0,0
+3,Tloma Lodge (Standard Room),Karatu,01/04/26-31/05/26,0,0,0
+4,Manyara Best View Lodge (Silver Room) (K),Karatu,"01/07/25-31/08/25,01/12/25-31/12/25",235,360,540
+4,Manyara Best View Lodge (Silver Room) (K),Karatu,"01/01/25-28/02/25,01/06/25-30/06/25,01/09/25-30/11/25",210,300,450
+4,Manyara Best View Lodge (Silver Room) (K),Karatu,01/03/25-31/05/25,186,240,360
+4,Manyara Best View Lodge (Silver Room) (K),Karatu,"01/07/26-31/08/26,01/12/26-31/12/26",0,0,0
+4,Manyara Best View Lodge (Silver Room) (K),Karatu,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-30/11/26",0,0,0
+4,Manyara Best View Lodge (Silver Room) (K),Karatu,01/03/26-31/05/26,0,0,0
+4,Ngorongoro Coffee Lodge- Karatu,Karatu,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",223,303,425
+4,Ngorongoro Coffee Lodge- Karatu,Karatu,"01/04/25-31/05/25,01/11/25-30/11/25",142,202,293
+4,Ngorongoro Coffee Lodge- Karatu,Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+4,Ngorongoro Coffee Lodge- Karatu,Karatu,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+4,Ngorongoro Farm House and Farm House Valley (Standard Room),Karatu,"01/01/25-31/03/25,01/06/25-31/10/25,16/12/25-31/12/25",275,374,481
+4,Ngorongoro Farm House and Farm House Valley (Standard Room),Karatu,01/11/25-15/12/25,224,308,397
+4,Ngorongoro Farm House and Farm House Valley (Standard Room),Karatu,01/04/25-31/05/25,175,242,313
+4,Ngorongoro Farm House and Farm House Valley (Standard Room),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+4,Ngorongoro Farm House and Farm House Valley (Standard Room),Karatu,01/11/26-15/12/26,0,0,0
+4,Ngorongoro Farm House and Farm House Valley (Standard Room),Karatu,01/04/26-31/05/26,0,0,0
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,"01/01/25-31/03/25,01/06/25-30/06/25,01/11/25-19/12/25",457,574,803.6
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,"01/07/25-30/10/25,20/12/25-31/12/25",830,640,896
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,01/04/25-31/05/25,299,376,526.4
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",0,0,0
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,"01/07/26-30/10/26,20/12/26-31/12/26",0,0,0
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,01/04/26-31/05/26,0,0,0
+5,Acacia Farm Lodge,Karatu,01/01/25-28/02/25,320,428,642
+5,Acacia Farm Lodge,Karatu,"01/06/25-31/10/25,20/12/25-31/12/25",335,448,672
+5,Acacia Farm Lodge,Karatu,"01/03/25-31/05/25,01/11/25-19/12/25",205,274,411
+5,Acacia Farm Lodge,Karatu,01/01/26-28/02/26,0,0,0
+5,Acacia Farm Lodge,Karatu,"01/06/26-31/10/26,20/12/26-31/12/26",0,0,0
+5,Acacia Farm Lodge,Karatu,"01/03/26-31/05/26,01/11/26-19/12/26",0,0,0
+5,The Retreat at Ngorongoro,Karatu,"01/01/25-28/02/25,01/06/25-30/06/25,01/09/25-31/10/25",265,408,590
+5,The Retreat at Ngorongoro,Karatu,"01/07/25-31/08/25,20/12/25-31/12/25",295,488,685
+5,The Retreat at Ngorongoro,Karatu,"01/03/25-31/05/25,01/11/25-19/12/25",163,265,396
+5,The Retreat at Ngorongoro,Karatu,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-31/10/26",0,0,0
+5,The Retreat at Ngorongoro,Karatu,"01/07/26-31/08/26,20/12/26-31/12/26",0,0,0
+5,The Retreat at Ngorongoro,Karatu,"01/03/26-31/05/26,01/11/26-19/12/26",0,0,0
+6,Neptune Ngorongoro Lodge (K),Karatu,01/01/25-31/03/25,631,844,1139.4
+6,Neptune Ngorongoro Lodge (K),Karatu,01/04/25-31/05/25,396,530,715.5
+6,Neptune Ngorongoro Lodge (K),Karatu,01/06/25-31/10/25,718,960,1296
+6,Neptune Ngorongoro Lodge (K),Karatu,01/11/25-19/12/25,424,568,766.8
+6,Neptune Ngorongoro Lodge (K),Karatu,20/12/25-30/12/25,843,1126,1520.1
+6,Neptune Ngorongoro Lodge (K),Karatu,01/01/26-31/03/26,0,0,0
+6,Neptune Ngorongoro Lodge (K),Karatu,01/04/26-31/05/26,0,0,0
+6,Neptune Ngorongoro Lodge (K),Karatu,01/06/26-31/10/26,0,0,0
+6,Neptune Ngorongoro Lodge (K),Karatu,01/11/26-19/12/26,0,0,0
+6,Neptune Ngorongoro Lodge (K),Karatu,20/12/26-30/12/26,0,0,0
+,,,,,,
+1,Primeland Hotel (HB),Moshi,"01/01/25-31/03/25,01/07/25-30/09/25,15/12/25-31/12/25",85,120,150
+1,Primeland Hotel (HB),Moshi,"01/04/25-30/06/25,01/10/25-14/12/25",75,110,140
+1,Primeland Hotel (HB),Moshi,"01/01/26-31/03/26,01/07/26-30/09/26,15/12/26-31/12/26",0,0,0
+1,Primeland Hotel (HB),Moshi,"01/04/26-30/06/26,01/10/26-14/12/26",0,0,0
+1,"Keys Hotel, Moshi (African Cottages) - HB",Moshi,01/01/25-31/12/25,85,115,150
+1,"Keys Hotel, Moshi (African Cottages) - HB",Moshi,01/01/26-31/12/26,0,0,0
+2,Chanya Lodge (HB),Moshi,"01/01/25-31/03/25,01/06/25-31/12/25",95,134,192
+2,Chanya Lodge (HB),Moshi,01/04/25-31/05/25,80,116,165
+2,Chanya Lodge (HB),Moshi,"01/01/26-31/03/26,01/06/26-31/12/26",0,0,0
+2,Chanya Lodge (HB),Moshi,01/04/26-31/05/26,0,0,0
+2,Honey Badger Lodge (HB),Moshi,"01/01/25-28/02/25,01/07/25-31/10/25,01/12/25-31/12/25",90,140,190
+2,Honey Badger Lodge (HB),Moshi,"01/03/25-30/06/25,01/11/25-30/11/25",80,120,160
+2,Honey Badger Lodge (HB),Moshi,"01/01/26-28/02/26,01/07/26-31/10/26,01/12/26-31/12/26",0,0,0
+2,Honey Badger Lodge (HB),Moshi,"01/03/26-30/06/26,01/11/26-30/11/26",0,0,0
+3,Weru Weru River Lodge (HB) (1),Moshi,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",115,150,175
+3,Weru Weru River Lodge (HB) (1),Moshi,"01/04/25-31/05/25,01/11/25-30/11/25",105,140,165
+3,Weru Weru River Lodge (HB) (1),Moshi,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+3,Weru Weru River Lodge (HB) (1),Moshi,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+3,Salinero Kilimanjaro Hotel (HB) (1),Moshi,"01/01/25-31/03/25,01/06/25-31/12/25",105,160,230
+3,Salinero Kilimanjaro Hotel (HB) (1),Moshi,01/04/25-31/05/25,75,125,150
+3,Salinero Kilimanjaro Hotel (HB) (1),Moshi,"01/01/26-31/03/26,01/06/26-31/12/26",0,0,0
+3,Salinero Kilimanjaro Hotel (HB) (1),Moshi,01/04/26-31/05/26,0,0,0
+4,Weru Weru River Lodge (HB) (2),Moshi,"01/01/25-31/03/25,01/06/25-31/10/25,01/12/25-31/12/25",115,150,175
+4,Weru Weru River Lodge (HB) (2),Moshi,"01/04/25-31/05/25,01/11/25-30/11/25",105,140,165
+4,Weru Weru River Lodge (HB) (2),Moshi,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",0,0,0
+4,Weru Weru River Lodge (HB) (2),Moshi,"01/04/26-31/05/26,01/11/26-30/11/26",0,0,0
+4,Salinero Kilimanjaro Hotel (HB) (2),Moshi,"01/01/25-31/03/25,01/06/25-31/12/25",105,160,230
+4,Salinero Kilimanjaro Hotel (HB) (2),Moshi,01/04/25-31/05/25,75,125,150
+4,Salinero Kilimanjaro Hotel (HB) (2),Moshi,"01/01/26-31/03/26,01/06/26-31/12/26",0,0,0
+4,Salinero Kilimanjaro Hotel (HB) (2),Moshi,01/04/26-31/05/26,0,0,0
+5,Pink Flamingo Boutique Hotel (Comfort) (HB) (1),Moshi,01/01/25-31/12/25,206,244,332
+5,Pink Flamingo Boutique Hotel (Comfort) (HB) (1),Moshi,01/01/26-31/12/26,0,0,0
+6,Pink Flamingo Boutique Hotel (Comfort) (HB) (2),Moshi,01/01/25-31/12/25,206,244,332
+6,Pink Flamingo Boutique Hotel (Comfort) (HB) (2),Moshi,01/01/26-31/12/26,0,0,0
+,,,,,,
+1,Tulia Boutique Hotel (Standard) - HB,Arusha,01/01/25-31/12/25,100,125,165
+1,Tulia Boutique Hotel (Standard) - HB,Arusha,01/01/26-31/12/26,0,0,0
+1,Venus Premier hotel (Standard Room) - HB,Arusha,01/01/25-31/12/25,95,125,220
+1,Venus Premier hotel (Standard Room) - HB,Arusha,01/01/26-31/12/26,0,0,0
+2,Kibo Palace Hotel Arusha (Executive Room) - HB,Arusha,01/06/25-31/12/25,195,245,320
+2,Kibo Palace Hotel Arusha (Executive Room) - HB,Arusha,01/01/25-31/05/25,165,215,290
+2,Kibo Palace Hotel Arusha (Executive Room) - HB,Arusha,01/06/26-31/12/26,0,0,0
+2,Kibo Palace Hotel Arusha (Executive Room) - HB,Arusha,01/01/26-31/05/26,0,0,0
+2,Olerai Lodge Arusha (HB),Arusha,"01/01/25-31/3/25,01/06/25-31/12/25",145,210,291
+2,Olerai Lodge Arusha (HB),Arusha,01/04/25-31/05/25,100,150,230
+2,Olerai Lodge Arusha (HB),Arusha,"01/01/26-31/3/26,01/06/26-31/12/26",0,0,0
+2,Olerai Lodge Arusha (HB),Arusha,01/04/26-31/05/26,0,0,0
+2,Arusha Planet Lodge (HB),Arusha,"01/01/25-28/02/25,01/06/25-31/10/25,16/12/25-31/12/25",137,188,276
+2,Arusha Planet Lodge (HB),Arusha,"01/03/25-31/12/25,01/11/25-15/12/25",119,164,232
+2,Arusha Planet Lodge (HB),Arusha,01/04/25-31/05/25,92,148,198
+2,Arusha Planet Lodge (HB),Arusha,"01/01/26-28/02/26,01/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+2,Arusha Planet Lodge (HB),Arusha,"01/03/26-31/12/26,01/11/26-15/12/26",0,0,0
+2,Arusha Planet Lodge (HB),Arusha,01/04/26-31/05/26,0,0,0
+3,Mount Meru Game Lodge (HB),Arusha,"01/01/25-14/03/25,15/06/25-31/10/25,16/12/25-31/12/25",180,280,360
+3,Mount Meru Game Lodge (HB),Arusha,"15/03/25-14/06/25,01/11/25-15/12/25",120,187,246
+3,Mount Meru Game Lodge (HB),Arusha,"01/01/26-14/03/26,15/06/26-31/10/26,16/12/26-31/12/26",0,0,0
+3,Mount Meru Game Lodge (HB),Arusha,"15/03/26-14/06/26,01/11/26-15/12/26",0,0,0
+3,Four Points by Sheraton (Traditional Queen) - HB,Arusha,"01/01/25-01/03/25,01/06/25-31/12/25",211,267,478
+3,Four Points by Sheraton (Traditional Queen) - HB,Arusha,01/04/25-31/05/25,181,237,418
+3,Four Points by Sheraton (Traditional Queen) - HB,Arusha,"01/01/26-01/03/26,01/06/26-31/12/26",0,0,0
+3,Four Points by Sheraton (Traditional Queen) - HB,Arusha,01/04/26-31/05/26,0,0,0
+4,Mount Meru Hotel (Standard Room) - HB,Arusha,"16/06/25-15/09/25,21/12/25-31/12/25",240,305,445
+4,Mount Meru Hotel (Standard Room) - HB,Arusha,"01/02/25-28/02/25,01/06/25-15/06/25,16/09/25-31/10/25",220,285,425
+4,Mount Meru Hotel (Standard Room) - HB,Arusha,"01/01/25-31/01/25,01/03/25-31/05/25,01/11/25-20/12/25",215,280,420
+4,Mount Meru Hotel (Standard Room) - HB,Arusha,"16/06/26-15/09/26,21/12/26-31/12/26",0,0,0
+4,Mount Meru Hotel (Standard Room) - HB,Arusha,"01/02/26-28/02/26,01/06/26-15/06/26,16/09/26-31/10/26",0,0,0
+4,Mount Meru Hotel (Standard Room) - HB,Arusha,"01/01/26-31/01/26,01/03/26-31/05/26,01/11/26-20/12/26",0,0,0
+4,River Trees Inn (Garden Rooms) - HB,Arusha,"16/06/25-31/08/25,19/12/25-31/12/25",270,380,522
+4,River Trees Inn (Garden Rooms) - HB,Arusha,"01/01/25-20/03/25,14/05/25-15/06/25,01/09/25-31/10/25",234,332,450
+4,River Trees Inn (Garden Rooms) - HB,Arusha,"21/03/25-13/05/25,01/11/25-18/12/25",160,232,318
+4,River Trees Inn (Garden Rooms) - HB,Arusha,"16/06/26-31/08/26,19/12/26-31/12/26",0,0,0
+4,River Trees Inn (Garden Rooms) - HB,Arusha,"01/01/26-20/03/26,14/05/26-15/06/26,01/09/26-31/10/26",0,0,0
+4,River Trees Inn (Garden Rooms) - HB,Arusha,"21/03/26-13/05/26,01/11/26-18/12/26",0,0,0
+5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,"01/01/25-28/02/25,01/09/25-31/10/25",293,401,694
+5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,"01/06/25-31/08/25,21/12/25-31/12/25",328,446,774
+5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,"01/03/25-31/03/25,01/11/25-20/12/25",273,376,649
+5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,01/4/25-31/05/25,248,346,594
+5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,"01/01/26-28/02/26,01/09/26-31/10/26",0,0,0
+5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,"01/06/26-31/08/26,21/12/26-31/12/26",0,0,0
+5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,"01/03/26-31/03/26,01/11/26-20/12/26",0,0,0
+5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,01/4/26-31/05/26,0,0,0
+6,Elewana Arusha Coffee Lodge (Plantation room) (HB),Arusha,"01/01/25-28/02/25,01/06/25-31/10/25,20/12/25-31/12/25",416,590,703
+6,Elewana Arusha Coffee Lodge (Plantation room) (HB),Arusha,"01/03/25-31/03/25,01/11/25-19/12/25",348,500,601
+6,Elewana Arusha Coffee Lodge (Plantation room) (HB),Arusha,01/04/25-31/05/25,287,418,509
+6,Elewana Arusha Coffee Lodge (Plantation room) (HB),Arusha,"01/01/26-28/02/26,01/06/26-31/10/26,20/12/26-31/12/26",0,0,0
+6,Elewana Arusha Coffee Lodge (Plantation room) (HB),Arusha,"01/03/26-31/03/26,01/11/26-19/12/26",0,0,0
+6,Elewana Arusha Coffee Lodge (Plantation room) (HB),Arusha,01/04/26-31/05/26,0,0,0
+,,,,,,
+1,Golden Tulip Zanzibar Resort (Superior City View) - BB,Zanzibar,"01/01/25-28/02/25,01/09/25-31/10/25",85,98,183
+1,Golden Tulip Zanzibar Resort (Superior City View) - BB,Zanzibar,"01/03/25-30/06/25,01/11/25-23/12/25",79,92,171
+1,Golden Tulip Zanzibar Resort (Superior City View) - BB,Zanzibar,01/07/25-31/08/25,102,115,217
+1,Golden Tulip Zanzibar Resort (Superior City View) - BB,Zanzibar,24/12/25-31/12/25,115,128,243
+1,Golden Tulip Zanzibar Resort (Superior City View) - BB,Zanzibar,"01/01/26-28/02/26,01/09/26-31/10/26",0,0,0
+1,Golden Tulip Zanzibar Resort (Superior City View) - BB,Zanzibar,"01/03/26-30/06/26,01/11/26-23/12/26",0,0,0
+1,Golden Tulip Zanzibar Resort (Superior City View) - BB,Zanzibar,01/07/26-31/08/26,0,0,0
+1,Golden Tulip Zanzibar Resort (Superior City View) - BB,Zanzibar,24/12/2-31/12/26,0,0,0
+1,Ndame Paje Hotel (Standard Room) - BB,Zanzibar,"01/01/25-28/02/25,01/07/25-31/08/25",110,130,240
+1,Ndame Paje Hotel (Standard Room) - BB,Zanzibar,"01/03/25-30/06/25,01/09/25-21/12/25",90,110,200
+1,Ndame Paje Hotel (Standard Room) - BB,Zanzibar,22/12/25-31/12/25,0,0,0
+1,Ndame Paje Hotel (Standard Room) - BB,Zanzibar,"01/01/26-28/02/26,01/07/26-31/08/26",0,0,0
+1,Ndame Paje Hotel (Standard Room) - BB,Zanzibar,"01/03/26-30/06/26,01/09/26-21/12/26",0,0,0
+1,Ndame Paje Hotel (Standard Room) - BB,Zanzibar,22/12/26-31/12/26,0,0,0
+1,Fun Beach Hotel (Back Pool Room) - BB,Zanzibar,"01/01/25-31/03/25,01/06/25-22/12/25",106.25,125,150
+1,Fun Beach Hotel (Back Pool Room) - BB,Zanzibar,01/04/25-31/05/25,80.75,95,120
+1,Fun Beach Hotel (Back Pool Room) - BB,Zanzibar,23/12/25-31/12/25,123.25,145,170
+1,Fun Beach Hotel (Back Pool Room) - BB,Zanzibar,01/01/26-06/01/26,123.25,145,170
+1,Fun Beach Hotel (Back Pool Room) - BB,Zanzibar,"07/01/26-31/03/26,01/06/26-22/12/26",0,0,0
+1,Fun Beach Hotel (Back Pool Room) - BB,Zanzibar,01/04/26-31/05/26,0,0,0
+1,Fun Beach Hotel (Back Pool Room) - BB,Zanzibar,23/12/26-31/12/26,0,0,0
+1,Blue Ocean Resort and Residence (Premium Room - Partial sea view) - BB,Zanzibar,"01/01/25-31/01/25,01/07/25-31/08/25,21/12/25-26/12/25",100,115,150
+1,Blue Ocean Resort and Residence (Premium Room - Partial sea view) - BB,Zanzibar,01/09/25-20/12/25,85,100,135
+1,Blue Ocean Resort and Residence (Premium Room - Partial sea view) - BB,Zanzibar,01/02/25-30/06/25,70,85,120
+1,Blue Ocean Resort and Residence (Premium Room - Partial sea view) - BB,Zanzibar,26/12/25-31/12/25,185,200,235
+1,Blue Ocean Resort and Residence (Premium Room - Partial sea view) - BB,Zanzibar,01/01/26-05/01/26,185,200,235
+1,Blue Ocean Resort and Residence (Premium Room - Partial sea view) - BB,Zanzibar,"06/01/26-31/01/26,01/07/26-31/08/26,21/12/26-26/12/26",0,0,0
+1,Blue Ocean Resort and Residence (Premium Room - Partial sea view) - BB,Zanzibar,01/09/26-20/12/26,0,0,0
+1,Blue Ocean Resort and Residence (Premium Room - Partial sea view) - BB,Zanzibar,01/02/26-30/06/26,0,0,0
+1,Blue Ocean Resort and Residence (Premium Room - Partial sea view) - BB,Zanzibar,26/12/26-31/12/26,0,0,0
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,"01/01/25-28/02/25,20/07/25-31/08/25",124,129,253
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,01/03/25-31/03/25,104,109,213
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,01/04/25-31/05/25,84,89,173
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,05/06/25-12/06/25,144,149,293
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,"01/06/25-04/06/25,13/06/25-30/06/25",94,99,193
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,"01/07/25-19/07/25,01/09/25-20/12/25",114,119,233
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,20/07/25-31/08/25,124,129,253
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,21/12/25-31/12/25,154,159,313
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,01/01/26-08/01/25,154,159,313
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,"09/01/26-28/02/26,20/07/26-31/08/26",124,129,253
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,01/03/26-31/03/26,104,109,213
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,01/04/26-31/05/26,84,89,173
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,05/06/26-12/06/26,144,149,293
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,"01/06/26-04/06/26,13/06/26-30/06/26",94,99,193
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,"01/07/26-19/07/26,01/09/26-18/12/26",124,129,253
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,20/07/26-31/08/26,134,139,273
+1,Aluna Paje Zanzibar (Double- Pool View) - BB,Zanzibar,19/12/26-31/12/26,174,179,353
+1,Zenobia Beach Resort (Standard Room Ocean View) - BB,Zanzibar,"01/01/25-28/02/25,01/07/25-31/08/25",115,125,240
+1,Zenobia Beach Resort (Standard Room Ocean View) - BB,Zanzibar,"01/03/25-31/03/25,01/06/25-30/06/25",90,100,190
+1,Zenobia Beach Resort (Standard Room Ocean View) - BB,Zanzibar,01/09/25-20/12/25,100,110,210
+1,Zenobia Beach Resort (Standard Room Ocean View) - BB,Zanzibar,21/12/25-31/12/25,0,0,0
+1,Zenobia Beach Resort (Standard Room Ocean View) - BB,Zanzibar,"01/01/26-28/02/26,01/07/26-31/08/26",0,0,0
+1,Zenobia Beach Resort (Standard Room Ocean View) - BB,Zanzibar,"01/03/26-31/03/26,01/06/26-30/06/26",0,0,0
+1,Zenobia Beach Resort (Standard Room Ocean View) - BB,Zanzibar,01/09/26-20/12/26,0,0,0
+1,Zenobia Beach Resort (Standard Room Ocean View) - BB,Zanzibar,21/12/26-31/12/26,0,0,0
+1,Sunny Palms Resort (1 Bedroom Villa) - BB,Zanzibar,"01/01/25-31/01/25,01/07/25-31/08/25,21/12/25-25/12/25",120,130,160
+1,Sunny Palms Resort (1 Bedroom Villa) - BB,Zanzibar,"01/02/25-30/06/25,01/09/25-20/12/25",80,90,120
+1,Sunny Palms Resort (1 Bedroom Villa) - BB,Zanzibar,26/12/25-31/12/25,260,270,305
+1,Sunny Palms Resort (1 Bedroom Villa) - BB,Zanzibar,01/01/26-07/01/26,260,270,305
+1,Sunny Palms Resort (1 Bedroom Villa) - BB,Zanzibar,"08/01/26-31/01/26,01/07/26-31/08/26,21/12/26-25/12/26",0,0,0
+1,Sunny Palms Resort (1 Bedroom Villa) - BB,Zanzibar,"01/02/26-30/06/26,01/09/26-20/12/26",0,0,0
+1,Sunny Palms Resort (1 Bedroom Villa) - BB,Zanzibar,26/12/26-31/12/26,0,0,0
+1,Zanzibar Magic Boutique Hotel (Sea View Suite) - BB,Zanzibar,"01/01/25-28/02/25,01/07/25-31/10/25",112,140,180
+1,Zanzibar Magic Boutique Hotel (Sea View Suite) - BB,Zanzibar,"01/03/25-31/03/25,01/06/25-30/06/25,01/11/25-24/12/25",95.2,119,159
+1,Zanzibar Magic Boutique Hotel (Sea View Suite) - BB,Zanzibar,01/04/25-31/05/25,72.8,91,131
+1,Zanzibar Magic Boutique Hotel (Sea View Suite) - BB,Zanzibar,25/12/25-31/12/25,218.4,273,313
+1,Zanzibar Magic Boutique Hotel (Sea View Suite) - BB,Zanzibar,01/01/26-07/01/26,218.4,273,313
+1,Zanzibar Magic Boutique Hotel (Sea View Suite) - BB,Zanzibar,"01/01/26-28/02/26,01/07/26-31/10/26",0,0,0
+1,Zanzibar Magic Boutique Hotel (Sea View Suite) - BB,Zanzibar,"01/03/26-31/03/26,01/06/26-30/06/26,01/11/26-24/12/26",0,0,0
+1,Zanzibar Magic Boutique Hotel (Sea View Suite) - BB,Zanzibar,01/04/26-31/05/26,0,0,0
+1,Zanzibar Magic Boutique Hotel (Sea View Suite) - BB,Zanzibar,25/12/26-31/12/26,0,0,0
+1,Kena Beach Hotel (Standard Room) - BB,Zanzibar,"01/01/25-31/03/25,01/07/25-31/10/25",100,160,220
+1,Kena Beach Hotel (Standard Room) - BB,Zanzibar,"01/04/25-30/06/25,01/11/25-20/12/25",80,120,160
+1,Kena Beach Hotel (Standard Room) - BB,Zanzibar,21/12/25-31/12/25,120,200,270
+1,Kena Beach Hotel (Standard Room) - BB,Zanzibar,01/01/26-05/01/26,120,200,270
+1,Kena Beach Hotel (Standard Room) - BB,Zanzibar,06/01/26-31/03/26,100,160,220
+1,Kena Beach Hotel (Standard Room) - BB,Zanzibar,01/04/26-30/06/26,80,120,160
+1,Kena Beach Hotel (Standard Room) - BB,Zanzibar,01/07/26-31/10/26,0,0,0
+1,Kena Beach Hotel (Standard Room) - BB,Zanzibar,01/11/26-20/12/26,0,0,0
+1,Kena Beach Hotel (Standard Room) - BB,Zanzibar,21/12/26-31/12/26,0,0,0
+2,Warere Beach Hotel (Ocean View Room) - BB,Zanzibar,"01/01/25-12/01/25,22/12/25-31/12/25",180,204,244
+2,Warere Beach Hotel (Ocean View Room) - BB,Zanzibar,"13/01/25-31/03/25,01/07/25-21/12/25",150,170,210
+2,Warere Beach Hotel (Ocean View Room) - BB,Zanzibar,01/04/25-30/06/25,113,128,168
+2,Warere Beach Hotel (Ocean View Room) - BB,Zanzibar,"01/01/26-12/01/26,22/12/26-31/12/26",0,0,0
+2,Warere Beach Hotel (Ocean View Room) - BB,Zanzibar,"13/01/26-31/03/26,01/07/26-21/12/26",0,0,0
+2,Warere Beach Hotel (Ocean View Room) - BB,Zanzibar,01/04/26-30/06/26,0,0,0
+2,F-Zeen Boutique Hotel Zanzibar (Garden View) - BB,Zanzibar,"01/01/25-31/03/25,27/06/25-27/07/25,01/10/25-31/10/25",135,154,207.9
+2,F-Zeen Boutique Hotel Zanzibar (Garden View) - BB,Zanzibar,01/04/25-15/05/25,91,104,140.4
+2,F-Zeen Boutique Hotel Zanzibar (Garden View) - BB,Zanzibar,16/05/25-26/06/25,122.5,140,189
+2,F-Zeen Boutique Hotel Zanzibar (Garden View) - BB,Zanzibar,28/7/25-30/09/25,168,192,259.2
+2,F-Zeen Boutique Hotel Zanzibar (Garden View) - BB,Zanzibar,"01/01/26-31/03/26,27/06/26-27/07/26,01/10/26-31/10/26",0,0,0
+2,F-Zeen Boutique Hotel Zanzibar (Garden View) - BB,Zanzibar,01/04/26-15/05/26,0,0,0
+2,F-Zeen Boutique Hotel Zanzibar (Garden View) - BB,Zanzibar,16/05/26-26/06/26,0,0,0
+2,F-Zeen Boutique Hotel Zanzibar (Garden View) - BB,Zanzibar,28/7/26-30/09/26,0,0,0
+2,Zanzibar Queen Hotel (Standard Room) - BB,Zanzibar,"01/01/25-28/02/25,01/07/25-31/10/25",142.5,190,260
+2,Zanzibar Queen Hotel (Standard Room) - BB,Zanzibar,"01/03/25-31/03/25,01/11/25-22/12/25",120,160,215
+2,Zanzibar Queen Hotel (Standard Room) - BB,Zanzibar,01/04/25-30/06/25,86.25,115,160
+2,Zanzibar Queen Hotel (Standard Room) - BB,Zanzibar,23/12/25-31/12/25,225,300,385
+2,Zanzibar Queen Hotel (Standard Room) - BB,Zanzibar,01/01/26-06/01/26,225,300,385
+2,Zanzibar Queen Hotel (Standard Room) - BB,Zanzibar,"07/01/26-28/02/26,01/07/26-31/10/26",157.5,210,280
+2,Zanzibar Queen Hotel (Standard Room) - BB,Zanzibar,"01/03/26-31/03/26,01/11/26-22/12/26",131.25,175,230
+2,Zanzibar Queen Hotel (Standard Room) - BB,Zanzibar,01/04/26-30/06/26,97.5,130,175
+2,Zanzibar Queen Hotel (Standard Room) - BB,Zanzibar,23/12/26-31/12/26,240,320,405
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,01/01/25-16/03/25,147,210,290
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,17/03/25-31/05/25,112,160,240
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,"01/06/25-30/06/25,01/11/25-18/12/25",119,170,250
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,"01/07/25-31/07/25,18/08/25-31/10/25",140,200,280
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,01/08/25-17/08/25,154,220,300
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,19/12/25-31/12/25,0,0,0
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,01/01/26-16/03/26,0,0,0
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,17/03/26-31/05/26,0,0,0
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,"01/06/26-30/06/26,01/11/26-18/12/26",0,0,0
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,"01/07/6-31/07/26,18/08/26-31/10/26",0,0,0
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,01/08/26-17/08/26,0,0,0
+2,The Sands Beach Resort Zanzibar (Standard Bungalow) - HB,Zanzibar,19/12/26-31/12/26,0,0,0
+2,Zanbluu Beach Hotel (Garden Deluxe) - HB,Zanzibar,"01/01/25-31/03/25,01/09/25-20/12/25",134.4,192,249.6
+2,Zanbluu Beach Hotel (Garden Deluxe) - HB,Zanzibar,01/04/25-10/07/25,123.2,176,228.8
+2,Zanbluu Beach Hotel (Garden Deluxe) - HB,Zanzibar,11/07/25-31/08/25,155.4,222,288.6
+2,Zanbluu Beach Hotel (Garden Deluxe) - HB,Zanzibar,21/12/25-31/12/25,187.6,268,348.4
+2,Zanbluu Beach Hotel (Garden Deluxe) - HB,Zanzibar,01/01/26-07/01/26,187.6,268,348.4
+2,Zanbluu Beach Hotel (Garden Deluxe) - HB,Zanzibar,"08/01/25-31/03/25,01/09/25-20/12/25",0,0,0
+2,Zanbluu Beach Hotel (Garden Deluxe) - HB,Zanzibar,01/04/25-10/07/25,0,0,0
+2,Zanbluu Beach Hotel (Garden Deluxe) - HB,Zanzibar,11/07/25-31/08/25,0,0,0
+2,Zanbluu Beach Hotel (Garden Deluxe) - HB,Zanzibar,21/12/25-31/12/25,0,0,0
+3,The Z hotel Zanzibar (Garden View Rooms) - BB,Zanzibar,"01/01/25-31/03/25,01/07/25-31/10/25",220,260,295
+3,The Z hotel Zanzibar (Garden View Rooms) - BB,Zanzibar,"01/04/25-21/04/25,01/06/25-30/06/25,01/11/25-22/12/25",205,245,280
+3,The Z hotel Zanzibar (Garden View Rooms) - BB,Zanzibar,23/12/25-31/12/25,270,310,345
+3,The Z hotel Zanzibar (Garden View Rooms) - BB,Zanzibar,"01/01/26-31/03/26,01/07/26-31/10/26",0,0,0
+3,The Z hotel Zanzibar (Garden View Rooms) - BB,Zanzibar,"01/04/26-21/04/26,01/06/26-30/06/26,01/11/26-22/12/26",0,0,0
+3,The Z hotel Zanzibar (Garden View Rooms) - BB,Zanzibar,23/12/26-31/12/26,0,0,0
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,01/01/25-31/03/25,180,225,405
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,01/04/25-31/05/25,145,200,345
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,01/06/25-31/08/25,210,265,475
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,01/09/25-19/12/25,190,240,430
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,20/12/25-31/12/25,335,360,695
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,01/01/26-10/01/26,335,360,695
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,11/01/26-31/03/26,190,240,430
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,01/04/26-31/05/26,0,0,0
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,01/06/26-31/08/26,0,0,0
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,01/09/26-19/12/26,0,0,0
+3,Nungwi Dreams by Mantis (Standard Room) - BB,Zanzibar,20/12/26-31/12/26,0,0,0
+3,Zanzibar Serena Hotel - BB,Zanzibar,"01/01/25-31/01/25,01/03/25-31/03/25,01/11/25-22/12/25",227.25,303,454.5
+3,Zanzibar Serena Hotel - BB,Zanzibar,"01/02/25-28/02/25,01/06/25-31/10/25",273,364,546
+3,Zanzibar Serena Hotel - BB,Zanzibar,01/04/25-31/05/25,204.75,273,409.5
+3,Zanzibar Serena Hotel - BB,Zanzibar,23/12/25-31/12/25,325.5,434,651
+3,Zanzibar Serena Hotel - BB,Zanzibar,"01/01/26-31/01/26,01/03/26-31/03/26,01/11/26-22/12/26",0,0,0
+3,Zanzibar Serena Hotel - BB,Zanzibar,"01/02/26-28/02/26,01/06/26-31/10/26",0,0,0
+3,Zanzibar Serena Hotel - BB,Zanzibar,01/04/26-31/05/26,0,0,0
+3,Zanzibar Serena Hotel - BB,Zanzibar,23/12/26-31/12/26,0,0,0
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/01/25-28/02/25,263.5,310,418.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/03/25-31/03/25,195.5,230,310.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/04/25-30/06/25,170,200,270
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/07/25-31/07/25,229.5,270,364.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/08/25-31/08/25,263.5,310,418.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/09/25-30/09/25,221,260,351
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/10/25-31/10/25,238,280,378
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/11/25-21/12/25,212.5,250,337.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,22/12/25-31/12/25,357,420,567
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/01/26-05/01/26,357,420,567
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,06/01/26-28/02/26,263.5,310,418.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/03/26-31/03/26,195.5,230,310.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/04/26-31/05/26,144.5,170,229.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/06/26-30/06/26,170,200,270
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/07/26-31/07/26,229.5,270,364.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/08/26-31/08/26,272,320,432
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/09/26-30/09/26,229.5,270,364.5
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/10/26-31/10/26,238,280,378
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,01/11/26-21/12/26,221,260,351
+3,Nungwi Beach Resort by Turaco (Garden View) - HB,Zanzibar,22/12/26-31/12/26,365.5,430,580.5
+3,Lux Marijani Zanzibar (Deluxe Room) - BB,Zanzibar,"01/01/25-21/03/25,05/07/25-31/08/25,11/12/25-22/12/25",343,366,549
+3,Lux Marijani Zanzibar (Deluxe Room) - BB,Zanzibar,22/03/25-31/05/25,168,190,285
+3,Lux Marijani Zanzibar (Deluxe Room) - BB,Zanzibar,"01/06/25-04/07/25,01/09/25-10/12/25",229,252,378
+3,Lux Marijani Zanzibar (Deluxe Room) - BB,Zanzibar,23/12/25-31/12/25,537,560,840
+3,Lux Marijani Zanzibar (Deluxe Room) - BB,Zanzibar,"01/01/26-21/03/26,05/07/26-31/08/26,11/12/26-22/12/26",0,0,0
+3,Lux Marijani Zanzibar (Deluxe Room) - BB,Zanzibar,22/03/26-31/05/26,0,0,0
+3,Lux Marijani Zanzibar (Deluxe Room) - BB,Zanzibar,01/06/26-04/07/26,0,0,0
+3,Lux Marijani Zanzibar (Deluxe Room) - BB,Zanzibar,01/09/26-10/12/26,0,0,0
+3,Lux Marijani Zanzibar (Deluxe Room) - BB,Zanzibar,23/12/26-31/12/26,0,0,0
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,01/01/25-17/02/25,293,410,560
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,18/02/25-08/04/25,267,376,526
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,"09/04/25-31/05/25,01/10/25-31/10/25",199,285,435
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,"01/06/25-30/06/25,01/09/25-30/09/25",232,329,479
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,01/07/25-31/08/25,300,420,570
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,01/11/25-20/12/25,293,329,479
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,21/12/25-31/12/25,429,592,742
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,01/01/26-05/01/26,429,592,742
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,06/01/26-17/02/26,293,410,560
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,18/02/26-08/04/26,267,376,526
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,"09/04/26-31/05/26,01/10/26-31/10/26",199,285,435
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,"01/06/26-30/06/26,01/09/26-30/09/26",232,329,479
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,01/07/26-31/08/26,300,420,570
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,01/11/26-20/12/26,293,329,479
+4,Tui Blue Bahari Zanzibar (Deluxe Room Garden View) - AI,Zanzibar,21/12/26-31/12/26,0,0,0
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/01/25-28/02/25,330,440,594
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/03/25-31/03/25,261,350,472.5
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/04/25-30/06/25,178,296,399.6
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/07/25-31/08/25,305,406,20382.7
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/09/25-31/10/25,252,336,453.6
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/11/25-20/12/25,0,0,0
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,21/12/25-31/12/25,0,0,0
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/01/26-28/02/26,0,0,0
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/03/26-31/03/26,0,0,0
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/04/26-30/06/26,0,0,0
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/07/26-31/08/26,0,0,0
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/09/26-31/10/26,0,0,0
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,01/11/26-20/12/26,0,0,0
+4,Neptune Pwani Beach Hotel (Deluxe Garden View) - AI,Zanzibar,21/12/26-31/12/26,0,0,0
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,01/01/25-17/02/25,318,454,604
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,18/02/25-08/04/25,276,394,544
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,09/04/25-31/05/25,244,349,499
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,"01/06/25-30/06/25,01/11/25-20/12/25",256,366,516
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,01/07/25-31/08/25,348,497,647
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,01/09/25-30/09/25,285,407,557
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,01/10/25-31/10/25,302,432,582
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,21/12/25-31/12/25,565,807,957
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,01/01/26-05/01/26,565,807,957
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,06/01/26-17/02/26,318,454,604
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,18/02/26-08/04/26,276,394,544
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,09/04/26-31/05/26,244,349,499
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,"01/06/26-30/06/26,01/11/26-20/12/26",256,366,516
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,01/07/26-31/08/26,348,497,647
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,01/09/26-30/09/26,285,407,557
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,01/10/26-31/10/26,302,432,582
+5,The Mora Zanzibar (Superior Junior Suite Garden View) - AI,Zanzibar,21/12/26-31/12/26,0,0,0
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,"01/01/25-31/03/25,01/07/25-31/08/25",368,490,661.5
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,01/04/25-31/05/25,203,270,364.5
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,01/06/25-30/06/25,255,340,459
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,01/09/25-31/10/25,270,360,486
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,01/11/25-23/12/25,297,396,534.6
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,24/12/25-31/12/25,710,946,1277.1
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,01/01/26-05/01/26,710,946,1277.1
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,"06/01/26-31/03/26,01/07/26-31/08/26",405,540,729
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,01/04/26-31/05/26,224,298,402.3
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,01/06/26-30/06/26,281,374,504.9
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,01/09/26-31/10/26,297,396,534.6
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,01/11/26-23/12/26,0,0,0
+5,The Royal Zanzibar Beach Resort (Superior Room) - AI,Zanzibar,24/12/26-31/12/26,0,0,0
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,"01/01/25-28/02/25,01/09/25-31/10/25",320,440,760
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,01/03/25-31/03/25,297,410,707
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,01/04/25-30/06/25,273,375,648
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,01/07/25-31/08/25,374,515,889
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,01/11/25-21/12/25,315,435,750
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,22/12/25-31/12/25,464,640,1104
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,01/01/26-06/01/26,464,640,1104
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,"07/01/25-28/02/25,01/09/25-31/10/25",323,445,768
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,01/03/26-31/03/26,297,410,707
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,01/04/26-30/06/26,272,375,647
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,01/07/26-31/08/26,377,520,897
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,01/11/26-21/12/26,315,435,750
+5,Melia Zanzibar (Melia Garden) - AI,Zanzibar,22/12/26-31/12/26,0,0,0
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,"01/01/25-02/03/25,01/08/25-31/08/25",470,550,670
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,03/03/25-06/04/25,330,410,510
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,07/04/25-30/06/25,270,350,430
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,"01/07/25-31/07/25,01/09/25-25/12/25",370,450,570
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,26/12/25-31/12/25,870,870,1070
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,01/01/26-07/01/26,870,870,1070
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,"08/01/26-07/04/26,01/08/26-31/08/26",480,580,700
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,08/04/26-31/05/26,270,370,450
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,"01/06/26-31/07/26,01/09/26-23/12/26",380,480,600
+5,Gold Beach House (Deluxe Garden) - HB,Zanzibar,24/12/26-31/12/26,0,0,0
+5,Breezes Beach Club and Spa (Deluxe) - HB,Zanzibar,"01/01/25-15/03/25,16/06/25-30/06/25,01/09/25-31/10/25",296,472,660.8
+5,Breezes Beach Club and Spa (Deluxe) - HB,Zanzibar,"16/03/25-15/06/25,01/11/25-22/12/25",196,272,380.8
+5,Breezes Beach Club and Spa (Deluxe) - HB,Zanzibar,01/07/25-31/08/25,324,528,739.2
+5,Breezes Beach Club and Spa (Deluxe) - HB,Zanzibar,23/12/25-31/12/25,397,672,940.8
+5,Breezes Beach Club and Spa (Deluxe) - HB,Zanzibar,"01/01/26-15/03/26,16/06/26-30/06/26,01/09/26-31/10/26",0,0,0
+5,Breezes Beach Club and Spa (Deluxe) - HB,Zanzibar,"16/03/26-15/06/26,01/11/26-22/12/26",0,0,0
+5,Breezes Beach Club and Spa (Deluxe) - HB,Zanzibar,01/07/26-31/08/26,0,0,0
+5,Breezes Beach Club and Spa (Deluxe) - HB,Zanzibar,23/12/26-31/12/26,0,0,0
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,"01/01/25-15/03/25,01/09/25-31/10/25",373,464,714
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,01/06/25-30/06/25,331,413,663
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,01/07/25-31/08/25,487,609,859
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,"16/03/25-31/05/25,01/11/25-23/12/25",319,389,639
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,24/12/25-31/12/25,740,924,1174
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,"01/01/26-15/03/26,01/09/26-31/10/26",0,0,0
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,01/06/26-30/06/26,0,0,0
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,01/07/26-31/08/26,0,0,0
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,"16/03/26-31/05/26,01/11/26-23/12/26",0,0,0
+5,The Residence (Luxury Garden Pool Villa) - HB,Zanzibar,24/12/26-31/12/26,0,0,0
+6,Zuri Zanzibar Unique Beach Resort (Bungalow) - HB,Zanzibar,"01/01/25-31/03/25,01/06/25-30/11/25",841.5,935,1776.5
+6,Zuri Zanzibar Unique Beach Resort (Bungalow) - HB,Zanzibar,"01/04/25-31/05/25,01/12/25-22/12/25",589.5,655,1244.5
+6,Zuri Zanzibar Unique Beach Resort (Bungalow) - HB,Zanzibar,23/12/25-31/12/25,994.5,1105,2099.5
+6,Zuri Zanzibar Unique Beach Resort (Bungalow) - HB,Zanzibar,01/01/26-09/01/26,994.5,1105,2099.5
+6,Zuri Zanzibar Unique Beach Resort (Bungalow) - HB,Zanzibar,"10/01/26-31/03/26,01/06/26-30/11/26",887.4,986,1873.4
+6,Zuri Zanzibar Unique Beach Resort (Bungalow) - HB,Zanzibar,"01/04/26-31/05/26,01/12/26-22/12/26",604.8,672,1276.8
+6,Zuri Zanzibar Unique Beach Resort (Bungalow) - HB,Zanzibar,23/12/26-31/12/26,1025.1,1139,2164.1
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/01/25-28/02/25,768.8,961,1345.4
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/03/25-15/03/25,648.8,811,1135.4
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,16/03/25-31/03/25,524,655,917
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/04/25-30/04/25,393.6,492,688.8
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/06/25-20/06/25,472,590,826
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,21/06/25-15/07/25,566.4,708,991.2
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,16/07/25-31/07/25,750.4,938,1313.2
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/08/25-31/08/25,828,1035,1449
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/09/25-30/09/25,556,695,973
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/10/25-31/10/25,660.8,826,1156.4
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/11/25-20/12/25,491.2,614,859.6
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,21/12/25-25/12/25,810.4,1013,1418.2
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,26/12/25-31/12/25,1393.6,1742,2438.8
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/01/26-28/02/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/03/26-15/03/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,16/03/26-31/03/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/04/26-30/04/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/06/26-20/06/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,21/06/26-15/07/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,16/07/26-31/07/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/08/26-31/08/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/09/26-30/09/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/10/26-31/10/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,01/11/26-20/12/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,21/12/26-25/12/26,0,0,0
+6,Tulia Hotel Zanzibar (Deluxe Garden Bungalow) - BB,Zanzibar,26/12/26-31/12/26,0,0,0
+6,Kilindi Zanzibar (Garden View) - AI,Zanzibar,"01/01/25-28/02/25,01/07/25-31/08/25",801,1074,1875
+6,Kilindi Zanzibar (Garden View) - AI,Zanzibar,"01/03/25-30/04/25,01/06/25-30/06/25,01/09/25-21/12/25",681,914,1595
+6,Kilindi Zanzibar (Garden View) - AI,Zanzibar,22/12/25-31/12/25,1034,1384,2418
+6,Kilindi Zanzibar (Garden View) - AI,Zanzibar,"01/01/26-28/02/26,01/07/26-31/08/26",0,0,0
+6,Kilindi Zanzibar (Garden View) - AI,Zanzibar,"01/03/26-30/04/26,01/06/26-30/06/26,01/09/26-21/12/26",0,0,0
+6,Kilindi Zanzibar (Garden View) - AI,Zanzibar,22/12/26-31/12/26,0,0,0
+6,Baraza Resort and Spa (Garden Bedroom Villa) - AI,Zanzibar,"01/01/25-15/03/25,16/06/25-30/06/25,01/09/25-31/10/25",902.4,1128,1562
+6,Baraza Resort and Spa (Garden Bedroom Villa) - AI,Zanzibar,"16/03/25-15/06/25,01/11/25-22/12/25",710.4,888,1202
+6,Baraza Resort and Spa (Garden Bedroom Villa) - AI,Zanzibar,01/07/25-31/08/25,1013.6,1267,1742
+6,Baraza Resort and Spa (Garden Bedroom Villa) - AI,Zanzibar,23/12/25-31/12/25,1184,1480,2099
+6,Baraza Resort and Spa (Garden Bedroom Villa) - AI,Zanzibar,"01/01/26-15/03/26,16/06/26-30/06/26,01/09/26-31/10/26",0,0,0
+6,Baraza Resort and Spa (Garden Bedroom Villa) - AI,Zanzibar,"16/03/26-15/06/26,01/11/26-22/12/26",0,0,0
+6,Baraza Resort and Spa (Garden Bedroom Villa) - AI,Zanzibar,01/07/26-31/08/26,0,0,0
+6,Baraza Resort and Spa (Garden Bedroom Villa) - AI,Zanzibar,23/12/26-31/12/26,0,0,0
+6,Zawadi Hotel Zanzibar - AI,Zanzibar,"01/01/25-15/03/25,16/06/25-30/06/25,01/09/25-31/10/25",908,1135,1553
+6,Zawadi Hotel Zanzibar - AI,Zanzibar,"16/03/25-15/06/25,01/11/25-22/12/25",623.2,779,1067
+6,Zawadi Hotel Zanzibar - AI,Zanzibar,01/07/25-31/08/25,980,1225,1683
+6,Zawadi Hotel Zanzibar - AI,Zanzibar,23/12/25-31/12/25,1146.4,1433,1965
+6,Zawadi Hotel Zanzibar - AI,Zanzibar,"01/01/26-15/03/26,16/06/26-30/06/26,01/09/26-31/10/26",0,0,0
+6,Zawadi Hotel Zanzibar - AI,Zanzibar,"16/03/26-15/06/26,01/11/26-22/12/26",0,0,0
+6,Zawadi Hotel Zanzibar - AI,Zanzibar,01/07/26-31/08/26,0,0,0
+6,Zawadi Hotel Zanzibar - AI,Zanzibar,23/12/26-31/12/26,0,0,0
+6,The Palms Zanzibar - AI,Zanzibar,"01/01/25-15/03/25,16/06/25-30/06/25,01/09/25-31/10/25",819.2,1024,1436
+6,The Palms Zanzibar - AI,Zanzibar,"16/03/25-15/06/25,01/11/25-22/12/25",581.6,727,1017
+6,The Palms Zanzibar - AI,Zanzibar,01/07/25-31/08/25,886.4,1108,1553
+6,The Palms Zanzibar - AI,Zanzibar,23/12/25-31/12/25,1092,1365,1914
+6,The Palms Zanzibar - AI,Zanzibar,"01/01/26-15/03/26,16/06/26-30/06/26,01/09/26-31/10/26",0,0,0
+6,The Palms Zanzibar - AI,Zanzibar,"16/03/26-15/06/26,01/11/26-22/12/26",0,0,0
+6,The Palms Zanzibar - AI,Zanzibar,01/07/26-31/08/26,0,0,0
+6,The Palms Zanzibar - AI,Zanzibar,23/12/26-31/12/26,0,0,0
