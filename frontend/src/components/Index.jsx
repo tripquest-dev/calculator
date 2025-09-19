@@ -93,7 +93,7 @@ export default function SafariPricingTool() {
         `Fetching all hotels for location: ${location}, date: ${formattedDate}`
       );
       const response = await axios.post(
-        "http://localhost:5003/api/hotels/all",
+        "https://calculator-gaql.onrender.com/api/hotels/all",
         {
           groupSizeInfo: {
             adults: { count: adults },
@@ -275,7 +275,7 @@ export default function SafariPricingTool() {
         `Fetching hotel for Day ${day.day}: /api/hotels/hotel-price?date=${formattedDate}&location=${location}`
       );
       const res = await axios.post(
-        "http://localhost:5003/api/hotels/hotel-price",
+        "https://calculator-gaql.onrender.com/api/hotels/hotel-price",
         {
           groupSizeInfo: {
             adults: { count: adults },
@@ -307,7 +307,7 @@ export default function SafariPricingTool() {
       if (err.response?.status === 400) {
         try {
           const res = await axios.post(
-            "http://localhost:5003/api/hotels/hotel-price",
+            "https://calculator-gaql.onrender.com/api/hotels/hotel-price",
             {
               groupSizeInfo: {
                 adults: { count: adults },
@@ -424,9 +424,12 @@ export default function SafariPricingTool() {
       const kidsAges = Array(kids).fill(5);
       const feeResponses = await Promise.all(
         formData.itinerary.map(({ from, to }) =>
-          axios.get("http://localhost:5003/api/park/calculate-fee", {
-            params: { from, to, adults, kids },
-          })
+          axios.get(
+            "https://calculator-gaql.onrender.com/api/park/calculate-fee",
+            {
+              params: { from, to, adults, kids },
+            }
+          )
         )
       );
       const feeTotal = feeResponses.reduce((sum, res) => sum + res.data.fee, 0);
