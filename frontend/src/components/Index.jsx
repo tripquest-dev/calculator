@@ -422,7 +422,7 @@ export default function SafariPricingTool() {
   const handleCalculate = async () => {
     try {
       const kidsAges = Array(kids).fill(5);
-      console.log("Calculating fees with:", { adults, kids, kidsAges }); // Log inputs
+      console.log("Calculating fees with:", { adults, kids, kidsAges });
 
       const feeResponses = await Promise.all(
         formData.itinerary.map(({ from, to }) =>
@@ -434,16 +434,19 @@ export default function SafariPricingTool() {
               }
             )
             .then((res) => {
-              console.log(`API response for ${from} to ${to}:`, res.data); // Log response
+              console.log(`API response for ${from} to ${to}:`, res.data);
               return res;
+            })
+            .catch((error) => {
+              console.error(
+                `API request failed for ${from} to ${to}:`,
+                error.response?.data || error.message
+              );
+              throw error;
             })
         )
       );
 
-      console.log(
-        "All fee responses:",
-        feeResponses.map((res) => res.data)
-      ); // Log all responses
       const processedFees = feeResponses.map((res, index) => {
         const { from, to } = formData.itinerary[index];
         if (res.data.fee === undefined || isNaN(res.data.fee)) {
@@ -459,7 +462,7 @@ export default function SafariPricingTool() {
               adults: parseInt(adults) || 0,
               kids: parseInt(kids) || 0,
               ...serviceCodes.reduce((map, code) => {
-                map[code] = 0; // Default fallback; update with config if needed
+                map[code] = feeConfig[code] || 0;
                 return map;
               }, {}),
             };
@@ -475,7 +478,7 @@ export default function SafariPricingTool() {
               .replace(/\badults\b/g, vars.adults)
               .replace(/\bkids\b/g, vars.kids);
 
-            console.log("Evaluated formula:", formula);
+            console.log("Evaluated formula with fallback:", formula);
             let fee;
             try {
               fee = eval(formula);
@@ -526,12 +529,18 @@ export default function SafariPricingTool() {
             allHotels
               .filter((hotel) =>
                 formData.itinerary.some((day) =>
-                  dayHotelInfo[day.day]?.includes(hotel)
+                  dayHotelInfo[day.day]?.some(
+                    (h) =>
+                      h.hotel === hotel.hotel &&
+                      h.hotelClass === hotel.hotelClass
+                  )
                 )
               )
               .map((hotel) => hotel.hotelClass)
+              .slice(0, 6) // Ensure exactly 6 classes
           ),
         ];
+        console.log("Unique Classes:", uniqueClasses); // Debug log
         classPrices = uniqueClasses.map((hotelClass) => {
           const hotelTotal = formData.itinerary.reduce((sum, day, index) => {
             if (index === formData.itinerary.length - 1) return sum;
@@ -541,17 +550,21 @@ export default function SafariPricingTool() {
             );
             return sum + (classHotel ? classHotel.totalPrice : 0);
           }, 0);
-          const hotelsByDay = formData.itinerary.reduce((acc, day, index) => {
-            if (index === formData.itinerary.length - 1) return acc;
-            const hotelsForDay = dayHotelInfo[day.day] || [];
-            const classHotel = hotelsForDay.find(
-              (h) => h.hotelClass === hotelClass
-            );
-            if (classHotel && day.hotelLocation !== "No accommodation needed") {
-              acc[day.day] = classHotel.hotel;
-            }
-            return acc;
-          }, {});
+          const hotelsByDay = formData.itinerary
+            .filter((_, index) => index < formData.itinerary.length - 1)
+            .reduce((acc, day, index) => {
+              const hotelsForDay = dayHotelInfo[day.day] || [];
+              const classHotel = hotelsForDay.find(
+                (h) => h.hotelClass === hotelClass
+              );
+              if (
+                classHotel &&
+                day.hotelLocation !== "No accommodation needed"
+              ) {
+                acc[day.day] = classHotel.hotel;
+              }
+              return acc;
+            }, {});
           return {
             hotelClass,
             hotelTotal,
