@@ -422,28 +422,83 @@ export default function SafariPricingTool() {
   const handleCalculate = async () => {
     try {
       const kidsAges = Array(kids).fill(5);
+      console.log("Calculating fees with:", { adults, kids, kidsAges }); // Log inputs
+
       const feeResponses = await Promise.all(
         formData.itinerary.map(({ from, to }) =>
-          axios.get(
-            "https://calculator-gaql.onrender.com/api/park/calculate-fee",
-            {
-              params: { from, to, adults, kids },
-            }
-          )
+          axios
+            .get(
+              "https://calculator-gaql.onrender.com/api/park/calculate-fee",
+              {
+                params: { from, to, adults, kids },
+              }
+            )
+            .then((res) => {
+              console.log(`API response for ${from} to ${to}:`, res.data); // Log response
+              return res;
+            })
         )
       );
-      const feeTotal = feeResponses.reduce((sum, res) => sum + res.data.fee, 0);
+
+      console.log(
+        "All fee responses:",
+        feeResponses.map((res) => res.data)
+      ); // Log all responses
+      const processedFees = feeResponses.map((res, index) => {
+        const { from, to } = formData.itinerary[index];
+        if (res.data.fee === undefined || isNaN(res.data.fee)) {
+          console.warn(`Invalid fee for ${from} to ${to}:`, res.data);
+          const formulaData = feeFormulaMap[from]?.[to];
+          if (formulaData) {
+            const serviceCodes = (
+              formulaData.formula.match(/[A-Z][A-Z0-9]*/g) || []
+            ).filter((code) => !/^\d+$/.test(code));
+            console.log("Extracted service codes:", serviceCodes);
+
+            const vars = {
+              adults: parseInt(adults) || 0,
+              kids: parseInt(kids) || 0,
+              ...serviceCodes.reduce((map, code) => {
+                map[code] = 0; // Default fallback; update with config if needed
+                return map;
+              }, {}),
+            };
+
+            let formula = formulaData.formula;
+            serviceCodes.forEach((code) => {
+              formula = formula.replace(
+                new RegExp(`\\b${code}\\b`, "g"),
+                vars[code] || 0
+              );
+            });
+            formula = formula
+              .replace(/\badults\b/g, vars.adults)
+              .replace(/\bkids\b/g, vars.kids);
+
+            console.log("Evaluated formula:", formula);
+            let fee;
+            try {
+              fee = eval(formula);
+            } catch (evalError) {
+              console.error(`Eval error for ${from} to ${to}:`, evalError);
+              fee = 0;
+            }
+            return { ...res.data, fee: isNaN(fee) ? 0 : fee };
+          }
+          return { ...res.data, fee: 0 };
+        }
+        return res.data;
+      });
+
+      const feeTotal = processedFees.reduce((sum, res) => sum + res.fee, 0);
 
       let classPrices = [];
-
       if (manualHotelSearch) {
-        // Manual mode: Single card with selected hotels
         const hotelTotal = formData.itinerary.reduce((sum, day, index) => {
           if (index === formData.itinerary.length - 1) return sum;
           const selectedHotel = selectedHotels[index];
           return sum + (selectedHotel ? selectedHotel.totalPrice : 0);
         }, 0);
-
         const hotelsByDay = formData.itinerary.reduce((acc, day, index) => {
           if (index === formData.itinerary.length - 1) return acc;
           const selectedHotel = selectedHotels[index];
@@ -455,23 +510,28 @@ export default function SafariPricingTool() {
           }
           return acc;
         }, {});
-
         classPrices = [
           {
             hotelClass: "Selected Hotels",
             hotelTotal,
-            total: (feeTotal + hotelTotal) / 0.88, // Individual adjustment
+            total: (feeTotal + hotelTotal) / 0.88,
             feeTotal,
             hotelsByDay,
           },
         ];
       } else {
-        // Non-manual mode: Class-based cards
         const allHotels = Object.values(dayHotelInfo).flat();
         const uniqueClasses = [
-          ...new Set(allHotels.map((hotel) => hotel.hotelClass)),
+          ...new Set(
+            allHotels
+              .filter((hotel) =>
+                formData.itinerary.some((day) =>
+                  dayHotelInfo[day.day]?.includes(hotel)
+                )
+              )
+              .map((hotel) => hotel.hotelClass)
+          ),
         ];
-
         classPrices = uniqueClasses.map((hotelClass) => {
           const hotelTotal = formData.itinerary.reduce((sum, day, index) => {
             if (index === formData.itinerary.length - 1) return sum;
@@ -495,36 +555,35 @@ export default function SafariPricingTool() {
           return {
             hotelClass,
             hotelTotal,
-            total: (feeTotal + hotelTotal) / 0.88, // Individual adjustment
+            total: (feeTotal + hotelTotal) / 0.88,
             feeTotal,
             hotelsByDay,
           };
         });
       }
 
-      // Calculate misc cost and adjust total for each entry
       const duration = parseInt(formData.duration) || 1;
       const miscCost = (70 + 10 + 1 * duration) * (adults + kids) + 10;
-
       classPrices = classPrices.map((price) => ({
         ...price,
-        total: (price.total + miscCost) / 0.88, // Apply miscCost adjustment per entry
+        total: (price.total + miscCost) / 0.88,
         miscCost,
       }));
 
-      const details = feeResponses.map((res, index) => ({
-        ...res.data,
+      const details = processedFees.map((res, index) => ({
+        ...res,
         hotelLocation: formData.itinerary[index].hotelLocation,
       }));
 
       setResults({ classPrices, details });
-      console.log("API responses:", {
-        fees: feeResponses.map((res) => res.data),
-        hotels: dayHotelInfo,
-      });
-      console.log("Class prices with hotels:", classPrices);
+      console.log("Final results:", { classPrices, details });
     } catch (error) {
-      console.error("API error:", error.response?.data || error.message);
+      console.error("API error details:", {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+        config: error.config?.params,
+      });
       setError(
         "Failed to calculate price. Please check your inputs or ensure the backend is running."
       );
