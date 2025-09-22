@@ -502,6 +502,18 @@ export default function SafariPricingTool() {
         });
       }
 
+      // Calculate misc cost and adjust total
+      const duration = parseInt(formData.duration) || 1;
+      const miscCost = (70 + 10 + 1 * duration) * (adults + kids) + 10;
+      const adjustedTotal = (classPrices[0].total + miscCost) / 0.88;
+
+      // Update classPrices with adjusted total
+      classPrices = classPrices.map((price) => ({
+        ...price,
+        total: adjustedTotal,
+        miscCost: miscCost,
+      }));
+
       const details = feeResponses.map((res, index) => ({
         ...res.data,
         hotelLocation: formData.itinerary[index].hotelLocation,
@@ -1262,7 +1274,14 @@ export default function SafariPricingTool() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {results.classPrices.map(
                     (
-                      { hotelClass, total, feeTotal, hotelTotal, hotelsByDay },
+                      {
+                        hotelClass,
+                        total,
+                        feeTotal,
+                        hotelTotal,
+                        hotelsByDay,
+                        miscCost,
+                      },
                       index
                     ) => (
                       <div key={index} className="p-4 bg-sky-50 rounded-lg">
@@ -1276,7 +1295,8 @@ export default function SafariPricingTool() {
                         </div>
                         <div className="text-sm text-gray-600 mt-1">
                           Park Fees: ${feeTotal.toLocaleString()} + Hotels: $
-                          {hotelTotal.toLocaleString()}
+                          {hotelTotal.toLocaleString()} + Misc: $
+                          {miscCost.toLocaleString()}
                         </div>
                         {Object.keys(hotelsByDay).length > 0 && (
                           <div className="text-sm text-gray-600 mt-2">
@@ -1290,6 +1310,45 @@ export default function SafariPricingTool() {
                                 )
                               )}
                             </ul>
+                          </div>
+                        )}
+                        {/* New cost breakdown */}
+                        {adults > 0 && (
+                          <div className="mt-4">
+                            <div className="">
+                              <span className="text-sm text-gray-600 mr-2">
+                                Cost per Adult:
+                              </span>
+
+                              <span className="text-lg text-sky-600 font-semibold">
+                                $
+                                {(
+                                  total /
+                                  (adults + (kids > 0 ? kids / 2 : 0))
+                                ).toLocaleString(undefined, {
+                                  minimumFractionDigits: 2,
+                                  maximumFractionDigits: 2,
+                                })}
+                              </span>
+                            </div>
+                            {kids > 0 && (
+                              <div className="">
+                                <span className="text-sm text-gray-600 mr-2">
+                                  Cost per Child:
+                                </span>
+                                <span className="text-lg text-sky-600 font-semibold">
+                                  $
+                                  {(
+                                    total /
+                                    (adults + (kids > 0 ? kids / 2 : 0)) /
+                                    2
+                                  ).toLocaleString(undefined, {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2,
+                                  })}
+                                </span>
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>
