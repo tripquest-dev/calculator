@@ -460,7 +460,7 @@ export default function SafariPricingTool() {
           {
             hotelClass: "Selected Hotels",
             hotelTotal,
-            total: feeTotal + hotelTotal,
+            total: (feeTotal + hotelTotal) / 0.88, // Individual adjustment
             feeTotal,
             hotelsByDay,
           },
@@ -495,23 +495,21 @@ export default function SafariPricingTool() {
           return {
             hotelClass,
             hotelTotal,
-            total: feeTotal + hotelTotal,
+            total: (feeTotal + hotelTotal) / 0.88, // Individual adjustment
             feeTotal,
             hotelsByDay,
           };
         });
       }
 
-      // Calculate misc cost and adjust total
+      // Calculate misc cost and adjust total for each entry
       const duration = parseInt(formData.duration) || 1;
       const miscCost = (70 + 10 + 1 * duration) * (adults + kids) + 10;
-      const adjustedTotal = (classPrices[0].total + miscCost) / 0.88;
 
-      // Update classPrices with adjusted total
       classPrices = classPrices.map((price) => ({
         ...price,
-        total: adjustedTotal,
-        miscCost: miscCost,
+        total: (price.total + miscCost) / 0.88, // Apply miscCost adjustment per entry
+        miscCost,
       }));
 
       const details = feeResponses.map((res, index) => ({
