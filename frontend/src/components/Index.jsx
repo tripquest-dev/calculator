@@ -568,7 +568,7 @@ export default function SafariPricingTool() {
           return {
             hotelClass,
             hotelTotal,
-            total: (feeTotal + hotelTotal) / 0.88,
+            total: feeTotal + hotelTotal,
             feeTotal,
             hotelsByDay,
           };
