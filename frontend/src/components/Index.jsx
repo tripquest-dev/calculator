@@ -537,10 +537,10 @@ export default function SafariPricingTool() {
                 )
               )
               .map((hotel) => hotel.hotelClass)
-              .slice(0, 6)
+              .slice(0, 6) // Ensure exactly 6 classes
           ),
         ];
-        console.log("Unique Classes:", uniqueClasses);
+        console.log("Unique Classes:", uniqueClasses); // Debug log
         classPrices = uniqueClasses.map((hotelClass) => {
           const hotelTotal = formData.itinerary.reduce((sum, day, index) => {
             if (index === formData.itinerary.length - 1) return sum;
@@ -568,7 +568,7 @@ export default function SafariPricingTool() {
           return {
             hotelClass,
             hotelTotal,
-            total: feeTotal + hotelTotal,
+            total: (feeTotal + hotelTotal) / 0.88,
             feeTotal,
             hotelsByDay,
           };
@@ -579,7 +579,7 @@ export default function SafariPricingTool() {
       const miscCost = (70 + 10 + 1 * duration) * (adults + kids) + 10;
       classPrices = classPrices.map((price) => ({
         ...price,
-        total: price.total + miscCost,
+        total: (price.total + miscCost) / 0.88,
         miscCost,
       }));
 
