@@ -251,7 +251,7 @@ export default function SafariPricingTool() {
 
     const targetDate = addDays(baseDate, dayIndex);
     const formattedDate = format(targetDate, "dd/MM/yyyy");
-    const location = day.hotelLocation; // Use full location name
+    const location = day.hotelLocation;
 
     if (
       !adults ||
@@ -286,16 +286,10 @@ export default function SafariPricingTool() {
           params: { date: formattedDate, location },
         }
       );
-      const extractedHotelInfo = res.data.map(
-        ({ hotel, totalPrice, class: hotelClass }) => ({
-          hotel,
-          totalPrice,
-          hotelClass,
-        })
-      );
+      // Directly use the response data as it contains one entry per class
       setDayHotelInfo((prev) => ({
         ...prev,
-        [day.day]: extractedHotelInfo,
+        [day.day]: res.data,
       }));
       setError(null);
     } catch (err) {
@@ -318,16 +312,9 @@ export default function SafariPricingTool() {
               params: { date: fallbackFormattedDate, location },
             }
           );
-          const extractedHotelInfo = res.data.map(
-            ({ hotel, totalPrice, class: hotelClass }) => ({
-              hotel,
-              totalPrice,
-              hotelClass,
-            })
-          );
           setDayHotelInfo((prev) => ({
             ...prev,
-            [day.day]: extractedHotelInfo,
+            [day.day]: res.data,
           }));
           setError(null);
         } catch (fallbackErr) {
@@ -530,24 +517,19 @@ export default function SafariPricingTool() {
               .filter((hotel) =>
                 formData.itinerary.some((day) =>
                   dayHotelInfo[day.day]?.some(
-                    (h) =>
-                      h.hotel === hotel.hotel &&
-                      h.hotelClass === hotel.hotelClass
+                    (h) => h.hotel === hotel.hotel && h.class === hotel.class
                   )
                 )
               )
-              .map((hotel) => hotel.hotelClass)
-              .slice(0, 6) // Ensure exactly 6 classes
+              .map((hotel) => hotel.class)
+              .slice(0, 6)
           ),
         ];
-        console.log("Unique Classes:", uniqueClasses); // Debug log
         classPrices = uniqueClasses.map((hotelClass) => {
           const hotelTotal = formData.itinerary.reduce((sum, day, index) => {
             if (index === formData.itinerary.length - 1) return sum;
             const hotelsForDay = dayHotelInfo[day.day] || [];
-            const classHotel = hotelsForDay.find(
-              (h) => h.hotelClass === hotelClass
-            );
+            const classHotel = hotelsForDay.find((h) => h.class === hotelClass);
             return sum + (classHotel ? classHotel.totalPrice : 0);
           }, 0);
           const hotelsByDay = formData.itinerary
@@ -555,7 +537,7 @@ export default function SafariPricingTool() {
             .reduce((acc, day, index) => {
               const hotelsForDay = dayHotelInfo[day.day] || [];
               const classHotel = hotelsForDay.find(
-                (h) => h.hotelClass === hotelClass
+                (h) => h.class === hotelClass
               );
               if (
                 classHotel &&
@@ -776,678 +758,490 @@ export default function SafariPricingTool() {
       "FNBO",
       "WS",
     ],
-    NS: ["NS", "CS", "NG", "TA", "LM", "MM", "FNBO", "FZNZ", "FARK", "FDAR"],
-    ND: ["CS", "ND", "NG", "TA", "LM", "ARK", "JRO", "MS", "LE", "LN", "ARP"],
-    LE: [
-      "LM",
+    NS: [
       "NG",
-      "TA",
-      "ARK",
-      "JRO",
-      "CS",
-      "ND",
-      "LE",
-      "MS",
-      "LN",
-      "WS",
-      "ARP",
-    ],
-    LZ: ["ND", "TA", "LM", "NG", "LE", "ARP", "CS", "ARK", "JRO", "MS", "WS"],
-    ZNZ: [
-      "ARK",
-      "FCS",
-      "FNS",
-      "FNBO",
-      "ZNZT",
-      "ZNZ",
-      "FDAR",
-      "LM",
-      "CS",
-      "TA",
-      "LE",
-      "ND",
-      "MS",
-      "NG",
-      "LN",
-      "ACT",
-      "ARP",
-      "MCT",
-      "SW",
-      "KRA",
-      "WS",
-    ],
-    KR: [
-      "ARK",
-      "JRO",
-      "MS",
-      "ARP",
-      "TA",
-      "LM",
-      "NG",
-      "LE",
-      "LN",
       "CS",
       "NS",
-      "ND",
+      "MM",
+      "TA",
+      "LN",
+      "LM",
+      "LE",
       "FZNZ",
-      "WS",
-      "KRA",
-    ],
-    WS: ["NG", "CS", "WS", "TA", "LM", "LE", "ARP", "MS", "ARK", "JRO", "ACT"],
-    MS: [
-      "MSCT",
+      "ARP",
+      "MS",
       "ARK",
       "JRO",
-      "ARP",
-      "AR",
-      "TA",
-      "LM",
-      "CS",
+      "FARK",
+      "FZNZ",
+      "ACT",
+      "MCT",
+      "WS",
+    ],
+    LE: [
       "NG",
-      "KR",
-      "LE",
+      "CS",
+      "NS",
+      "TA",
       "LN",
+      "LM",
+      "LE",
+      "ARP",
+      "MS",
+      "ARK",
+      "JRO",
+      "ACT",
+      "MCT",
       "ND",
-      "MSKDT",
+      "WS",
+    ],
+    LN: [
+      "NG",
+      "CS",
+      "NS",
+      "TA",
+      "LN",
+      "LM",
+      "LE",
+      "ARP",
+      "MS",
+      "ARK",
+      "JRO",
+      "ACT",
+      "MCT",
+      "ND",
+      "WS",
+    ],
+    ND: [
+      "NG",
+      "CS",
+      "NS",
+      "TA",
+      "LN",
+      "LM",
+      "LE",
+      "ARP",
+      "MS",
+      "ARK",
+      "JRO",
+      "ACT",
+      "MCT",
+      "ND",
+      "WS",
+    ],
+    MS: [
+      "NG",
+      "CS",
+      "NS",
+      "TA",
+      "LN",
+      "LM",
+      "LE",
+      "ARP",
+      "MS",
+      "ARK",
+      "JRO",
+      "ACT",
+      "MCT",
+      "WS",
+    ],
+    WS: [
+      "NG",
+      "CS",
+      "NS",
+      "TA",
+      "LN",
+      "LM",
+      "LE",
+      "ARP",
+      "MS",
+      "ARK",
+      "JRO",
+      "ACT",
+      "MCT",
+      "WS",
+    ],
+    ZNZ: [
+      "NG",
+      "CS",
+      "NS",
+      "TA",
+      "LN",
+      "LM",
+      "LE",
+      "ARP",
+      "MS",
+      "ARK",
+      "JRO",
+      "ACT",
+      "MCT",
+      "WS",
+      "DAR",
     ],
     DAR: [
-      "FZN",
-      "FCS",
-      "FNS",
-      "FARK",
-      "LM",
-      "CS",
-      "TA",
-      "LE",
-      "ND",
-      "MS",
       "NG",
+      "CS",
+      "NS",
+      "TA",
       "LN",
-      "ACT",
+      "LM",
+      "LE",
       "ARP",
+      "MS",
+      "ARK",
+      "JRO",
+      "ACT",
       "MCT",
-      "SW",
-      "KRA",
+      "WS",
+      "ZNZ",
+    ],
+    ACT: [
+      "NG",
+      "CS",
+      "NS",
+      "TA",
+      "LN",
+      "LM",
+      "LE",
+      "ARP",
+      "MS",
+      "ARK",
+      "JRO",
+      "ACT",
+      "MCT",
+      "WS",
+    ],
+    MCT: [
+      "NG",
+      "CS",
+      "NS",
+      "TA",
+      "LN",
+      "LM",
+      "LE",
+      "ARP",
+      "MS",
+      "ARK",
+      "JRO",
+      "ACT",
+      "MCT",
       "WS",
     ],
   };
 
-  const startLocations = Object.keys(locationMap);
+  // Fee configuration (example, adjust as per your backend)
+  const feeConfig = {
+    // Add your fee codes and values here if needed
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-100 to-white bg-fixed p-4 md:p-8">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
-            Safari Pricing Tool
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Plan your African adventure with our comprehensive pricing
-            calculator. Get instant quotes for your safari experience.
-          </p>
+    <div className="p-6 bg-white shadow-md rounded-lg max-w-4xl mx-auto">
+      <h2 className="text-2xl font-bold mb-4 text-sky-700">
+        Safari Pricing Tool
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Client Name
+          </label>
+          <input
+            type="text"
+            value={formData.clientName}
+            onChange={(e) =>
+              setFormData({ ...formData, clientName: e.target.value })
+            }
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+            placeholder="Enter client name"
+          />
         </div>
-
-        <div className="bg-white bg-opacity-95 border-2 border-sky-500 shadow-xl rounded-lg p-6">
-          <div className="flex items-center gap-2 mb-6">
-            <Calculator className="h-6 w-6 text-sky-500" />
-            <h2 className="text-2xl font-bold text-sky-600">Trip Details</h2>
-          </div>
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium flex items-center gap-2 text-gray-700">
-                  <Users className="h-4 w-4 text-sky-500" />
-                  Client Name
-                </label>
-                <input
-                  type="text"
-                  name="clientName"
-                  value={formData.clientName}
-                  onChange={(e) =>
-                    setFormData({ ...formData, clientName: e.target.value })
-                  }
-                  placeholder="Enter client name"
-                  className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium flex items-center gap-2 text-gray-700">
-                  <Users className="h-4 w-4 text-sky-500" />
-                  Client ID
-                </label>
-                <input
-                  type="text"
-                  name="clientId"
-                  value={formData.clientId}
-                  onChange={(e) =>
-                    setFormData({ ...formData, clientId: e.target.value })
-                  }
-                  placeholder="Enter client ID"
-                  className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium flex items-center gap-2 text-gray-700">
-                  <Calendar className="h-4 w-4 text-sky-500" />
-                  Departure Date
-                </label>
-                <DatePicker
-                  selected={formData.departureDate}
-                  onChange={handleDateChange}
-                  placeholderText="Pick a date"
-                  dateFormat="dd-MM-yyyy"
-                  className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium flex items-center gap-2 text-gray-700">
-                  <Users className="h-4 w-4 text-sky-500" />
-                  Adults
-                </label>
-                <input
-                  type="number"
-                  name="adults"
-                  value={formData.adults}
-                  onChange={(e) => {
-                    const value = e.target.value;
-                    setFormData({
-                      ...formData,
-                      adults: value === "" ? "" : parseInt(value) || "",
-                    });
-                  }}
-                  placeholder="Number of adults"
-                  min="0"
-                  className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium flex items-center gap-2 text-gray-700">
-                  <Users className="h-4 w-4 text-sky-500" />
-                  Children
-                </label>
-                <input
-                  type="number"
-                  name="children"
-                  value={formData.children}
-                  onChange={(e) => {
-                    const value = e.target.value;
-                    setFormData({
-                      ...formData,
-                      children: value === "" ? "" : parseInt(value) || "",
-                    });
-                  }}
-                  placeholder="Number of children"
-                  min="0"
-                  className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2 max-w-xs">
-              <label className="text-sm font-medium flex items-center gap-2 text-gray-700">
-                <Clock className="h-4 w-4 text-sky-500" />
-                Duration (Days)
-              </label>
-              <input
-                type="number"
-                name="duration"
-                value={formData.duration}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  setFormData({
-                    ...formData,
-                    duration: value === "" ? "" : parseInt(value) || "",
-                  });
-                }}
-                placeholder="Enter number of days"
-                min="1"
-                className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-              />
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold flex items-center gap-2 text-sky-600">
-                  <MapPin className="h-5 w-5 text-sky-500" />
-                  Daily Itinerary
-                </h3>
-                <label className="flex items-center gap-2 text-sm text-gray-700">
-                  Manual Hotel Search
-                  <input
-                    type="checkbox"
-                    checked={manualHotelSearch}
-                    onChange={(e) => {
-                      setManualHotelSearch(e.target.checked);
-                      if (!e.target.checked) {
-                        setHotelQueries({});
-                        setHotelSuggestions({});
-                        setSelectedHotels({});
-                      }
-                    }}
-                    className="h-4 w-4 text-sky-500 focus:ring-sky-500 border-gray-300 rounded"
-                  />
-                </label>
-              </div>
-              {formData.itinerary.map((day, index) => (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-200 rounded-md p-4"
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-                    <div className="font-medium text-sky-600">
-                      Day {day.day}
-                    </div>
-                    <div className="col-span-2 flex flex-col md:flex-row gap-4">
-                      <div className="space-y-1 flex-1">
-                        <label className="text-xs text-gray-500">From</label>
-                        <select
-                          value={day.from}
-                          onChange={(e) => {
-                            const newItinerary = [...formData.itinerary];
-                            newItinerary[index] = {
-                              ...newItinerary[index],
-                              from: e.target.value,
-                              to: "",
-                              hotelLocation: "",
-                            };
-                            setFormData({
-                              ...formData,
-                              itinerary: newItinerary,
-                            });
-                            setHotelQueries((prev) => ({
-                              ...prev,
-                              [index]: "",
-                            }));
-                            setHotelSuggestions((prev) => ({
-                              ...prev,
-                              [index]: [],
-                            }));
-                            setSelectedHotels((prev) => ({
-                              ...prev,
-                              [index]: null,
-                            }));
-                          }}
-                          className="w-full h-10 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                        >
-                          <option value="">Select start location</option>
-                          {startLocations.map((loc) => (
-                            <option key={loc} value={loc}>
-                              {loc}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                      <div className="space-y-1 flex-1">
-                        <label className="text-xs text-gray-500">To</label>
-                        <select
-                          value={day.to}
-                          onChange={(e) => {
-                            const newItinerary = [...formData.itinerary];
-                            const toValue = e.target.value;
-                            const hotelLocation =
-                              feeFormulaMap[day.from]?.[toValue]
-                                ?.hotelLocation || "";
-                            console.log(
-                              `Day ${day.day}: Setting to=${toValue}, hotelLocation=${hotelLocation}`
-                            );
-                            newItinerary[index] = {
-                              ...newItinerary[index],
-                              to: toValue,
-                              hotelLocation,
-                            };
-                            setFormData({
-                              ...formData,
-                              itinerary: newItinerary,
-                            });
-                            setHotelQueries((prev) => ({
-                              ...prev,
-                              [index]: "",
-                            }));
-                            setHotelSuggestions((prev) => ({
-                              ...prev,
-                              [index]: [],
-                            }));
-                            setSelectedHotels((prev) => ({
-                              ...prev,
-                              [index]: null,
-                            }));
-                            if (
-                              manualHotelSearch &&
-                              hotelLocation &&
-                              hotelLocation !== "No accommodation needed"
-                            ) {
-                              console.log(
-                                `Fetching hotels for Day ${day.day} with hotelLocation=${hotelLocation}`
-                              );
-                              fetchAllHotels(hotelLocation, index);
-                            }
-                          }}
-                          disabled={!day.from}
-                          className="w-full h-10 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                        >
-                          <option value="">Select destination</option>
-                          {day.from &&
-                            locationMap[day.from]?.map((loc, locIndex) => (
-                              <option key={`${loc}-${locIndex}`} value={loc}>
-                                {loc}
-                              </option>
-                            ))}
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  {index !== formData.itinerary.length - 1 &&
-                    manualHotelSearch && (
-                      <div
-                        className="mt-4 relative"
-                        ref={(el) => (dropdownRefs.current[index] = el)}
-                      >
-                        <input
-                          type="text"
-                          value={hotelQueries[index] || ""}
-                          onChange={(e) => handleHotelQuery(e, index)}
-                          placeholder={
-                            day.hotelLocation &&
-                            day.hotelLocation !== "No accommodation needed"
-                              ? `Search hotels in ${day.hotelLocation}`
-                              : "Select a location to search hotels"
-                          }
-                          disabled={
-                            !day.hotelLocation ||
-                            day.hotelLocation === "No accommodation needed"
-                          }
-                          className="w-full h-10 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                        />
-                        {hotelSuggestions[index]?.length > 0 && (
-                          <ul className="absolute z-10 w-full bg-white border border-gray-200 rounded-md mt-1 max-h-40 overflow-y-auto shadow-md">
-                            {hotelSuggestions[index].map(
-                              (hotel, suggestionIndex) => (
-                                <li
-                                  key={suggestionIndex}
-                                  onClick={() =>
-                                    handleHotelSelect(hotel, index)
-                                  }
-                                  className="px-3 py-2 text-sm text-gray-900 hover:bg-sky-100 cursor-pointer"
-                                >
-                                  {hotel.name} (Class {hotel.class}, $
-                                  {hotel.totalPrice.toLocaleString()})
-                                </li>
-                              )
-                            )}
-                          </ul>
-                        )}
-                        {selectedHotels[index] && (
-                          <div className="mt-4">
-                            <div className="font-semibold text-sky-600 mb-2">
-                              Selected Hotel for Day {day.day}:
-                            </div>
-                            <div className="card bg-gray-50 border border-gray-200 shadow-md p-4">
-                              <h4 className="text-sm font-semibold text-sky-600">
-                                {selectedHotels[index].name}
-                              </h4>
-                              <p className="text-sm text-gray-600">
-                                Class: {selectedHotels[index].class}
-                              </p>
-                              <p className="text-sm text-gray-600">
-                                Price: $
-                                {selectedHotels[
-                                  index
-                                ].totalPrice.toLocaleString()}
-                              </p>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  {index !== formData.itinerary.length - 1 &&
-                    !manualHotelSearch &&
-                    dayHotelInfo[day.day]?.length > 0 && (
-                      <div className="mt-4">
-                        <div className="font-semibold text-sky-600 mb-2">
-                          Suggested Hotels for {day.hotelLocation}:
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                          {dayHotelInfo[day.day].map(
-                            ({ hotel, totalPrice, hotelClass }, cardIndex) => (
-                              <div
-                                key={`${day.day}-${cardIndex}`}
-                                className="card bg-gray-50 border border-gray-200 shadow-md"
-                              >
-                                <div className="card-body p-4">
-                                  <h4 className="card-title text-sm font-semibold text-sky-600">
-                                    {hotel}
-                                  </h4>
-                                  <p className="text-sm text-gray-600">
-                                    Class: {hotelClass}
-                                  </p>
-                                  <p className="text-sm text-gray-600">
-                                    Price: ${totalPrice.toLocaleString()}
-                                  </p>
-                                </div>
-                              </div>
-                            )
-                          )}
-                        </div>
-                      </div>
-                    )}
-                  {index !== formData.itinerary.length - 1 &&
-                    day.hotelLocation === "No accommodation needed" && (
-                      <div className="mt-4 text-sm text-gray-600">
-                        No accommodation needed for this day.
-                      </div>
-                    )}
-                </div>
-              ))}
-            </div>
-
-            <button
-              className="w-full h-12 bg-gradient-to-r from-sky-600 to-sky-400 text-white font-semibold text-lg rounded-md cursor-pointer hover:bg-sky-700"
-              onClick={handleCalculate}
-            >
-              Calculate Safari Price
-            </button>
-            {error && <div className="text-red-500 text-sm mt-2">{error}</div>}
-          </div>
-        </div>
-
-        <div className="bg-white bg-opacity-95 border-2 border-sky-500 shadow-xl rounded-lg p-6">
-          <h2 className="text-2xl font-bold text-center text-sky-600 mb-6">
-            Your Safari Quote
-          </h2>
-          <div className="space-y-6">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-sky-600 mb-3">Trip Summary</h4>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <span className="text-gray-500">Client Name: </span>
-                  <span className="text-sky-600">
-                    {formData.clientName || "Not provided"}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-gray-500">Client ID: </span>
-                  <span className="text-sky-600">
-                    {formData.clientId || "Not provided"}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-gray-500">Departure: </span>
-                  <span className="text-sky-600">
-                    {formData.departureDate
-                      ? formData.departureDate.toLocaleDateString("en-GB", {
-                          day: "2-digit",
-                          month: "2-digit",
-                          year: "numeric",
-                        })
-                      : "Not selected"}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-gray-500">Duration: </span>
-                  <span className="text-sky-600">
-                    {formData.duration || "0"} days
-                  </span>
-                </div>
-                <div>
-                  <span className="text-gray-500">Adults: </span>
-                  <span className="text-sky-600">
-                    {" "}
-                    {formData.adults || "0"}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-gray-500">Children: </span>
-                  <span className="text-sky-600">
-                    {formData.children || "0"}
-                  </span>
-                </div>
-              </div>
-              {results && results.details && (
-                <div className="mt-4">
-                  <h5 className="text-sm font-semibold text-sky-600">
-                    Itinerary
-                  </h5>
-                  {results.details.map((detail, index) => (
-                    <div key={index} className="text-sm text-gray-600 mb-2">
-                      <div>
-                        Day {index + 1} ({detail.from} → {detail.to}): $
-                        {detail.fee.toLocaleString()} - {detail.description}
-                      </div>
-                      {detail.hotelLocation && (
-                        <div>Hotel Location: {detail.hotelLocation}</div>
-                      )}
-                      {index !== formData.itinerary.length - 1 &&
-                        detail.hotelLocation === "No accommodation needed" && (
-                          <div>No accommodation needed for this day.</div>
-                        )}
-                      {selectedHotels[index] && (
-                        <div>
-                          Selected Hotel: {selectedHotels[index].name} (Class{" "}
-                          {selectedHotels[index].class}, $
-                          {selectedHotels[index].totalPrice.toLocaleString()})
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-            {results && results.classPrices && (
-              <div className="space-y-4">
-                <h4 className="font-semibold text-sky-600">
-                  {manualHotelSearch
-                    ? "Selected Hotels Price"
-                    : "Price by Hotel Class"}
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {results.classPrices.map(
-                    (
-                      {
-                        hotelClass,
-                        total,
-                        feeTotal,
-                        hotelTotal,
-                        hotelsByDay,
-                        miscCost,
-                      },
-                      index
-                    ) => (
-                      <div key={index} className="p-4 bg-sky-50 rounded-lg">
-                        <div className="text-lg font-semibold text-sky-600">
-                          {manualHotelSearch
-                            ? "Selected Hotels"
-                            : `Class ${hotelClass} Price`}
-                        </div>
-                        <div className="text-2xl font-bold text-sky-600">
-                          ${total.toLocaleString()}
-                        </div>
-                        <div className="text-sm text-gray-600 mt-1">
-                          {console.log(
-                            "FeeTotal",
-                            feeTotal + hotelTotal + miscCost
-                          )}
-                          Park Fees: ${feeTotal.toLocaleString()} + Hotels: $
-                          {hotelTotal.toLocaleString()} + Misc: $
-                          {miscCost.toLocaleString()}
-                        </div>
-                        {Object.keys(hotelsByDay).length > 0 && (
-                          <div className="text-sm text-gray-600 mt-2">
-                            Hotels:
-                            <ul className="list-disc ml-4">
-                              {Object.entries(hotelsByDay).map(
-                                ([day, hotelName]) => (
-                                  <li key={day}>
-                                    Day {day}: {hotelName}
-                                  </li>
-                                )
-                              )}
-                            </ul>
-                          </div>
-                        )}
-                        {/* New cost breakdown */}
-                        {adults > 0 && (
-                          <div className="mt-4">
-                            <div className="">
-                              <span className="text-sm text-gray-600 mr-2">
-                                Cost per Adult:
-                              </span>
-
-                              <span className="text-lg text-sky-600 font-semibold">
-                                $
-                                {(
-                                  total /
-                                  (adults + (kids > 0 ? kids / 2 : 0))
-                                ).toLocaleString(undefined, {
-                                  minimumFractionDigits: 2,
-                                  maximumFractionDigits: 2,
-                                })}
-                              </span>
-                            </div>
-                            {kids > 0 && (
-                              <div className="">
-                                <span className="text-sm text-gray-600 mr-2">
-                                  Cost per Child:
-                                </span>
-                                <span className="text-lg text-sky-600 font-semibold">
-                                  $
-                                  {(
-                                    total /
-                                    (adults + (kids > 0 ? kids / 2 : 0)) /
-                                    2
-                                  ).toLocaleString(undefined, {
-                                    minimumFractionDigits: 2,
-                                    maximumFractionDigits: 2,
-                                  })}
-                                </span>
-                              </div>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-            )}
-            <div className="flex gap-4">
-              <button
-                className="flex-1 h-12 border border-sky-500 text-sky-600 font-semibold rounded-md opacity-50 cursor-not-allowed"
-                disabled
-              >
-                Save Quote
-              </button>
-              <button
-                className="flex-1 h-12 bg-gradient-to-r from-sky-600 to-sky-400 text-white font-semibold rounded-md opacity-50 cursor-not-allowed"
-                disabled
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Client ID
+          </label>
+          <input
+            type="text"
+            value={formData.clientId}
+            onChange={(e) =>
+              setFormData({ ...formData, clientId: e.target.value })
+            }
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+            placeholder="Enter client ID"
+          />
         </div>
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Departure Date <Calendar className="inline ml-1 h-4 w-4" />
+          </label>
+          <DatePicker
+            selected={formData.departureDate}
+            onChange={handleDateChange}
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+            placeholderText="Select date"
+            dateFormat="dd/MM/yyyy"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Number of Adults <Users className="inline ml-1 h-4 w-4" />
+          </label>
+          <input
+            type="number"
+            value={formData.adults}
+            onChange={(e) =>
+              setFormData({ ...formData, adults: e.target.value })
+            }
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+            placeholder="Enter number of adults"
+            min="0"
+          />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Number of Children <Users className="inline ml-1 h-4 w-4" />
+          </label>
+          <input
+            type="number"
+            value={formData.children}
+            onChange={(e) =>
+              setFormData({ ...formData, children: e.target.value })
+            }
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+            placeholder="Enter number of children"
+            min="0"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Duration (Days) <Clock className="inline ml-1 h-4 w-4" />
+          </label>
+          <input
+            type="number"
+            value={formData.duration}
+            onChange={(e) =>
+              setFormData({ ...formData, duration: e.target.value })
+            }
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+            placeholder="Enter duration"
+            min="1"
+          />
+        </div>
+      </div>
+
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-700">
+          Itinerary
+        </label>
+        {formData.itinerary.map((day, index) => (
+          <div
+            key={day.day}
+            className="border border-gray-200 p-4 mb-2 rounded-md"
+          >
+            <h3 className="text-lg font-semibold text-sky-600">
+              Day {day.day}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+              <div>
+                <label className="block text-sm text-gray-700">From</label>
+                <select
+                  value={day.from}
+                  onChange={(e) => {
+                    const newItinerary = [...formData.itinerary];
+                    newItinerary[index] = {
+                      ...newItinerary[index],
+                      from: e.target.value,
+                    };
+                    setFormData({ ...formData, itinerary: newItinerary });
+                  }}
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                >
+                  <option value="">Select location</option>
+                  {Object.keys(locationMap).map((loc) => (
+                    <option key={loc} value={loc}>
+                      {loc}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm text-gray-700">To</label>
+                <select
+                  value={day.to}
+                  onChange={(e) => {
+                    const newItinerary = [...formData.itinerary];
+                    newItinerary[index] = {
+                      ...newItinerary[index],
+                      to: e.target.value,
+                    };
+                    setFormData({ ...formData, itinerary: newItinerary });
+                  }}
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                >
+                  <option value="">Select location</option>
+                  {day.from &&
+                    locationMap[day.from].map((loc) => (
+                      <option key={loc} value={loc}>
+                        {loc}
+                      </option>
+                    ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm text-gray-700">
+                  Hotel Location <MapPin className="inline ml-1 h-4 w-4" />
+                </label>
+                <input
+                  type="text"
+                  value={day.hotelLocation}
+                  onChange={(e) => {
+                    const newItinerary = [...formData.itinerary];
+                    newItinerary[index] = {
+                      ...newItinerary[index],
+                      hotelLocation: e.target.value,
+                    };
+                    setFormData({ ...formData, itinerary: newItinerary });
+                  }}
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                  placeholder="Enter hotel location"
+                  disabled={manualHotelSearch}
+                />
+                {manualHotelSearch && (
+                  <div ref={(el) => (dropdownRefs.current[index] = el)}>
+                    <input
+                      type="text"
+                      value={hotelQueries[index] || ""}
+                      onChange={(e) => handleHotelQuery(e, index)}
+                      className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                      placeholder="Search hotels..."
+                    />
+                    {hotelSuggestions[index]?.length > 0 && (
+                      <ul className="absolute z-10 bg-white border border-gray-300 rounded-md mt-1 w-full max-h-40 overflow-y-auto">
+                        {hotelSuggestions[index].map((hotel) => (
+                          <li
+                            key={hotel.name}
+                            onClick={() => handleHotelSelect(hotel, index)}
+                            className="p-2 cursor-pointer hover:bg-gray-100"
+                          >
+                            {hotel.name} (${hotel.totalPrice})
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
+                {!manualHotelSearch &&
+                  index !== formData.itinerary.length - 1 &&
+                  dayHotelInfo[day.day]?.length > 0 && (
+                    <div className="mt-4">
+                      <div className="font-semibold text-sky-600 mb-2">
+                        Suggested Hotels for {day.hotelLocation}:
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        {dayHotelInfo[day.day].map((hotel, classIndex) => (
+                          <div
+                            key={`${day.day}-${classIndex}`}
+                            className="card bg-gray-50 border border-gray-200 shadow-md"
+                          >
+                            <div className="card-body p-4">
+                              <h4 className="card-title text-sm font-semibold text-sky-600">
+                                {hotel.hotel}
+                              </h4>
+                              <p className="text-sm text-gray-600">
+                                Class: {hotel.class}
+                              </p>
+                              <p className="text-sm text-gray-600">
+                                Price: ${hotel.totalPrice.toLocaleString()}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mb-4">
+        <label className="inline-flex items-center">
+          <input
+            type="checkbox"
+            checked={manualHotelSearch}
+            onChange={(e) => {
+              setManualHotelSearch(e.target.checked);
+              setDayHotelInfo({});
+              setSelectedHotels({});
+              setHotelQueries({});
+              setHotelSuggestions({});
+            }}
+            className="form-checkbox h-5 w-5 text-sky-600"
+          />
+          <span className="ml-2 text-sm text-gray-700">
+            Manual Hotel Search
+          </span>
+        </label>
+      </div>
+
+      <button
+        onClick={handleCalculate}
+        className="flex items-center justify-center w-full md:w-auto px-4 py-2 bg-sky-600 text-white rounded-md hover:bg-sky-700"
+      >
+        <Calculator className="mr-2 h-5 w-5" />
+        Calculate Price
+      </button>
+
+      {error && <p className="text-red-500 mt-2">{error}</p>}
+
+      {results && (
+        <div className="mt-4">
+          <h3 className="text-xl font-semibold text-sky-700 mb-2">
+            Pricing Results
+          </h3>
+          {results.classPrices.map((price, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 p-4 mb-2 rounded-md"
+            >
+              <h4 className="text-lg font-medium text-sky-600">
+                Class {price.hotelClass}
+              </h4>
+              <p>Fee Total: ${price.feeTotal.toLocaleString()}</p>
+              <p>Hotel Total: ${price.hotelTotal.toLocaleString()}</p>
+              <p>Misc Cost: ${price.miscCost.toLocaleString()}</p>
+              <p>Total Price (incl. VAT): ${price.total.toLocaleString()}</p>
+              <h5 className="mt-2 text-sm font-medium">Hotels by Day:</h5>
+              <ul>
+                {Object.entries(price.hotelsByDay).map(([day, hotel]) => (
+                  <li key={day}>
+                    Day {day}: {hotel}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <h4 className="text-lg font-medium text-sky-600 mt-4">Fee Details</h4>
+          {results.details.map((detail, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 p-4 mb-2 rounded-md"
+            >
+              <p>
+                From: {detail.from} to {detail.to}
+              </p>
+              <p>Fee: ${detail.fee.toLocaleString()}</p>
+              <p>Hotel Location: {detail.hotelLocation}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

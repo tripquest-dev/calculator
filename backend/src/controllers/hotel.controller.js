@@ -1,5 +1,4 @@
 import Hotel from "../models/hotels.model.js";
-
 export const getHotelPrices = async (req, res) => {
   const { date, location } = req.query;
   const { groupSizeInfo } = req.body;
@@ -45,9 +44,8 @@ export const getHotelPrices = async (req, res) => {
   console.log(`Adults: ${adultsCount}, Kids (3-12): ${kidsCount}`);
 
   if (kidsCount === 1 && singleKidAge >= 3 && singleKidAge <= 12) {
-    // Case 1: Odd number of adults + 1 kid (3-12) - add kid to group size
     if (adultsCount % 2 === 1) {
-      const totalGroupSize = adultsCount + 1; // Add kid to group size
+      const totalGroupSize = adultsCount + 1;
       console.log(
         `Case 1: Odd adults (${adultsCount}) + 1 kid, total group size: ${totalGroupSize}`
       );
@@ -64,31 +62,24 @@ export const getHotelPrices = async (req, res) => {
           tripleRoom = 1;
         }
       }
-      kidDiscount = 0; // Kid is counted as full person in this case
-    }
-    // Case 2: Even number of adults + 1 kid - calculate rooms for adults, kid pays 25%
-    else if (adultsCount % 2 === 0) {
+      kidDiscount = 0;
+    } else if (adultsCount % 2 === 0) {
       console.log(`Case 2: Even adults (${adultsCount}) + 1 kid`);
 
-      // Special case 3: 2 adults + 1 kid = double room with kid discount
       if (adultsCount === 2) {
         console.log(`Case 3: 2 adults + 1 kid - double room with kid discount`);
         doubleRoom = 1;
         hasKidInRoom = true;
-        // Kid discount will be calculated later as 25% of double room rate
       } else {
-        // More than 2 adults (even number)
         doubleRoom = adultsCount / 2;
         hasKidInRoom = true;
-        // Kid goes with one of the double rooms and pays 25% extra
       }
     }
   } else {
-    // Original logic for other cases (no single kid 3-12, or multiple kids)
     let groupSize = adultsCount;
 
     if (kidsCount > 1) {
-      groupSize += kidsCount; // Multiple kids are added to group size
+      groupSize += kidsCount;
     }
 
     console.log(`Other cases: Group size ${groupSize}`);
@@ -146,7 +137,6 @@ export const getHotelPrices = async (req, res) => {
           endMonth: { $gte: month },
           endDay: { $gte: day },
           year: fullYear,
-          // Exclude zero-priced entries
           $or: [
             { "rates.single": { $gt: 0 } },
             { "rates.double": { $gt: 0 } },
@@ -156,24 +146,13 @@ export const getHotelPrices = async (req, res) => {
       },
     });
 
-    // Create separate maps for each room type that has count > 0
-    const roomTypeMaps = {};
-
-    if (singleRoom > 0) {
-      roomTypeMaps.single = new Map();
-    }
-    if (doubleRoom > 0) {
-      roomTypeMaps.double = new Map();
-    }
-    if (tripleRoom > 0) {
-      roomTypeMaps.triple = new Map();
-    }
+    // Map to store cheapest hotel per class based on baseRate
+    const classCheapest = new Map();
 
     hotels.forEach((hotel) => {
       const match = hotel.pricing.find((p) => {
         const start = new Date(p.year, p.startMonth - 1, p.startDay);
         const end = new Date(p.year, p.endMonth - 1, p.endDay);
-        // Ensure non-zero rates for the match
         return (
           targetDate >= start &&
           targetDate <= end &&
@@ -183,61 +162,87 @@ export const getHotelPrices = async (req, res) => {
 
       if (!match) return;
 
-      // Process each room type that has count > 0
-      Object.keys(roomTypeMaps).forEach((roomType) => {
-        const rateKey =
-          roomType === "single"
-            ? "single"
-            : roomType === "double"
-            ? "double"
-            : "triple";
+      // Initialize room totals for this hotel
+      let totalPrice = 0;
+      const roomDetails = [];
 
-        if (!match.rates[rateKey] || match.rates[rateKey] === 0) return; // Skip if rate is zero or doesn't exist
-
-        const current = roomTypeMaps[roomType].get(hotel.class);
-
-        // Calculate kid discount and final rate
-        let baseRate = match.rates[rateKey];
+      // Process each room type with count > 0
+      if (singleRoom > 0 && match.rates.single > 0) {
+        let baseRate = match.rates.single;
         let calculatedKidDiscount = 0;
         let finalRate = baseRate;
-
-        // Apply kid discount only for double rooms when hasKidInRoom is true
-        if (hasKidInRoom && roomType === "double") {
-          calculatedKidDiscount = baseRate * 0.25; // 25% of room rate for kid
-          finalRate = baseRate + calculatedKidDiscount; // Base rate + 25% for kid
+        if (hasKidInRoom && "single" === "double") {
+          calculatedKidDiscount = baseRate * 0.25;
+          finalRate += calculatedKidDiscount;
         }
-
-        if (!current || finalRate < current.finalRate) {
-          const roomCount =
-            roomType === "single"
-              ? singleRoom
-              : roomType === "double"
-              ? doubleRoom
-              : tripleRoom;
-
-          roomTypeMaps[roomType].set(hotel.class, {
-            class: hotel.class,
-            hotel: hotel.name,
-            roomType: roomType,
-            roomCount: roomCount,
-            baseRate: baseRate, // Original room rate
-            kidDiscount: calculatedKidDiscount, // Discount amount for kid
-            finalRate: finalRate, // Rate including kid discount if applicable
-            totalPrice: finalRate * roomCount, // Final price for all rooms of this type
-            hasKidInRoom: hasKidInRoom && roomType === "double",
-            adultsCount: adultsCount,
-            kidsCount: kidsCount,
-            description: match.description,
-          });
+        const roomTotal = finalRate * singleRoom;
+        totalPrice += roomTotal;
+        roomDetails.push({
+          roomType: "single",
+          roomCount: singleRoom,
+          baseRate,
+          kidDiscount: calculatedKidDiscount,
+          finalRate,
+          totalPrice: roomTotal,
+        });
+      }
+      if (doubleRoom > 0 && match.rates.double > 0) {
+        let baseRate = match.rates.double;
+        let calculatedKidDiscount = 0;
+        let finalRate = baseRate;
+        if (hasKidInRoom && "double" === "double") {
+          calculatedKidDiscount = baseRate * 0.25;
+          finalRate += calculatedKidDiscount;
         }
-      });
+        const roomTotal = finalRate * doubleRoom;
+        totalPrice += roomTotal;
+        roomDetails.push({
+          roomType: "double",
+          roomCount: doubleRoom,
+          baseRate,
+          kidDiscount: calculatedKidDiscount,
+          finalRate,
+          totalPrice: roomTotal,
+        });
+      }
+      if (tripleRoom > 0 && match.rates.triple > 0) {
+        let baseRate = match.rates.triple;
+        let calculatedKidDiscount = 0;
+        let finalRate = baseRate;
+        if (hasKidInRoom && "triple" === "double") {
+          calculatedKidDiscount = baseRate * 0.25;
+          finalRate += calculatedKidDiscount;
+        }
+        const roomTotal = finalRate * tripleRoom;
+        totalPrice += roomTotal;
+        roomDetails.push({
+          roomType: "triple",
+          roomCount: tripleRoom,
+          baseRate,
+          kidDiscount: calculatedKidDiscount,
+          finalRate,
+          totalPrice: roomTotal,
+        });
+      }
+
+      // Update cheapest hotel for this class if lower totalPrice or no entry
+      const current = classCheapest.get(hotel.class);
+      if (!current || totalPrice < current.totalPrice) {
+        classCheapest.set(hotel.class, {
+          class: hotel.class,
+          hotel: hotel.name,
+          roomDetails,
+          totalPrice,
+          hasKidInRoom,
+          adultsCount,
+          kidsCount,
+          description: match.description,
+        });
+      }
     });
 
-    // Combine results from all room type maps
-    const result = [];
-    Object.values(roomTypeMaps).forEach((map) => {
-      result.push(...Array.from(map.values()));
-    });
+    // Convert map to array and limit to 6 classes
+    const result = Array.from(classCheapest.values()).slice(0, 6);
 
     if (result.length === 0) {
       return res
