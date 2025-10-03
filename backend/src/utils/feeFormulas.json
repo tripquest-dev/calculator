@@ -161,17 +161,24 @@
     "hotelLocation": "Arusha"
   },
   {
+    "from": "AR",
+    "to": "NB",
+    "description": "Transfer from Arusha to Namanga Border",
+    "formula": "TCB * (adults + kids)",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
     "from": "ARK",
     "to": "LM",
     "description": "Lake Manyara",
-    "formula": "(LMA * adults + LMK * kids) + LC4",
+    "formula": "ARARK * (adults + kids) + (LMA * adults + LMK * kids) + LC4",
     "hotelLocation": "Lake Manyara"
   },
   {
     "from": "ARK",
     "to": "CS",
     "description": "Central Serengeti",
-    "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
+    "formula": "ARARK * (adults + kids) + (SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
     "hotelLocation": "Central Serengeti"
   },
   {
@@ -192,21 +199,21 @@
     "from": "ARK",
     "to": "TA",
     "description": "Tarangire NP",
-    "formula": "(TAA * adults + TAK * kids) + LC4",
+    "formula": "ARARK * (adults + kids) + (TAA * adults + TAK * kids) + LC4",
     "hotelLocation": "Tarangire"
   },
   {
     "from": "ARK",
     "to": "LE",
     "description": "Lake Eyasi",
-    "formula": "(LEA * adults + LEK * kids) + LC4",
+    "formula": "ARARK * (adults + kids) + (LEA * adults + LEK * kids) + LC4",
     "hotelLocation": "Lake Eyasi"
   },
   {
     "from": "ARK",
     "to": "ND",
     "description": "Ndutu",
-    "formula": "(NGA * adults + NGK * kids) + LC4",
+    "formula": "ARARK * (adults + kids) + (NGA * adults + NGK * kids) + LC4",
     "hotelLocation": "Ndutu"
   },
   {
@@ -234,14 +241,14 @@
     "from": "ARK",
     "to": "NG",
     "description": "Ngorongoro Crater Tour",
-    "formula": "(NGA * adults + NGK * kids) + NCV + LC4",
+    "formula": "ARARK * (adults + kids) + (NGA * adults + NGK * kids) + NCV + LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
     "from": "ARK",
     "to": "LN",
     "description": "Lake Natron",
-    "formula": "(LNA * adults + LNK * kids) + LC4",
+    "formula": "ARARK * (adults + kids) + (LNA * adults + LNK * kids) + LC4",
     "hotelLocation": "Lake Natron"
   },
   {
@@ -262,7 +269,7 @@
     "from": "ARK",
     "to": "ARP",
     "description": "Arusha National Park",
-    "formula": "(ARPA * adults + ARPK * kids) + LC4",
+    "formula": "ARARK * (adults + kids) + (ARPA * adults + ARPK * kids) + LC4",
     "hotelLocation": "Arusha"
   },
   {
@@ -276,14 +283,14 @@
     "from": "ARK",
     "to": "SW",
     "description": "Serval Wildlife Sanctuary from Arusha",
-    "formula": "SWAR * (adults + kids)",
+    "formula": "ARARK * (adults + kids) + SWAR * (adults + kids)",
     "hotelLocation": "Arusha"
   },
   {
     "from": "ARK",
     "to": "FDAR",
     "description": "Flight to Dar es Salaam",
-    "formula": "FARDR * (adults + kids)",
+    "formula": "FARDR * (adults + kids) + ARARK * (adults + kids)",
     "hotelLocation": "No accommodation needed"
   },
   {
@@ -297,35 +304,35 @@
     "from": "ARK",
     "to": "NBOF",
     "description": "Flight to Nairobi",
-    "formula": "FARNBO * (adults + kids)",
+    "formula": "FARNBO * (adults + kids) + ARARK * (adults + kids)",
     "hotelLocation": "No accommodation needed"
   },
   {
     "from": "ARK",
     "to": "KRA",
     "description": "Karatu activities",
-    "formula": "KRA * (adults + kids) + LC4",
+    "formula": "ARARK * (adults + kids) + KRA * (adults + kids) + LC4",
     "hotelLocation": "Karatu"
   },
   {
     "from": "ARK",
     "to": "WS",
     "description": "Western Serengeti",
-    "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
+    "formula": "ARARK * (adults + kids) + (SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
     "hotelLocation": "Western Serengeti"
   },
   {
     "from": "JRO",
     "to": "LM",
     "description": "Lake Manyara",
-    "formula": "(LMA * adults + LMK * kids) + LC4",
+    "formula": "ARJRO * (adults + kids) + (LMA * adults + LMK * kids) + LC4",
     "hotelLocation": "Lake Manyara"
   },
   {
     "from": "JRO",
     "to": "CS",
     "description": "Central Serengeti",
-    "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
+    "formula": "ARJRO * (adults + kids) + (SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
     "hotelLocation": "Central Serengeti"
   },
   {
@@ -346,21 +353,21 @@
     "from": "JRO",
     "to": "TA",
     "description": "Tarangire NP",
-    "formula": "(TAA * adults + TAK * kids) + LC4",
+    "formula": "ARJRO * (adults + kids) + (TAA * adults + TAK * kids) + LC4",
     "hotelLocation": "Tarangire"
   },
   {
     "from": "JRO",
     "to": "LE",
     "description": "Lake Eyasi",
-    "formula": "(LEA * adults + LEK * kids) + LC4",
+    "formula": "ARJRO * (adults + kids) + (LEA * adults + LEK * kids) + LC4",
     "hotelLocation": "Lake Eyasi"
   },
   {
     "from": "JRO",
     "to": "ND",
     "description": "Ndutu",
-    "formula": "(NGA * adults + NGK * kids) + LC4",
+    "formula": "ARJRO * (adults + kids) + (NGA * adults + NGK * kids) + LC4",
     "hotelLocation": "Ndutu"
   },
   {
@@ -388,14 +395,14 @@
     "from": "JRO",
     "to": "NG",
     "description": "Ngorongoro Crater Tour",
-    "formula": "(NGA * adults + NGK * kids) + NCV + LC4",
+    "formula": "ARJRO * (adults + kids) + (NGA * adults + NGK * kids) + NCV + LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
     "from": "JRO",
     "to": "LN",
     "description": "Lake Natron",
-    "formula": "(LNA * adults + LNK * kids) + LC4",
+    "formula": "ARJRO * (adults + kids) + (LNA * adults + LNK * kids) + LC4",
     "hotelLocation": "Lake Natron"
   },
   {
@@ -416,7 +423,7 @@
     "from": "JRO",
     "to": "ARP",
     "description": "Arusha National Park",
-    "formula": "(ARPA * adults + ARPK * kids) + LC4",
+    "formula": "ARJRO * (adults + kids) + (ARPA * adults + ARPK * kids) + LC4",
     "hotelLocation": "Arusha"
   },
   {
@@ -458,14 +465,14 @@
     "from": "JRO",
     "to": "KRA",
     "description": "Karatu activities",
-    "formula": "KRA * (adults + kids) + LC4",
+    "formula": "ARJRO * (adults + kids) + KRA * (adults + kids) + LC4",
     "hotelLocation": "Karatu"
   },
   {
     "from": "JRO",
     "to": "WS",
     "description": "Western Serengeti",
-    "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
+    "formula": "ARJRO * (adults + kids) + (SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
     "hotelLocation": "Western Serengeti"
   },
   {
@@ -565,6 +572,20 @@
     "description": "Western Serengeti",
     "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
     "hotelLocation": "Western Serengeti"
+  },
+  {
+    "from": "LM",
+    "to": "AR",
+    "description": "Arusha",
+    "formula": "LC4",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
+    "from": "LM",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FAZN * (adults + kids) + (ARARK + ZNZT) * (adults + kids) + LC4",
+    "hotelLocation": "Zanzibar"
   },
   {
     "from": "NG",
@@ -672,6 +693,20 @@
     "hotelLocation": "Western Serengeti"
   },
   {
+    "from": "NG",
+    "to": "AR",
+    "description": "Arusha",
+    "formula": "LC4",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
+    "from": "NG",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FAZN * (adults + kids) + (ARARK + ZNZT) * (adults + kids) + LC4",
+    "hotelLocation": "Zanzibar"
+  },
+  {
     "from": "TA",
     "to": "NG",
     "description": "Ngorongoro",
@@ -768,6 +803,20 @@
     "description": "Western Serengeti",
     "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
     "hotelLocation": "Western Serengeti"
+  },
+  {
+    "from": "TA",
+    "to": "AR",
+    "description": "Arusha",
+    "formula": "LC4",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
+    "from": "TA",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FAZN * (adults + kids) + (ARARK + ZNZT) * (adults + kids) + LC4",
+    "hotelLocation": "Zanzibar"
   },
   {
     "from": "CS",
@@ -896,6 +945,20 @@
     "hotelLocation": "Western Serengeti"
   },
   {
+    "from": "CS",
+    "to": "AR",
+    "description": "Arusha",
+    "formula": "LC4",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
+    "from": "CS",
+    "to": "FARZN",
+    "description": "Flight to Zanzibar",
+    "formula": "FAZN * (adults + kids) + (ARARK + ZNZT) * (adults + kids) + LC4",
+    "hotelLocation": "Zanzibar"
+  },
+  {
     "from": "NS",
     "to": "NS",
     "description": "North Serengeti",
@@ -934,7 +997,7 @@
     "from": "NS",
     "to": "MM",
     "description": "Masai Mara",
-    "formula": "(MMA * adults + MMK * kids) + FUL * 2 + LC4 * 4",
+    "formula": "(MMA * adults + MMK * kids) + FUL82 + LC4 * 4",
     "hotelLocation": "Masai Mara"
   },
   {
@@ -969,7 +1032,7 @@
     "from": "ND",
     "to": "CS",
     "description": "Central Serengeti",
-    "formula": "(SEA * adults + SEK * kids) + LC4",
+    "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
     "hotelLocation": "Central Serengeti"
   },
   {
@@ -1041,6 +1104,20 @@
     "description": "Arusha National Park",
     "formula": "(ARPA * adults + ARPK * kids) + (NGA * adults + NGK * kids) + LC4",
     "hotelLocation": "Arusha"
+  },
+  {
+    "from": "ND",
+    "to": "AR",
+    "description": "Arusha",
+    "formula": "LC4",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
+    "from": "ND",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FAZN * (adults + kids) + (ARARK + ZNZT) * (adults + kids) + LC4",
+    "hotelLocation": "Zanzibar"
   },
   {
     "from": "LE",
@@ -1120,6 +1197,20 @@
     "hotelLocation": "Arusha"
   },
   {
+    "from": "LE",
+    "to": "AR",
+    "description": "Arusha",
+    "formula": "LC4",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
+    "from": "LE",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FAZN * (adults + kids) + (ARARK + ZNZT) * (adults + kids) + LC4",
+    "hotelLocation": "Zanzibar"
+  },
+  {
     "from": "LN",
     "to": "ND",
     "description": "Ndutu",
@@ -1195,6 +1286,20 @@
     "description": "Western Serengeti",
     "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
     "hotelLocation": "Western Serengeti"
+  },
+  {
+    "from": "LN",
+    "to": "AR",
+    "description": "Arusha",
+    "formula": "LC4",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
+    "from": "LN",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FAZN * (adults + kids) + (ARARK + ZNZT) * (adults + kids) + LC4",
+    "hotelLocation": "Zanzibar"
   },
   {
     "from": "ZNZ",
@@ -1449,6 +1554,13 @@
     "hotelLocation": "Karatu"
   },
   {
+    "from": "KR",
+    "to": "AR",
+    "description": "Arusha",
+    "formula": "LC4",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
     "from": "WS",
     "to": "NG",
     "description": "Ngorongoro",
@@ -1526,6 +1638,20 @@
     "hotelLocation": "Arusha"
   },
   {
+    "from": "WS",
+    "to": "AR",
+    "description": "Arusha",
+    "formula": "LC4",
+    "hotelLocation": "No accommodation needed"
+  },
+  {
+    "from": "WS",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FAZN * (adults + kids) + (ARARK + ZNZT) * (adults + kids) + LC4",
+    "hotelLocation": "Zanzibar"
+  },
+  {
     "from": "MS",
     "to": "MSCT",
     "description": "Moshi city tour",
@@ -1556,16 +1682,9 @@
   {
     "from": "MS",
     "to": "AR",
-    "description": "Transfer to Arusha",
+    "description": "Arusha",
     "formula": "ARMS * (adults + kids)",
     "hotelLocation": "Arusha"
-  },
-  {
-    "from": "MS",
-    "to": "TA",
-    "description": "Tarangire",
-    "formula": "ARMS * (adults + kids) + (TAA * adults + TAK * kids) + LC4",
-    "hotelLocation": "Tarangire"
   },
   {
     "from": "MS",
@@ -1576,24 +1695,17 @@
   },
   {
     "from": "MS",
-    "to": "CS",
-    "description": "Central Serengeti",
-    "formula": "ARMS * (adults + kids) + (SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
-    "hotelLocation": "Central Serengeti"
-  },
-  {
-    "from": "MS",
     "to": "NG",
-    "description": "Ngorongoro crater",
+    "description": "Ngorongoro Crater Tour",
     "formula": "ARMS * (adults + kids) + (NGA * adults + NGK * kids) + NCV + LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
     "from": "MS",
-    "to": "KR",
-    "description": "Karatu",
-    "formula": "ARMS * (adults + kids) + LC4",
-    "hotelLocation": "Karatu"
+    "to": "TA",
+    "description": "Tarangire NP",
+    "formula": "ARMS * (adults + kids) + (TAA * adults + TAK * kids) + LC4",
+    "hotelLocation": "Tarangire"
   },
   {
     "from": "MS",
@@ -1611,6 +1723,20 @@
   },
   {
     "from": "MS",
+    "to": "CS",
+    "description": "Central Serengeti",
+    "formula": "ARMS * (adults + kids) + (SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
+    "hotelLocation": "Central Serengeti"
+  },
+  {
+    "from": "MS",
+    "to": "NS",
+    "description": "North Serengeti",
+    "formula": "ARMS * (adults + kids) + (SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
+    "hotelLocation": "North Serengeti"
+  },
+  {
+    "from": "MS",
     "to": "ND",
     "description": "Ndutu",
     "formula": "ARMS * (adults + kids) + (NGA * adults + NGK * kids) + LC4",
@@ -1618,17 +1744,38 @@
   },
   {
     "from": "MS",
-    "to": "MSKDT",
-    "description": "Kilimanjaro hut day trek",
-    "formula": "MSKDT * (adults + kids)",
-    "hotelLocation": "Moshi"
+    "to": "KRA",
+    "description": "Karatu activities",
+    "formula": "ARMS * (adults + kids) + KRA * (adults + kids) + LC4",
+    "hotelLocation": "Karatu"
+  },
+  {
+    "from": "MS",
+    "to": "WS",
+    "description": "Western Serengeti",
+    "formula": "ARMS * (adults + kids) + (SEA + NGA) * adults + (SEK + NGK) * kids + LC4",
+    "hotelLocation": "Western Serengeti"
+  },
+  {
+    "from": "MS",
+    "to": "SW",
+    "description": "Serval Wildlife Sanctuary from Moshi",
+    "formula": "SWMS * (adults + kids)",
+    "hotelLocation": "Arusha"
+  },
+  {
+    "from": "MS",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FAZN * (adults + kids) + (ARARK + ZNZT) * (adults + kids) + LC4",
+    "hotelLocation": "Zanzibar"
   },
   {
     "from": "DAR",
-    "to": "FZN",
-    "description": "Flight to Zanzibar",
-    "formula": "FDRZN * (adults + kids) + ZNZT * (adults + kids)",
-    "hotelLocation": "Zanzibar"
+    "to": "ARK",
+    "description": "Flight to Arusha airport",
+    "formula": "FDRAR * (adults + kids)",
+    "hotelLocation": "No accommodation needed"
   },
   {
     "from": "DAR",
@@ -1646,10 +1793,10 @@
   },
   {
     "from": "DAR",
-    "to": "FARK",
-    "description": "Flight to Arusha",
-    "formula": "FDRAR * (adults + kids)",
-    "hotelLocation": "Arusha"
+    "to": "ZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FDRZN * (adults + kids) + ZNZT * (adults + kids)",
+    "hotelLocation": "Zanzibar"
   },
   {
     "from": "DAR",
@@ -1717,36 +1864,36 @@
   {
     "from": "DAR",
     "to": "ARP",
-    "description": "Flight to Arusha and to Arusha city by road",
-    "formula": "ARPA * (adults + kids) + (FDRAR + ARARK) * (adults + kids) + LC4",
+    "description": "Flight to Arusha and to Arusha National Park by road",
+    "formula": "(ARPA * adults + ARPK * kids) + (FDRAR + ARARK) * (adults + kids) + LC4",
     "hotelLocation": "Arusha"
   },
   {
     "from": "DAR",
     "to": "MCT",
-    "description": "Flight to Arusha and to Arusha city by road",
+    "description": "Flight to Arusha and to Moshi city tour by road",
     "formula": "ARMCT * (adults + kids) + (FDRAR + ARARK) * (adults + kids)",
     "hotelLocation": "Moshi"
   },
   {
     "from": "DAR",
     "to": "SW",
-    "description": "Flight to Arusha and to Arusha city by road",
+    "description": "Flight to Arusha and to Serval Wildlife Sanctuary by road",
     "formula": "SWAR * (adults + kids) + (FDRAR + ARARK) * (adults + kids)",
     "hotelLocation": "Arusha"
   },
   {
     "from": "DAR",
     "to": "KRA",
-    "description": "Flight to Arusha and to Arusha city by road",
+    "description": "Flight to Arusha and to Karatu by road",
     "formula": "KRA * (adults + kids) + (FDRAR + ARARK) * (adults + kids) + LC4",
     "hotelLocation": "Karatu"
   },
   {
     "from": "DAR",
     "to": "WS",
-    "description": "Flight to Arusha and to Arusha city by road",
-    "formula": "(SEA+NGA) * (adults) + (SEK + NGK) * kids + (FDRAR + ARARK) * (adults + kids) + LC4",
-    "hotelLocation": "Western serengeti"
+    "description": "Flight to Arusha and to Western Serengeti by road",
+    "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + (FDRAR + ARARK) * (adults + kids) + LC4",
+    "hotelLocation": "Western Serengeti"
   }
 ]
