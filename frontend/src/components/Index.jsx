@@ -1420,16 +1420,48 @@ export default function SafariPricingTool() {
                           </div>
                           {Object.keys(hotelsByDay).length > 0 && (
                             <div className="text-sm text-gray-600 mt-2">
-                              Hotels:
-                              <ul className="list-disc ml-4">
-                                {Object.entries(hotelsByDay).map(
-                                  ([day, hotelName]) => (
-                                    <li key={day}>
-                                      Day {day}: {hotelName}
-                                    </li>
-                                  )
-                                )}
-                              </ul>
+                              {(() => {
+                                // Get room details from the first hotel to show configuration once
+                                const firstDay = Object.keys(hotelsByDay)[0];
+                                const dayHotels = dayHotelInfo[firstDay] || [];
+                                const firstHotelDetails = dayHotels.find(
+                                  (h) => h.class === hotelClass
+                                );
+
+                                return (
+                                  <>
+                                    {firstHotelDetails?.roomDetails && (
+                                      <div className="mb-2">
+                                        <span className="font-medium">
+                                          Room Configuration:
+                                        </span>
+                                        {firstHotelDetails.roomDetails.map(
+                                          (room, idx) => (
+                                            <span key={idx}>
+                                              {idx > 0 && ", "}
+                                              {room.roomType
+                                                .charAt(0)
+                                                .toUpperCase() +
+                                                room.roomType.slice(1)}
+                                              : {room.roomCount}
+                                            </span>
+                                          )
+                                        )}
+                                      </div>
+                                    )}
+                                    <div>Hotels:</div>
+                                    <ul className="list-disc ml-4">
+                                      {Object.entries(hotelsByDay).map(
+                                        ([day, hotelName]) => (
+                                          <li key={day}>
+                                            Day {day}: {hotelName}
+                                          </li>
+                                        )
+                                      )}
+                                    </ul>
+                                  </>
+                                );
+                              })()}
                             </div>
                           )}
                           {adults > 0 && (
