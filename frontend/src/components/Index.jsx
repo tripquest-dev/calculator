@@ -29,6 +29,7 @@ export default function SafariPricingTool() {
   const adults = parseInt(formData.adults) || 0;
   const kids = parseInt(formData.children) || 0;
   const dropdownRefs = useRef({});
+  const dayRefs = useRef({});
 
   // Location normalization map (for validation only, not API calls)
   const locationNormalization = {
@@ -575,6 +576,12 @@ export default function SafariPricingTool() {
 
       setResults({ classPrices, details });
       console.log("Final results:", { classPrices, details });
+      setTimeout(() => {
+        window.scrollBy({
+          top: 600,
+          behavior: "smooth",
+        });
+      }, 100);
     } catch (error) {
       console.error("API error details:", {
         message: error.message,
@@ -964,9 +971,12 @@ export default function SafariPricingTool() {
                   type="text"
                   name="clientId"
                   value={formData.clientId}
-                  onChange={(e) =>
-                    setFormData({ ...formData, clientId: e.target.value })
-                  }
+                  onChange={(e) => {
+                    const value = e.target.value
+                      .toUpperCase()
+                      .replace(/[^A-Z0-9]/g, "");
+                    setFormData({ ...formData, clientId: value });
+                  }}
                   placeholder="Enter client ID"
                   className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
                 />
@@ -1078,6 +1088,7 @@ export default function SafariPricingTool() {
               {formData.itinerary.map((day, index) => (
                 <div
                   key={index}
+                  ref={(el) => (dayRefs.current[index] = el)}
                   className="bg-white border border-gray-200 rounded-md p-4"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
@@ -1168,6 +1179,14 @@ export default function SafariPricingTool() {
                               );
                               fetchAllHotels(hotelLocation, index);
                             }
+                            // if (index + 1 < formData.itinerary.length) {
+                            //   setTimeout(() => {
+                            //     dayRefs.current[index + 1]?.scrollIntoView({
+                            //       behavior: "smooth",
+                            //       block: "start",
+                            //     });
+                            //   }, 100);
+                            // }
                           }}
                           disabled={!day.from}
                           className="w-full h-10 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
@@ -1269,7 +1288,7 @@ export default function SafariPricingTool() {
                                   </h4>
                                   <p className="text-sm text-gray-600">
                                     Class: {hotelClass}
-                                    {console.log("HOTEL CLASS", hotelClass)}
+                                    {/* {console.log("HOTEL CLASS", hotelClass)} */}
                                   </p>
                                   <p className="text-sm text-gray-600">
                                     Price: ${totalPrice.toLocaleString()}
@@ -1437,7 +1456,7 @@ export default function SafariPricingTool() {
                                   <>
                                     {firstHotelDetails?.roomDetails && (
                                       <div className="mb-2">
-                                        <span className="font-medium">
+                                        <span className="font-medium mr-2">
                                           Room Configuration:
                                         </span>
                                         {firstHotelDetails.roomDetails.map(
