@@ -547,6 +547,7 @@ export default function SafariPricingTool() {
               ) {
                 acc[day.day] = classHotel.hotel;
               }
+              console.log("HOTEL CLASS", hotelClass);
               return acc;
             }, {});
           return {
@@ -1254,7 +1255,10 @@ export default function SafariPricingTool() {
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                           {dayHotelInfo[day.day].map(
-                            ({ hotel, totalPrice, hotelClass }, cardIndex) => (
+                            (
+                              { hotel, totalPrice, class: hotelClass },
+                              cardIndex
+                            ) => (
                               <div
                                 key={`${day.day}-${cardIndex}`}
                                 className="card bg-gray-50 border border-gray-200 shadow-md"
@@ -1265,6 +1269,7 @@ export default function SafariPricingTool() {
                                   </h4>
                                   <p className="text-sm text-gray-600">
                                     Class: {hotelClass}
+                                    {console.log("HOTEL CLASS", hotelClass)}
                                   </p>
                                   <p className="text-sm text-gray-600">
                                     Price: ${totalPrice.toLocaleString()}
