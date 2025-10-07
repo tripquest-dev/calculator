@@ -1186,14 +1186,14 @@ export default function SafariPricingTool() {
                               );
                               fetchAllHotels(hotelLocation, index);
                             }
-                            // if (index + 1 < formData.itinerary.length) {
-                            //   setTimeout(() => {
-                            //     dayRefs.current[index + 1]?.scrollIntoView({
-                            //       behavior: "smooth",
-                            //       block: "start",
-                            //     });
-                            //   }, 100);
-                            // }
+                            if (index + 1 < formData.itinerary.length) {
+                              setTimeout(() => {
+                                dayRefs.current[index + 1]?.scrollIntoView({
+                                  behavior: "smooth",
+                                  block: "start",
+                                });
+                              }, 100);
+                            }
                           }}
                           disabled={!day.from}
                           className="w-full h-10 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
@@ -1310,7 +1310,7 @@ export default function SafariPricingTool() {
                   {index !== formData.itinerary.length - 1 &&
                     day.hotelLocation === "No accommodation needed" && (
                       <div className="mt-4 text-sm text-gray-600">
-                        No accommodation needed for this day.
+                        No accommodation.
                       </div>
                     )}
                 </div>
