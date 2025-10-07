@@ -1068,21 +1068,28 @@ export default function SafariPricingTool() {
                   <MapPin className="h-5 w-5 text-sky-500" />
                   Daily Itinerary
                 </h3>
-                <label className="flex items-center gap-2 text-sm text-gray-700">
-                  Manual Hotel Search
-                  <input
-                    type="checkbox"
-                    checked={manualHotelSearch}
-                    onChange={(e) => {
-                      setManualHotelSearch(e.target.checked);
-                      if (!e.target.checked) {
+                <label className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
+                  <span>Manual Hotel Search</span>
+                  <div
+                    onClick={() => {
+                      const newValue = !manualHotelSearch;
+                      setManualHotelSearch(newValue);
+                      if (!newValue) {
                         setHotelQueries({});
                         setHotelSuggestions({});
                         setSelectedHotels({});
                       }
                     }}
-                    className="h-4 w-4 text-sky-500 focus:ring-sky-500 border-gray-300 rounded"
-                  />
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      manualHotelSearch ? "bg-sky-500" : "bg-gray-300"
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        manualHotelSearch ? "translate-x-6" : "translate-x-1"
+                      }`}
+                    />
+                  </div>
                 </label>
               </div>
               {formData.itinerary.map((day, index) => (
@@ -1345,11 +1352,13 @@ export default function SafariPricingTool() {
                     <span className="text-gray-500">Departure: </span>
                     <span className="text-sky-600">
                       {formData.departureDate
-                        ? formData.departureDate.toLocaleDateString("en-GB", {
-                            day: "2-digit",
-                            month: "2-digit",
-                            year: "numeric",
-                          })
+                        ? formData.departureDate
+                            .toLocaleDateString("en-GB", {
+                              day: "2-digit",
+                              month: "long",
+                              year: "numeric",
+                            })
+                            .replace(/\//g, "-")
                         : "Not selected"}
                     </span>
                   </div>
