@@ -132,11 +132,21 @@ export const getHotelPrices = async (req, res) => {
       location,
       pricing: {
         $elemMatch: {
-          startMonth: { $lte: month },
-          startDay: { $lte: day },
-          endMonth: { $gte: month },
-          endDay: { $gte: day },
           year: fullYear,
+          $and: [
+            {
+              $or: [
+                { startMonth: { $lt: month } },
+                { $and: [{ startMonth: month }, { startDay: { $lte: day } }] },
+              ],
+            },
+            {
+              $or: [
+                { endMonth: { $gt: month } },
+                { $and: [{ endMonth: month }, { endDay: { $gte: day } }] },
+              ],
+            },
+          ],
           $or: [
             { "rates.single": { $gt: 0 } },
             { "rates.double": { $gt: 0 } },
@@ -256,7 +266,6 @@ export const getHotelPrices = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 };
-
 export const getAllHotelsByLocation = async (req, res) => {
   const { date, location } = req.query;
   const { groupSizeInfo } = req.body;
