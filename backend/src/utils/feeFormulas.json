@@ -73,7 +73,7 @@
     "from": "AR",
     "to": "NG",
     "description": "Ngorongoro Crater Tour",
-    "formula": "(NGA*adults+NGK*kids)+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -241,7 +241,7 @@
     "from": "ARK",
     "to": "NG",
     "description": "Ngorongoro Crater Tour",
-    "formula": "ARARK*(adults+kids)+(NGA*adults+NGK*kids)+NCV+N*LC4",
+    "formula": "ARARK*(adults+kids)+(NGA*adults+NGK*kids)+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -395,7 +395,7 @@
     "from": "JRO",
     "to": "NG",
     "description": "Ngorongoro Crater Tour",
-    "formula": "ARJRO*(adults+kids)+(NGA*adults+NGK*kids)+NCV+N*LC4",
+    "formula": "ARJRO*(adults+kids)+(NGA*adults+NGK*kids)+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -479,7 +479,7 @@
     "from": "LM",
     "to": "NG",
     "description": "Ngorongoro Crater Tour",
-    "formula": "(NGA*adults+NGK*kids)+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -710,7 +710,7 @@
     "from": "TA",
     "to": "NG",
     "description": "Ngorongoro",
-    "formula": "(NGA*adults+NGK*kids)+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -822,7 +822,7 @@
     "from": "CS",
     "to": "NG",
     "description": "Ngorongoro",
-    "formula": "(NGA*adults+NGK*kids)*2+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)*2+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -976,7 +976,7 @@
     "from": "NS",
     "to": "NG",
     "description": "Ngorongoro Crater",
-    "formula": "(NGA*adults+NGK*kids)*2+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)*2+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -1046,7 +1046,7 @@
     "from": "ND",
     "to": "NG",
     "description": "Ngorongoro Crater",
-    "formula": "(NGA*adults+NGK*kids)*2+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)*2+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -1130,7 +1130,7 @@
     "from": "LE",
     "to": "NG",
     "description": "Ngorongoro crater",
-    "formula": "(NGA*adults+NGK*kids)+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -1235,7 +1235,7 @@
     "from": "LN",
     "to": "NG",
     "description": "Ngorongoro",
-    "formula": "(NGA*adults+NGK*kids)+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)+N*N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -1396,7 +1396,7 @@
     "from": "ZNZ",
     "to": "NG",
     "description": "Flight to arusha and to Ngorongoro by road",
-    "formula": "(NGA*adults+NGK*kids)+NCV+(FZNAR+ARARK)*(adults+kids)+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)+N*NCV+(FZNAR+ARARK)*(adults+kids)+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -1494,7 +1494,7 @@
     "from": "KR",
     "to": "NG",
     "description": "Ngorongoro crater",
-    "formula": "(NGA*adults+NGK*kids)+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -1564,7 +1564,7 @@
     "from": "WS",
     "to": "NG",
     "description": "Ngorongoro",
-    "formula": "(NGA*adults+NGK*kids)*2+NCV+N*LC4",
+    "formula": "(NGA*adults+NGK*kids)*2+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -1711,7 +1711,7 @@
     "from": "MS",
     "to": "NG",
     "description": "Ngorongoro careter",
-    "formula": "ARMS*(adults+kids)+(NGA*adults+NGK*kids)+NCV+N*LC4",
+    "formula": "ARMS*(adults+kids)+(NGA*adults+NGK*kids)+N*NCV+N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
@@ -1844,7 +1844,7 @@
     "from": "DAR",
     "to": "NG",
     "description": "Flight to Arusha and to Ngorongoro by road",
-    "formula": "(NGA * adults + NGK * kids) + NCV + (FDRAR + ARARK) * (adults + kids) + N*LC4",
+    "formula": "(NGA * adults + NGK * kids) + N*NCV + (FDRAR + ARARK) * (adults + kids) + N*LC4",
     "hotelLocation": "Ngorongoro"
   },
   {
