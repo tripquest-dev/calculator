@@ -21,8 +21,8 @@ export const calculateFee = async (req, res) => {
       fs.readFileSync("./src/utils/feeFormulas.json", "utf-8")
     );
     console.log(
-      "Formulas loaded, checking for CS to NG:",
-      formulas.some((f) => f.from === "CS" && f.to === "NG")
+      "Formulas loaded, checking for route:",
+      formulas.some((f) => f.from === from && f.to === to)
     );
     const rule = formulas.find((f) => f.from === from && f.to === to);
     if (!rule) {
@@ -34,9 +34,9 @@ export const calculateFee = async (req, res) => {
     console.log("Found rule:", rule);
 
     const serviceCodes = (rule.formula.match(/[A-Z][A-Z0-9]*/g) || []).filter(
-      (code) => !/^\d+$/.test(code)
+      (code) => !/^\d+$/.test(code) && code !== "N"
     );
-    console.log("Extracted service codes:", serviceCodes);
+    console.log("Extracted service codes (excluding N):", serviceCodes);
 
     const services = await ServicePricing.find({
       serviceCode: { $in: serviceCodes },
@@ -54,12 +54,33 @@ export const calculateFee = async (req, res) => {
     }, {});
     console.log("Constructed fee map:", feeMap);
 
+    // Calculate N based on group size
+    const groupSize = adultsNum + kidsNum;
+    let N;
+    if (groupSize < 7) {
+      N = 1;
+    } else if (groupSize > 7) {
+      if (groupSize % 7 === 0) {
+        N = groupSize / 7;
+      } else {
+        N = Math.floor(groupSize / 7) + 1;
+      }
+    } else {
+      N = 1; // groupSize === 7
+    }
+    console.log("Calculated N:", N, "for groupSize:", groupSize);
+
     let formula = rule.formula;
+    // Replace service codes (excluding N)
     serviceCodes.forEach((code) => {
       const feeValue = feeMap[code] || 0;
       formula = formula.replace(new RegExp(`\\b${code}\\b`, "g"), feeValue);
       console.log(`Replaced ${code} with ${feeValue}`);
     });
+    // Replace N
+    formula = formula.replace(/\bN\b/g, N);
+    console.log("After replacing N:", formula);
+    // Replace adults and kids
     formula = formula
       .replace(/\badults\b/g, adultsNum)
       .replace(/\bkids\b/g, kidsNum);
