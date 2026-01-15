@@ -176,7 +176,55 @@ export default function SafariPricingTool() {
     };
     return map;
   }, {});
+  const feeFormulaByCountry = feeFormula.reduce((acc, entry) => {
+    if (!acc[entry.country]) acc[entry.country] = [];
+    acc[entry.country].push(entry);
+    return acc;
+  }, {});
 
+  const getFromLocations = () => {
+    if (!selectCountry) return [];
+    if (selectCountry === "Tanzania + Kenya") {
+      return [...new Set(feeFormula.map((f) => f.from))];
+    }
+
+    return [
+      ...new Set(
+        feeFormula.filter((f) => f.country === selectCountry).map((f) => f.from)
+      ),
+    ];
+  };
+  const getToLocations = (from) => {
+    if (!from || !selectCountry) return [];
+
+    let formulas = feeFormula;
+
+    if (selectCountry !== "Tanzania + Kenya") {
+      formulas = formulas.filter((f) => f.country === selectCountry);
+    }
+
+    return [
+      ...new Set(formulas.filter((f) => f.from === from).map((f) => f.to)),
+    ];
+  };
+  useEffect(() => {
+    if (!selectCountry) return;
+
+    setFormData((prev) => ({
+      ...prev,
+      itinerary: prev.itinerary.map((day) => ({
+        ...day,
+        from: "",
+        to: "",
+        hotelLocation: "",
+      })),
+    }));
+
+    setHotelQueries({});
+    setHotelSuggestions({});
+    setSelectedHotels({});
+    setDayHotelInfo({});
+  }, [selectCountry]);
   // Debug state changes
   useEffect(() => {
     console.log("formData:", formData);
@@ -1161,7 +1209,7 @@ export default function SafariPricingTool() {
                           className="w-full h-10 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
                         >
                           <option value="">Select start location</option>
-                          {startLocations.map((loc) => (
+                          {getFromLocations().map((loc) => (
                             <option key={loc} value={loc}>
                               {loc}
                             </option>
@@ -1226,7 +1274,7 @@ export default function SafariPricingTool() {
                         >
                           <option value="">Select destination</option>
                           {day.from &&
-                            locationMap[day.from]?.map((loc, locIndex) => (
+                            getToLocations(day.from)?.map((loc, locIndex) => (
                               <option key={`${loc}-${locIndex}`} value={loc}>
                                 {loc}
                               </option>
