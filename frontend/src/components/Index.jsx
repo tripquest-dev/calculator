@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Calendar, Users, Clock, MapPin, Calculator } from "lucide-react";
+import {
+  Calendar,
+  Users,
+  Clock,
+  MapPin,
+  Calculator,
+  Earth,
+} from "lucide-react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
@@ -26,11 +33,12 @@ export default function SafariPricingTool() {
   const [hotelSuggestions, setHotelSuggestions] = useState({});
   const [selectedHotels, setSelectedHotels] = useState({});
   const [allHotels, setAllHotels] = useState({}); // Store hotels by location
+  const [selectCountry, setSelectCountry] = useState("");
   const adults = parseInt(formData.adults) || 0;
   const kids = parseInt(formData.children) || 0;
   const dropdownRefs = useRef({});
   const dayRefs = useRef({});
-
+  const countryOptions = ["Tanzania", "Kenya", "Tanzania + Kenya"];
   // Location normalization map (for validation only, not API calls)
   const locationNormalization = {
     Ngorongoro: "NG",
@@ -1039,29 +1047,47 @@ export default function SafariPricingTool() {
                 />
               </div>
             </div>
-
-            <div className="space-y-2 max-w-xs">
-              <label className="text-sm font-medium flex items-center gap-2 text-gray-700">
-                <Clock className="h-4 w-4 text-sky-500" />
-                Duration (Days)
-              </label>
-              <input
-                type="number"
-                name="duration"
-                value={formData.duration}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  setFormData({
-                    ...formData,
-                    duration: value === "" ? "" : parseInt(value) || "",
-                  });
-                }}
-                placeholder="Enter number of days"
-                min="1"
-                className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <div className="space-y-2 max-w-xs">
+                <label className="text-sm font-medium flex items-center gap-2 text-gray-700">
+                  <Clock className="h-4 w-4 text-sky-500" />
+                  Duration (Days)
+                </label>
+                <input
+                  type="number"
+                  name="duration"
+                  value={formData.duration}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setFormData({
+                      ...formData,
+                      duration: value === "" ? "" : parseInt(value) || "",
+                    });
+                  }}
+                  placeholder="Enter number of days"
+                  min="1"
+                  className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                />
+              </div>
+              <div className="space-y-2 ">
+                <label className="text-sm font-medium flex items-center gap-2 text-gray-900 ">
+                  <Earth className="h-4 w-4 text-sky-500" />
+                  Country
+                </label>
+                <select
+                  className="w-full h-12 border border-gray-300 rounded-md px-3 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                  value={selectCountry}
+                  onChange={(e) => setSelectCountry(e.target.value)}
+                >
+                  <option value="">Choose a country</option>
+                  {countryOptions.map((country) => (
+                    <option key={country} value={country}>
+                      {country}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
-
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold flex items-center gap-2 text-sky-600">
