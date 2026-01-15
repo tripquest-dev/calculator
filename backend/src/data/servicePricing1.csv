@@ -63,3 +63,50 @@ FCSNBO,Seronera to Nairobi Flight,330
 FNSNBO,Kogatende to Nairobi Flight,330
 ARRNBO,Tansfer Arusha to Nairobi by Road (vice versa) per group below 6,150
 MSKDT,Kilimanjaro Hut Day Trek from Moshi,290
+MMA,Masai Mara Park Fee for Adult ,100
+MMK,Masai Mara Park Fee for Kid ,50
+LKA,Lake Nakuru park fee for adult,100
+LKK,Lake Nakuru park fee for kid,35
+LAA,Lake Naivasha Park fee for adult,30
+LAK,Lake Naivasha Park fee for kid,20
+LAB,Boat ride,35
+AMA,Amboseli National Park fee for adult,100
+AMK,Amboseli National Park fee for kid,35
+TEA,Tsavo East park fee for adult,80
+TEK,Tsavo East park fee for kid,35
+TWA,Tsavo Westt park fee for adult,80
+TWK,Tsavo West park fee for kid,35
+ABA,Aberdare National Park fee for adults,100
+ABK,Aberdare National Park fee for kid,35
+NBA,Nairobi National Park fee for adults,100
+NBK,Nairobi National Park fee for kids,35
+SBA,Samburu National Reserve fee for adults,85
+SBK,Samburu National Reserve fee for kids,50
+OPA,Olpejeta Conservancy fee for adults,120
+OPK,Olpejeta Conservancy fee for kids,65
+SV,Safari Van per day,150
+LC,Land Cruiser,200
+SFK,Service fee Kenya,50
+MVK,Masai Village Visit,30
+HABK,Hot Air Balloon Safari,460
+PLK,Packed Lunch,15
+WAK,WA,1
+ELK,Extra Lunch,35
+NBT,Tansfer from Nairbi to Nairobi Airport and Vice Versa,25
+NBAR,Transfer from Nairobi to Arusha via Road,170
+AMAR,Transfer from amboseli to Arusha via Road,120
+FNBAR,Transfer from Nairobi to Arusha via Flight (Flightlink),155
+NBCT,"Nairobi City Tour (Giraffe Centre, and Karen Blixen Museum)",160
+FNBMM,Flight charges Nairobi to Masai Mara (Mombasa Air),190
+FMMNB,Flight charges Masai Mara to Nairobi (Mombasa Air),190
+FAMMM,Flight charges from Amboseli to Masai Mara (Mombasa),290
+FMMAM,Flight charges from Masai Mara to Amboseli (Mombasa),400
+FNBMB,Flight from Nairobi to Mombasa/ Diani (Safari Link),235
+FMBNB,Flight from Mombasa/ Diani to Nairobi (Safari Link),235
+FNBZN,Flight from Nairobi to Zanzibar (Flightlink),245
+FMMMB,Flight charges from Masai Mara to Mombasa (Mombasa Air),390
+FMBMM,Flight charges from Mombasa to Masai Mara (Mombasa Air),275
+FMBZN,Flight charges from Mombasa to Zanzibar (Safari Link),360
+FNBAM,Flight charges from Nairobi to Amboseli (Mombasa Air),180
+FAMNB,Flight charges from Amboseli to Nairobi (Mombasa Air),180
+FMBAM,Flight charges from Mombasa to Amboseli (Mombasa Air),290

@@ -1,7 +1,7 @@
 import fs from "fs";
 import mongoose from "mongoose";
 import Hotel from "../models/hotels.model.js"; // Adjust path as needed
-const CSV_FILE_PATH = "./src/data/hotels.csv";
+const CSV_FILE_PATH = "./src/data/hotels2.csv";
 function parseDateString(dateRangeStr) {
   const ranges = dateRangeStr.split(",");
   const parsedRanges = [];

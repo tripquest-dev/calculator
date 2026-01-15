@@ -429,7 +429,7 @@ class,hotelname,location,daterange,singlerate,doubleRate,tripleRate
 3,Natron River Camp (Standard),Lake Natron,01/04/26-31/05/26,0,0,0
 4,Halisi Natron Camp (1),Lake Natron,01/01/25-31/12/25,269.5,409,608.5
 4,Halisi Natron Camp (1),Lake Natron,01/01/26-31/12/26,0,0,0
-5,Halisi Natron Camp 2),Lake Natron,01/01/25-31/12/25,269.5,409,608.5
+5,Halisi Natron Camp (2),Lake Natron,01/01/25-31/12/25,269.5,409,608.5
 5,Halisi Natron Camp (2),Lake Natron,01/01/26-31/12/26,0,0,0
 6,Lake Natron Camp (Luxury Tent),Lake Natron,"01/01/25-31/01/25,01/03/25-31/05/25,01/11/25-31/12/25",374.5,489,728.5
 6,Lake Natron Camp (Luxury Tent),Lake Natron,"01/02/25-28/02/25,01/06/25-31/10/25",444.5,629,938.5
