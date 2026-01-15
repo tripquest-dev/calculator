@@ -2166,5 +2166,973 @@
     "formula": "(SEA + NGA) * adults + (SEK + NGK) * kids + (FDRAR + ARARK) * (adults + kids) + N*LC4",
     "hotelLocation": "Western Serengeti",
     "country": "Tanzania"
+  },
+  {
+    "from": "NB",
+    "to": "MM",
+    "description": "Masai Mara",
+    "formula": "(MMA*adults+MMK*kids)+N*LC",
+    "hotelLocation": "Masai Mara",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "AM",
+    "description": "Amboseli",
+    "formula": "(AMA*adults+AMK*kids)+N*LC",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "LK",
+    "description": "Lake Nakuru",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "TE",
+    "description": "Tsavo East",
+    "formula": "(TEA*adults+TEK*kids)+N*LC",
+    "hotelLocation": "Tsavo East",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "TW",
+    "description": "Tsavo West",
+    "formula": "(TWA*adults+TWK*kids)+N*LC",
+    "hotelLocation": "Tsavo West",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "SB",
+    "description": "Samburu NP",
+    "formula": "(SBA*adults+SBK*kids)+N*LC",
+    "hotelLocation": "Samburu",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "OP",
+    "description": "Ol pejeta Conservancy",
+    "formula": "(OPA*adults+OPK*kids)+N*LC",
+    "hotelLocation": "Ol Pejeta",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "NBT",
+    "description": "Nairobi airport transfer",
+    "formula": "NBT*(adults+kids)",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "NBP",
+    "description": "Nairobi National Park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "ARR",
+    "description": "Transfer from Nairobi to Arusha by road",
+    "formula": "NBAR*(adults+kids)",
+    "hotelLocation": "Arusha",
+    "country": "Tanzania"
+  },
+  {
+    "from": "NB",
+    "to": "FAR",
+    "description": "Transfer from Nairobi to Arusha by flight",
+    "formula": "FNBAR*(adults+kids)",
+    "hotelLocation": "Arusha",
+    "country": "Tanzania"
+  },
+  {
+    "from": "NB",
+    "to": "MBS",
+    "description": "Flight from Nairobi to Mombasa",
+    "formula": "FNBMB*(adults+kids)",
+    "hotelLocation": "Mombasa",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "NBCT",
+    "description": "Nairobi city tour",
+    "formula": "NBCT*(adults+kids)",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar from Nairobi",
+    "formula": "FNBZN*(adults+kids)+NBT",
+    "hotelLocation": "Zanzibar",
+    "country": "Tanzania"
+  },
+  {
+    "from": "NB",
+    "to": "FMM",
+    "description": "Flight to Masai Mara from Nairobi",
+    "formula": "(MMA*adults+MMK*kids)+(FNBMM+ELK)*(adults+kids)+N*LC*2",
+    "hotelLocation": "Masai Mara",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "AB",
+    "description": "Aberdare National Park",
+    "formula": "(ABA*adults+ABK*kids)+N*LC",
+    "hotelLocation": "Aberdare",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "NB",
+    "description": "Stay in hotel (No activity)",
+    "formula": "0",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "NB",
+    "to": "FNBAM",
+    "description": "Flight from Nairobi to Amboseli",
+    "formula": "(AMA*adults+AMK*kids)+(FNBAM+ELK)*(adults+kids)+N*LC*2",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "FAM",
+    "description": "Flight from Masai Mara to Amboseli",
+    "formula": "(AMA*adults+AMK*kids)+FMMAM*(adults+kids)+N*LC*2",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "LK",
+    "description": "Lake Nakuru",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "AB",
+    "description": "Aberdare",
+    "formula": "(ABA*adults+ABK*kids)+N*LC",
+    "hotelLocation": "Aberdare",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "NBT",
+    "description": "Nairobi airport transfer",
+    "formula": "NBT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "NBP",
+    "description": "Nairobi national park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "FMB",
+    "description": "Flight to Mombasa",
+    "formula": "FMMMB*(adults+kids)+N*LC",
+    "hotelLocation": "Mombasa",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "NS",
+    "description": "Masai Mara to North Serengeti through Isebania border",
+    "formula": "(SEA*adults+SEK*kids)+N*LC*4+150",
+    "hotelLocation": "North Serengeti",
+    "country": "Tanzania"
+  },
+  {
+    "from": "MM",
+    "to": "CS",
+    "description": "Masai Mara to Central Serengeti through Isebania border",
+    "formula": "(SEA*adults+SEK*kids)+N*LC*4+150",
+    "hotelLocation": "Central Serengeti",
+    "country": "Tanzania"
+  },
+  {
+    "from": "MM",
+    "to": "MM",
+    "description": "Full day in Masai Mara",
+    "formula": "(MMA*adults+MMK*kids)+N*LC",
+    "hotelLocation": "Masai Mara",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "FNB",
+    "description": "Flight to Nairobi airport",
+    "formula": "FMMNB*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "NB",
+    "description": "Drop off to Nairobi",
+    "formula": "N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "MM",
+    "to": "NBCT",
+    "description": "Nairobi city tour",
+    "formula": "NBCT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "AM",
+    "description": "Amboseli",
+    "formula": "(AMA*adults+AMK*kids)+N*LC",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "MM",
+    "description": "Masai Mara",
+    "formula": "(MMA*adults+MMK*kids)+N*LC",
+    "hotelLocation": "Masai Mara",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "SB",
+    "description": "Samburu NR",
+    "formula": "(SBA*adults+SBK*kids)+N*LC",
+    "hotelLocation": "Samburu",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "OP",
+    "description": "Ol pejeta conservancy",
+    "formula": "(OPA*adults+OPK*kids)+N*LC",
+    "hotelLocation": "Ol Pejeta",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "NBT",
+    "description": "Nairobi airport transfer",
+    "formula": "NBT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "NBP",
+    "description": "Nairobi national Park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "NBCT",
+    "description": "Nairobi city tour",
+    "formula": "NBCT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "LK",
+    "description": "Full day game drives",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "AB",
+    "description": "Aberdare national park",
+    "formula": "(ABA*adults+ABK*kids)+N*LC",
+    "hotelLocation": "Aberdare",
+    "country": "Kenya"
+  },
+  {
+    "from": "LK",
+    "to": "NB",
+    "description": "Nairobi drop off",
+    "formula": "N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "AM",
+    "description": "Amboseli",
+    "formula": "(AMA*adults+AMK*kids)+N*LC",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "MM",
+    "description": "Masai Mara",
+    "formula": "(MMA*adults+MMK*kids)+N*LC",
+    "hotelLocation": "Masai Mara",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "NBP",
+    "description": "Nairobi national park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "SB",
+    "description": "Samburu reserve",
+    "formula": "(SBA*adults+SBK*kids)+N*LC",
+    "hotelLocation": "Samburu",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "OP",
+    "description": "Ol pejeta conservancy",
+    "formula": "(OPA*adults+OPK*kids)+N*LC",
+    "hotelLocation": "Ol Pejeta",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "NBT",
+    "description": "Nairobi transfer",
+    "formula": "NBT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "NB",
+    "description": "Nairobi drop off",
+    "formula": "N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "NBCT",
+    "description": "Nairobi city tour",
+    "formula": "NBCT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "LK",
+    "description": "Lake Nakuru",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "LA",
+    "to": "AB",
+    "description": "Aberdare",
+    "formula": "(ABA*adults+ABK*kids)+N*LC",
+    "hotelLocation": "Aberdare",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "NBT",
+    "description": "Nairobi airport transfer",
+    "formula": "NBT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "NBCT",
+    "description": "Nairobi city tour",
+    "formula": "NBCT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "LK",
+    "description": "Lake Nakuru",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "OP",
+    "description": "Ol pejeta conservancy",
+    "formula": "(OPA*adults+OPK*kids)+N*LC",
+    "hotelLocation": "Ol Pejeta",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "NBP",
+    "description": "Nairobi national park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "MM",
+    "description": "Masai Mara",
+    "formula": "(MMA*adults+MMK*kids)+N*LC",
+    "hotelLocation": "Masai Mara",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "AB",
+    "description": "Full day in Aberdare",
+    "formula": "(ABA*adults+ABK*kids)+N*LC",
+    "hotelLocation": "Aberdare",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "SB",
+    "description": "Samburu",
+    "formula": "(SBA*adults+SBK*kids)+N*LC",
+    "hotelLocation": "Samburu",
+    "country": "Kenya"
+  },
+  {
+    "from": "AB",
+    "to": "NB",
+    "description": "Nairobi drop off",
+    "formula": "N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "NBT",
+    "description": "Nairobi airport transfer",
+    "formula": "NBT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "NBCT",
+    "description": "Nairobi city tour",
+    "formula": "NBCT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "NBP",
+    "description": "Nairobi national park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "AM",
+    "description": "Full day in Amboseli",
+    "formula": "(AMA*adults+AMK*kids)+N*LC",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "FMM",
+    "description": "Flight to Masai Mara",
+    "formula": "(MMA*adults+MMk*kids)+FAMMM*(adults+kids)+N*LC*3",
+    "hotelLocation": "Masai Mara",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "LK",
+    "description": "Lake Nakuru",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "TE",
+    "description": "Tsavo East",
+    "formula": "(TEA*adults+TEK*kids)+N*LC",
+    "hotelLocation": "Tsavo East",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "TW",
+    "description": "Tsavo West",
+    "formula": "(TWA*adults+TWK*kids)+N*LC",
+    "hotelLocation": "Tsavo West",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "AR",
+    "description": "Arusha by road",
+    "formula": "AMAR*(adults+kids)+N*LC",
+    "hotelLocation": "Arusha",
+    "country": "Tanzania"
+  },
+  {
+    "from": "AM",
+    "to": "NB",
+    "description": "Nairobi Drop",
+    "formula": "N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "AM",
+    "to": "FNB",
+    "description": "Flight to Nairobi",
+    "formula": "FAMNB*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "NBT",
+    "description": "Nairobi airport transfer",
+    "formula": "NBT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "NBCT",
+    "description": "Nairobi city Tour",
+    "formula": "NBCT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "NBP",
+    "description": "Nairobi national Park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "AM",
+    "description": "Amboseli NP",
+    "formula": "(AMA*adults+AMK*kids)+N*LC",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "LK",
+    "description": "Lake Nakuru",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "TE",
+    "description": "Tsavo East",
+    "formula": "(TEA*adults+TEK*kids)+N*LC",
+    "hotelLocation": "Tsavo East",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "TW",
+    "description": "Tsavo West",
+    "formula": "(TWA*adults+TWK*kids)+N*LC",
+    "hotelLocation": "Tsavo West",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "MB",
+    "description": "Mombasa drop",
+    "formula": "N*LC*2",
+    "hotelLocation": "Mombasa",
+    "country": "Kenya"
+  },
+  {
+    "from": "TW",
+    "to": "NB",
+    "description": "Nairobi drop",
+    "formula": "N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "NBT",
+    "description": "Nairobi airport transfer",
+    "formula": "NBT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "NBCT",
+    "description": "Nairobi city tour",
+    "formula": "NBCT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "NBP",
+    "description": "Nairobi national park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "AM",
+    "description": "Amboseli national park",
+    "formula": "(AMA*adults+AMK*kids)+N*LC",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "LK",
+    "description": "Lake Nakuru",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "TE",
+    "description": "Tsavo East",
+    "formula": "(TEA*adults+TEK*kids)+N*LC",
+    "hotelLocation": "Tsavo East",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "TW",
+    "description": "Tsavo West",
+    "formula": "(TWA*adults+TWK*kids)+N*LC",
+    "hotelLocation": "Tsavo West",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "MB",
+    "description": "Mombasa",
+    "formula": "N*LC*2",
+    "hotelLocation": "Mombasa",
+    "country": "Kenya"
+  },
+  {
+    "from": "TE",
+    "to": "NB",
+    "description": "Nairobi drop",
+    "formula": "N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "OP",
+    "to": "LK",
+    "description": "Lake Nakuru",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "OP",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "OP",
+    "to": "AB",
+    "description": "Aberdare",
+    "formula": "(ABA*adults+ABK*kids)+N*LC",
+    "hotelLocation": "Aberdare",
+    "country": "Kenya"
+  },
+  {
+    "from": "OP",
+    "to": "MM",
+    "description": "Masai Mara",
+    "formula": "(MMA*adults+MMK*kids)+N*LC",
+    "hotelLocation": "Masai Mara",
+    "country": "Kenya"
+  },
+  {
+    "from": "OP",
+    "to": "NBP",
+    "description": "Nairobi national park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "OP",
+    "to": "OP",
+    "description": "Full day in Ol pejeta",
+    "formula": "(OPA*adults+OPK*kids)+N*LC",
+    "hotelLocation": "Ol Pejeta",
+    "country": "Kenya"
+  },
+  {
+    "from": "OP",
+    "to": "NBT",
+    "description": "Nairobi airport transfer",
+    "formula": "NBT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "OP",
+    "to": "NBCT",
+    "description": "Nairobi city tour",
+    "formula": "NBCT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "OP",
+    "to": "NB",
+    "description": "Nairobi drop off",
+    "formula": "N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "SB",
+    "to": "NBT",
+    "description": "Nairobi airport transfer",
+    "formula": "NBT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "SB",
+    "to": "NBP",
+    "description": "Nairobi national Park",
+    "formula": "(NBA*adults+NBK*kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "SB",
+    "to": "NBCT",
+    "description": "Nairobi City Tour",
+    "formula": "NBCT*(adults+kids)+N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "SB",
+    "to": "OP",
+    "description": "Ol Pejeta",
+    "formula": "(OPA*adults+OPK*kids)+N*LC",
+    "hotelLocation": "Ol Pejeta",
+    "country": "Kenya"
+  },
+  {
+    "from": "SB",
+    "to": "AB",
+    "description": "Aberdare",
+    "formula": "(ABA*adults+ABK*kids)+N*LC",
+    "hotelLocation": "Aberdare",
+    "country": "Kenya"
+  },
+  {
+    "from": "SB",
+    "to": "LK",
+    "description": "Lake Nakuru",
+    "formula": "(LKA*adults+LKK*kids)+N*LC",
+    "hotelLocation": "Lake Nakuru",
+    "country": "Kenya"
+  },
+  {
+    "from": "SB",
+    "to": "LA",
+    "description": "Lake Naivasha",
+    "formula": "((LAA*adults+LAK*kids)+LAB)+N*LC",
+    "hotelLocation": "Lake Naivasha",
+    "country": "Kenya"
+  },
+  {
+    "from": "SB",
+    "to": "SB",
+    "description": "Full day in samburu",
+    "formula": "(SBA*adults+SBK*kids)+N*LC",
+    "hotelLocation": "Samburu",
+    "country": "Kenya"
+  },
+  {
+    "from": "SB",
+    "to": "NB",
+    "description": "Nairobi drop",
+    "formula": "N*LC",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "MB",
+    "to": "TE",
+    "description": "Tsavo east",
+    "formula": "(TEA*adults+TEK*kids)+N*LC*2",
+    "hotelLocation": "Tsavo East",
+    "country": "Kenya"
+  },
+  {
+    "from": "MB",
+    "to": "TW",
+    "description": "Tsavo west",
+    "formula": "(TWA*adults+TWK*kids)+N*LC*2",
+    "hotelLocation": "Tsavo West",
+    "country": "Kenya"
+  },
+  {
+    "from": "MB",
+    "to": "AM",
+    "description": "Amboseli NP",
+    "formula": "(AMA*adults+AMK*kids)+N*LC*2",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
+  },
+  {
+    "from": "MB",
+    "to": "FNB",
+    "description": "Flight to nairobi airport",
+    "formula": "FMBNB*(adults+kids)",
+    "hotelLocation": "Nairobi",
+    "country": "Kenya"
+  },
+  {
+    "from": "MB",
+    "to": "FMM",
+    "description": "Flight to Masai Mara",
+    "formula": "(MMA*adults+MMK*kids)+(FMBMM+EL)*(adults+kids)+N*LC*2",
+    "hotelLocation": "Masai Mara",
+    "country": "Kenya"
+  },
+  {
+    "from": "MB",
+    "to": "FZNZ",
+    "description": "Flight to Zanzibar",
+    "formula": "FMBZN*(adults+kids)",
+    "hotelLocation": "Zanzibar",
+    "country": "Tanzania"
+  },
+  {
+    "from": "MB",
+    "to": "FAM",
+    "description": "Flight to Amboseli to mombasa",
+    "formula": "FMBAM*(adults+kids)",
+    "hotelLocation": "Amboseli",
+    "country": "Kenya"
   }
 ]
