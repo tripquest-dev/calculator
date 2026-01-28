@@ -16,7 +16,7 @@ const PORT = process.env.PORT;
 
 // const range = parseDateString("1 Nov - 15 Dec");
 // console.log(range);
-//ingestHotels();
+ingestHotels();
 //importCsvToDatabase("./src/data/servicePricing1.csv");
 app.use("/api/hotels", hotelRoutes);
 app.use("/api/park", parkRoutes);
