@@ -1,34 +1,40 @@
 import mongoose from "mongoose";
 
 const hotelSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  class: {
-    type: Number,
-    required: true,
-  },
   location: {
     type: String,
     required: true,
+    index:true
   },
-  pricing: [
-    {
-      startMonth: Number,
-      startDay: Number,
-      endMonth: Number,
-      endDay: Number,
-      year: Number,
-      description: String,
+   category: {
+    type: String,
+    enum: ["Value", "Comfort", "Premium", "Luxury"],
+    required: true,
+    index: true,
+  },
+  startDate:{
+    type:Date,
+    required:true,
+    index:true
+  },
+   endDate: {
+    type: Date,
+    required: true,
+    index: true,
+  },
+  hotel:{
+      name: {
+        type: String,
+        required: true,
+      },
       rates: {
         single: Number,
         double: Number,
         triple: Number,
       },
-    },
-  ],
+    
+  },
 });
-
+hotelSchema.index({ location: 1, startDate: 1, endDate: 1, category: 1 });
 const Hotel = mongoose.model("Hotel", hotelSchema);
 export default Hotel;

@@ -1,233 +1,98 @@
 import fs from "fs";
+import csv from "csv-parser";
 import mongoose from "mongoose";
-import Hotel from "../models/hotels.model.js"; // Adjust path as needed
-const CSV_FILE_PATH = "./src/data/hotels2.csv";
-function parseDateString(dateRangeStr) {
-  const ranges = dateRangeStr.split(",");
-  const parsedRanges = [];
+import Hotel from "../models/hotels.model.js";
 
-  ranges.forEach((range) => {
-    const [start, end] = range.split("-");
-    const [startDay, startMonth, startYear] = start.split("/").map(Number);
-    const [endDay, endMonth, endYear] = end.split("/").map(Number);
+const CSV_FILE_PATH = "./src/data/dummy.csv";
 
-    // Convert two-digit year to four-digit (assuming 20XX for years like 25, 26)
-    const fullStartYear = startYear < 100 ? 2000 + startYear : startYear;
-    const fullEndYear = endYear < 100 ? 2000 + endYear : endYear;
+function parseDateRange(range) {
+  const [start, end] = range.split("-");
 
-    // Validate year consistency within the range
-    if (fullStartYear !== fullEndYear) {
-      console.warn(`Inconsistent years in range "${range}", using start year`);
-    }
+  const [sd, sm, sy] = start.split("/").map(Number);
+  const [ed, em, ey] = end.split("/").map(Number);
 
-    parsedRanges.push({
-      startDay,
-      startMonth,
-      endDay,
-      endMonth,
-      year: fullStartYear,
-    });
-  });
+  const startYear = sy < 100 ? 2000 + sy : sy;
+  const endYear = ey < 100 ? 2000 + ey : ey;
 
-  return parsedRanges;
+  return {
+    startDate: new Date(startYear, sm - 1, sd),
+    endDate: new Date(endYear, em - 1, ed),
+  };
 }
 
 export async function ingestHotels() {
-  const hotelsData = {};
-
   try {
-    const { default: csv } = await import("csv-parser");
+    await Hotel.deleteMany({});
+    console.log("Cleared existing hotel pricing data");
 
-    const stream = fs.createReadStream(CSV_FILE_PATH).pipe(
-      csv({
-        mapHeaders: ({ header }) =>
-          header ? header.toLowerCase().replace(/\s/g, "") : null,
-      })
-    );
+    let currentPlace = null;
+    let currentMonth = null;
 
-    stream
+    const insertPromises = []; // 🔑 THIS IS THE KEY
+
+    fs.createReadStream(CSV_FILE_PATH)
+      .pipe(
+        csv({
+          mapHeaders: ({ header }) =>
+            header ? header.trim().toLowerCase() : null,
+        })
+      )
       .on("data", (row) => {
-        const hotelName = row.hotelname;
-        const classStr = row.class?.match(/\d+/);
-        if (!classStr) {
-          console.warn(`Skipping invalid class for hotel "${hotelName}"`);
-          return;
-        }
-        const hotelClass = parseInt(classStr[0]);
+        // ❗ DO NOT make this handler async
+        const promise = (async () => {
+          try {
+            // Carry forward Excel-style grouping
+            if (row.place) currentPlace = row.place.trim();
+            if (row.month) currentMonth = row.month.trim();
 
-        const location = row.location;
-        const dateRangeStr = row.daterange;
-        const description = row.description;
-        const singleRate = parseFloat(row.singlerate);
-        const doubleRate = parseFloat(row.doublerate);
-        const tripleRate = parseFloat(row.triplerate);
+            const location = currentPlace;
+            const dateRange = currentMonth;
+            const category = row.categories?.trim();
+            const hotelName = row.hotels?.trim();
 
-        const parsedDateRanges = parseDateString(dateRangeStr);
+            if (!location || !dateRange || !category || !hotelName) {
+              console.log("SKIPPED ROW:", row);
+              return;
+            }
 
-        const uniqueKey = `${hotelName}::${hotelClass}`;
+            const { startDate, endDate } = parseDateRange(dateRange);
 
-        if (!hotelsData[uniqueKey]) {
-          hotelsData[uniqueKey] = {
-            name: hotelName,
-            class: hotelClass,
-            location: location,
-            pricing: [],
-          };
-        }
+            await Hotel.create({
+              location,
+              category,
+              startDate,
+              endDate,
+              hotel: {
+                name: hotelName,
+                rates: {
+                  single: Number(row.single) || null,
+                  double: Number(row.double) || null,
+                  triple: Number(row.triple) || null,
+                },
+              },
+            });
 
-        parsedDateRanges.forEach((range) => {
-          hotelsData[uniqueKey].pricing.push({
-            startMonth: range.startMonth,
-            startDay: range.startDay,
-            endMonth: range.endMonth,
-            endDay: range.endDay,
-            year: range.year,
-            description: description,
-            rates: {
-              single: singleRate,
-              double: doubleRate,
-              triple: tripleRate,
-            },
-          });
-        });
+            console.log("INSERTED:", location, category, hotelName);
+          } catch (err) {
+            console.error("Failed to ingest row:", err.message);
+          }
+        })();
+
+        insertPromises.push(promise); //  collect promise
       })
       .on("end", async () => {
-        console.log("CSV file successfully processed");
-
         try {
-          await Hotel.deleteMany({});
-          console.log("Existing hotel data cleared.");
+          // 🔑 WAIT for all DB inserts
+          await Promise.all(insertPromises);
 
-          for (const key in hotelsData) {
-            const hotel = hotelsData[key];
-            await Hotel.findOneAndUpdate(
-              { name: hotel.name, class: hotel.class }, // match by both name and class
-              {
-                $set: {
-                  location: hotel.location,
-                },
-                $push: { pricing: { $each: hotel.pricing } },
-              },
-              { upsert: true, new: true }
-            );
-            console.log(
-              `Saved/Updated hotel: ${hotel.name} (Class ${hotel.class})`
-            );
-          }
-
-          console.log("All hotels ingested successfully!");
-        } catch (error) {
-          console.error("Error ingesting data:", error);
+          console.log("CSV ingestion completed successfully");
+        } catch (err) {
+          console.error("Error during ingestion:", err.message);
         } finally {
-          mongoose.disconnect();
+          await mongoose.disconnect();
         }
-      })
-      .on("error", (error) => {
-        console.error("Error reading CSV:", error);
       });
   } catch (err) {
-    console.error("Error importing csv-parser:", err);
+    console.error("Ingestion failed:", err.message);
   }
 }
-
-// import fs from "fs";
-// import mongoose from "mongoose";
-// import Hotel from "../models/hotels.model.js"; // Adjust path as needed
-// import { parseDateString } from "../utils/parseDateString.js"; // Adjust path as needed
-// const CSV_FILE_PATH = "./src/data/hotels.csv"; // Adjust path as needed
-// export async function ingestHotels() {
-//   const hotelsData = {};
-
-//   try {
-//     const { default: csv } = await import("csv-parser");
-
-//     const stream = fs.createReadStream(CSV_FILE_PATH).pipe(
-//       csv({
-//         mapHeaders: ({ header }) =>
-//           header ? header.toLowerCase().replace(/\s/g, "") : null,
-//       })
-//     );
-
-//     stream
-//       .on("data", (row) => {
-//         const hotelName = row.hotelname;
-//         const classStr = row.class?.match(/\d+/);
-//         if (!classStr) {
-//           console.warn(`Skipping invalid class for hotel "${hotelName}"`);
-//           return;
-//         }
-//         const hotelClass = parseInt(classStr[0]);
-
-//         const location = row.location;
-//         const dateRangeStr = row.daterange;
-//         const description = row.description;
-//         const singleRate = parseFloat(row.singlerate);
-//         const doubleRate = parseFloat(row.doublerate);
-//         const tripleRate = parseFloat(row.triplerate);
-
-//         const parsedDateRanges = parseDateString(dateRangeStr);
-
-//         const uniqueKey = `${hotelName}::${hotelClass}`;
-
-//         if (!hotelsData[uniqueKey]) {
-//           hotelsData[uniqueKey] = {
-//             name: hotelName,
-//             class: hotelClass,
-//             location: location,
-//             pricing: [],
-//           };
-//         }
-
-//         parsedDateRanges.forEach((range) => {
-//           hotelsData[uniqueKey].pricing.push({
-//             startMonth: range.startMonth,
-//             startDay: range.startDay,
-//             endMonth: range.endMonth,
-//             endDay: range.endDay,
-//             description: description,
-//             rates: {
-//               single: singleRate,
-//               double: doubleRate,
-//               triple: tripleRate,
-//             },
-//           });
-//         });
-//       })
-//       .on("end", async () => {
-//         console.log("CSV file successfully processed");
-
-//         try {
-//           await Hotel.deleteMany({});
-//           console.log("Existing hotel data cleared.");
-
-//           for (const key in hotelsData) {
-//             const hotel = hotelsData[key];
-//             await Hotel.findOneAndUpdate(
-//               { name: hotel.name, class: hotel.class }, // match by both name and class
-//               {
-//                 $set: {
-//                   location: hotel.location,
-//                 },
-//                 $push: { pricing: { $each: hotel.pricing } },
-//               },
-//               { upsert: true, new: true }
-//             );
-//             console.log(
-//               `Saved/Updated hotel: ${hotel.name} (Class ${hotel.class})`
-//             );
-//           }
-
-//           console.log("All hotels ingested successfully!");
-//         } catch (error) {
-//           console.error("Error ingesting data:", error);
-//         } finally {
-//           mongoose.disconnect();
-//         }
-//       })
-//       .on("error", (error) => {
-//         console.error("Error reading CSV:", error);
-//       });
-//   } catch (err) {
-//     console.error("Error importing csv-parser:", err);
-//   }
-// }

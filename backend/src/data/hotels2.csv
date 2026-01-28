@@ -91,24 +91,24 @@ class,hotelname,location,daterange,singlerate,doubleRate,tripleRate
 5,Mara Engai Wilderness Lodge,Masai Mara,"01/01/27-31/03/27,01/06/27-30/06/27,01/10/27-30/10/27,16/12/27-31/12/27",0,0,0
 5,Mara Engai Wilderness Lodge,Masai Mara,"01/04/27-31/05/27,01/11/27-15/12/27",0,0,0
 5,Mara Engai Wilderness Lodge,Masai Mara,01/07/27-30/09/27,0,0,0
-6,Mara Ngenche Safari Camp ,Masai Mara,"01/01/26-31/03/26,01/06/26-30/06/26,16/10/26-22/12/26",570,900,1350
-6,Mara Ngenche Safari Camp ,Masai Mara,01/04/26-31/05/26,570,900,1350
-6,Mara Ngenche Safari Camp ,Masai Mara,"01/07/26-15/10/26,23/10/26-31/12/26",965,1500,2250
-6,Mara Ngenche Safari Camp ,Masai Mara,"01/01/27-31/03/27,01/06/27-30/06/27,16/10/27-22/12/27",0,0,0
-6,Mara Ngenche Safari Camp ,Masai Mara,01/04/27-31/05/27,0,0,0
-6,Mara Ngenche Safari Camp ,Masai Mara,"01/07/27-15/10/27,23/10/27-31/12/27",0,0,0
+6,Mara Ngenche Safari Camp,Masai Mara,"01/01/26-31/03/26,01/06/26-30/06/26,16/10/26-22/12/26",570,900,1350
+6,Mara Ngenche Safari Camp,Masai Mara,01/04/26-31/05/26,570,900,1350
+6,Mara Ngenche Safari Camp,Masai Mara,"01/07/26-15/10/26,23/10/26-31/12/26",965,1500,2250
+6,Mara Ngenche Safari Camp,Masai Mara,"01/01/27-31/03/27,01/06/27-30/06/27,16/10/27-22/12/27",0,0,0
+6,Mara Ngenche Safari Camp,Masai Mara,01/04/27-31/05/27,0,0,0
+6,Mara Ngenche Safari Camp,Masai Mara,"01/07/27-15/10/27,23/10/27-31/12/27",0,0,0
 6,Entim Mara Camp (Luxury Suite),Masai Mara,"01/01/26-04/01/26,01/07/26-30/09/26,22/12/26-31/12/26",880,1400,2100
 6,Entim Mara Camp (Luxury Suite),Masai Mara,"01/02/26-31/03/26,01/06/26-30/06/26,01/10/26-31/10/26",540,820,1230
 6,Entim Mara Camp (Luxury Suite),Masai Mara,"05/01/26-31/01/26,01/04/26-06/04/26,01/11/26-21/12/26",510,770,1155
 6,Entim Mara Camp (Luxury Suite),Masai Mara,"01/01/27-04/01/27,01/07/27-30/09/27,22/12/27-31/12/27",0,0,0
 6,Entim Mara Camp (Luxury Suite),Masai Mara,"01/02/27-31/03/27,01/06/27-30/06/27,01/10/27-31/10/27",0,0,0
 6,Entim Mara Camp (Luxury Suite),Masai Mara,"05/01/27-31/01/27,01/04/27-06/04/27,01/11/27-21/12/27",0,0,0
-6,Elewana Sandriver Mara Camp ,Masai Mara,"01/01/26-03/01/26,01/07/26-31/10/26,20/12/26-31/12/26",1130,1506,1694
-6,Elewana Sandriver Mara Camp ,Masai Mara,"04/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",941,1256,1412
-6,Elewana Sandriver Mara Camp ,Masai Mara,01/04/26-31/05/26,689,918,1034
-6,Elewana Sandriver Mara Camp ,Masai Mara,"01/01/27-03/01/27,01/07/27-31/10/27,20/12/27-31/12/27",0,0,0
-6,Elewana Sandriver Mara Camp ,Masai Mara,"04/01/27-31/03/27,01/06/27-30/06/27,01/11/27-19/12/27",0,0,0
-6,Elewana Sandriver Mara Camp ,Masai Mara,01/04/27-31/05/27,0,0,0
+6,Elewana Sandriver Mara Camp,Masai Mara,"01/01/26-03/01/26,01/07/26-31/10/26,20/12/26-31/12/26",1130,1506,1694
+6,Elewana Sandriver Mara Camp,Masai Mara,"04/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",941,1256,1412
+6,Elewana Sandriver Mara Camp,Masai Mara,01/04/26-31/05/26,689,918,1034
+6,Elewana Sandriver Mara Camp,Masai Mara,"01/01/27-03/01/27,01/07/27-31/10/27,20/12/27-31/12/27",0,0,0
+6,Elewana Sandriver Mara Camp,Masai Mara,"04/01/27-31/03/27,01/06/27-30/06/27,01/11/27-19/12/27",0,0,0
+6,Elewana Sandriver Mara Camp,Masai Mara,01/04/27-31/05/27,0,0,0
 1,Eagle Palace Hotel (Superior/ Empire Room),Lake Nakuru,01/01/26-31/12/26,110,170,270
 1,Eagle Palace Hotel (Superior/ Empire Room),Lake Nakuru,01/01/27-31/12/27,0,0,0
 2,"Maili Saba Camp, Lake Nakuru",Lake Nakuru,"01/01/26-31/03/26,01/07/26-31/10/26,16/12/26-31/12/26",100,200,300
@@ -207,14 +207,14 @@ class,hotelname,location,daterange,singlerate,doubleRate,tripleRate
 2,Amboseli Sopa Lodge (Standard Rooms),Amboseli,"01/01/27-31/03/27,01/06/27-30/06/27,01/11/27-21/12/27",0,0,0
 2,Amboseli Sopa Lodge (Standard Rooms),Amboseli,"01/07/27-31/10/27,22/12/27-31/12/27",0,0,0
 2,Amboseli Sopa Lodge (Standard Rooms),Amboseli,01/04/27-31/05/27,0,0,0
-3,Hunter's Luxury Manor Amboseli ,Amboseli,"01/01/26-31/03/26,01/12/26-20/12/26",120,160,230
-3,Hunter's Luxury Manor Amboseli ,Amboseli,"01/04/26-30/06/26,01/11/26-30/11/26",100,150,220
-3,Hunter's Luxury Manor Amboseli ,Amboseli,01/07/26-31/08/26,200,315,420
-3,Hunter's Luxury Manor Amboseli ,Amboseli,"01/09/26-31/10/26,21/12/26-31/12/26",150,200,290
-3,Hunter's Luxury Manor Amboseli ,Amboseli,"01/01/27-31/03/27,01/12/27-20/12/27",0,0,0
-3,Hunter's Luxury Manor Amboseli ,Amboseli,"01/04/27-30/06/27,01/11/27-30/11/27",0,0,0
-3,Hunter's Luxury Manor Amboseli ,Amboseli,01/07/27-31/08/27,0,0,0
-3,Hunter's Luxury Manor Amboseli ,Amboseli,"01/09/27-31/10/27,21/12/27-31/12/27",0,0,0
+3,Hunter's Luxury Manor Amboseli,Amboseli,"01/01/26-31/03/26,01/12/26-20/12/26",120,160,230
+3,Hunter's Luxury Manor Amboseli,Amboseli,"01/04/26-30/06/26,01/11/26-30/11/26",100,150,220
+3,Hunter's Luxury Manor Amboseli,Amboseli,01/07/26-31/08/26,200,315,420
+3,Hunter's Luxury Manor Amboseli,Amboseli,"01/09/26-31/10/26,21/12/26-31/12/26",150,200,290
+3,Hunter's Luxury Manor Amboseli,Amboseli,"01/01/27-31/03/27,01/12/27-20/12/27",0,0,0
+3,Hunter's Luxury Manor Amboseli,Amboseli,"01/04/27-30/06/27,01/11/27-30/11/27",0,0,0
+3,Hunter's Luxury Manor Amboseli,Amboseli,01/07/27-31/08/27,0,0,0
+3,Hunter's Luxury Manor Amboseli,Amboseli,"01/09/27-31/10/27,21/12/27-31/12/27",0,0,0
 3,Ol Tukai Lodge,Amboseli,"01/01/26-31/03/26,01/11/26-19/12/26",226,300,420
 3,Ol Tukai Lodge,Amboseli,01/04/26-31/05/26,140,280,420
 3,Ol Tukai Lodge,Amboseli,"01/06/26-31/10/26,20/12/26-31/12/26",258,344,482
@@ -483,156 +483,76 @@ class,hotelname,location,daterange,singlerate,doubleRate,tripleRate
 6,The Ark (Classic Room) (1),Aberdare,01/10/27-22/12/27,0,0,0
 1,Eileens Trees Inn (Standard Room) (K),Karatu,"01/01/26-31/03/26,01/06/26-31/12/26",100,140,190
 1,Eileens Trees Inn (Standard Room) (K),Karatu,01/04/26-31/05/26,70,120,170
+1,Eileens Trees Inn (Standard Room) (K),Karatu,"01/01/27-31/03/27,01/06/27-31/12/27",0,0,0
+1,Eileens Trees Inn (Standard Room) (K),Karatu,01/04/27-31/05/27,0,0,0
 1,Omega View Hotel and Resort (K),Karatu,01/01/26-31/12/26,92,153,180
+1,Omega View Hotel and Resort (K),Karatu,01/01/27-31/12/27,0,0,0
 2,Country Lodge (K),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",110,200,260
 2,Country Lodge (K),Karatu,"01/04/26-31/05/26,01/11/26-31/11/26",90,165,210
+2,Country Lodge (K),Karatu,"01/01/27-31/03/27,01/06/27-31/10/27,01/12/27-31/12/27",0,0,0
+2,Country Lodge (K),Karatu,"01/04/27-31/05/27,01/11/27-31/11/27",0,0,0
 2,Marera Valley Lodge (K),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",115,210,275
 2,Marera Valley Lodge (K),Karatu,"01/04/26-31/05/26,01/11/26-31/11/26",90,165,210
+2,Marera Valley Lodge (K),Karatu,"01/01/27-31/03/27,01/06/27-31/10/27,01/12/27-31/12/27",0,0,0
+2,Marera Valley Lodge (K),Karatu,"01/04/27-31/05/27,01/11/27-31/11/27",0,0,0
 2,Bougain Villea Safari Lodge (K),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",115,210,275
 2,Bougain Villea Safari Lodge (K),Karatu,"01/04/26-31/05/26,01/11/26-31/11/26",90,165,210
+2,Bougain Villea Safari Lodge (K),Karatu,"01/01/27-31/03/27,01/06/27-31/10/27,01/12/27-31/12/27",0,0,0
+2,Bougain Villea Safari Lodge (K),Karatu,"01/04/27-31/05/27,01/11/27-31/11/27",0,0,0
 3,Mawe Mawe Lake Manyara Lodge (K),Karatu,01/01/26-31/12/26,159.9,246,369
+3,Mawe Mawe Lake Manyara Lodge (K),Karatu,01/01/27-31/12/27,0,0,0
 3,Karatu Simba Lodge,Karatu,"01/01/26-31/03/26,01/06/26-31/12/26",168,260,385
 3,Karatu Simba Lodge,Karatu,01/04/26-31/05/26,110,185,272
+3,Karatu Simba Lodge,Karatu,"01/01/27-31/03/27,01/06/27-31/12/27",0,0,0
+3,Karatu Simba Lodge,Karatu,01/04/27-31/05/27,0,0,0
 4,Manyara Best View Lodge (Silver Room) (K),Karatu,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-30/11/26",210,300,450
 4,Manyara Best View Lodge (Silver Room) (K),Karatu,"01/07/26-31/08/26,01/12/26-31/12/26",234,360,540
 4,Manyara Best View Lodge (Silver Room) (K),Karatu,01/03/26-31/05/26,186,240,360
+4,Manyara Best View Lodge (Silver Room) (K),Karatu,"01/01/27-28/02/27,01/06/27-30/06/27,01/09/27-30/11/27",0,0,0
+4,Manyara Best View Lodge (Silver Room) (K),Karatu,"01/07/27-31/08/27,01/12/27-31/12/27",0,0,0
+4,Manyara Best View Lodge (Silver Room) (K),Karatu,01/03/27-31/05/27,0,0,0
 4,Ngorongoro Coffee Lodge - Karatu,Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",245,335,465
 4,Ngorongoro Coffee Lodge - Karatu,Karatu,"01/04/26-31/05/26,01/11/26-31/11/26",155,220,325
+4,Ngorongoro Coffee Lodge - Karatu,Karatu,"01/01/27-31/03/27,01/06/27-31/10/27,01/12/27-31/12/27",0,0,0
+4,Ngorongoro Coffee Lodge - Karatu,Karatu,"01/04/27-31/05/27,01/11/27-31/11/27",0,0,0
 4,Ngorongoro Farm House and Farm house Valley (Standard Room),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,16/12/26-31/12/26",275,374,481
 4,Ngorongoro Farm House and Farm house Valley (Standard Room),Karatu,01/11/26-15/12/26,224,308,397
 4,Ngorongoro Farm House and Farm house Valley (Standard Room),Karatu,01/04/26-31/105/26,175,242,313
-5,The Retreat at Ngorongoro ,Karatu,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-31/10/26",305,498,660
-5,The Retreat at Ngorongoro ,Karatu,"01/07/26-31/08/26,20/12/26-31/12/26",320,518,720
-5,The Retreat at Ngorongoro ,Karatu,"01/03/26-31/05/26,01/11/26-19/12/26",183,285,417
+4,Ngorongoro Farm House and Farm house Valley (Standard Room),Karatu,"01/01/27-31/03/27,01/06/27-31/10/27,16/12/27-31/12/27",0,0,0
+4,Ngorongoro Farm House and Farm house Valley (Standard Room),Karatu,01/11/27-15/12/27,0,0,0
+4,Ngorongoro Farm House and Farm house Valley (Standard Room),Karatu,01/04/27-31/105/27,0,0,0
+5,The Retreat at Ngorongoro,Karatu,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-31/10/26",305,498,660
+5,The Retreat at Ngorongoro,Karatu,"01/07/26-31/08/26,20/12/26-31/12/26",320,518,720
+5,The Retreat at Ngorongoro,Karatu,"01/03/26-31/05/26,01/11/26-19/12/26",183,285,417
+5,The Retreat at Ngorongoro,Karatu,"01/01/27-28/02/27,01/06/27-30/06/27,01/09/27-31/10/27",0,0,0
+5,The Retreat at Ngorongoro,Karatu,"01/07/27-31/08/27,20/12/27-31/12/27",0,0,0
+5,The Retreat at Ngorongoro,Karatu,"01/03/27-31/05/27,01/11/27-19/12/27",0,0,0
 5,Kitela Lodge (Standard Room),Karatu,"01/01/26-31/03/26,01/06/26-31/10/26,16/12/26-31/12/26",400,548,709
 5,Kitela Lodge (Standard Room),Karatu,01/11/26-15/12/26,344,474,613
 5,Kitela Lodge (Standard Room),Karatu,01/04/26-31/105/26,288,400,517
+5,Kitela Lodge (Standard Room),Karatu,"01/01/27-31/03/27,01/06/27-31/10/27,16/12/27-31/12/27",0,0,0
+5,Kitela Lodge (Standard Room),Karatu,01/11/27-15/12/27,0,0,0
+5,Kitela Lodge (Standard Room),Karatu,01/04/27-31/105/27,0,0,0
 5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",457,574,803.6
 5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,"01/07/26-31/10/26,20/12/26-31/12/26",510,640,896
 5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,01/04/26-31/05/26,299,376,507.6
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,"01/01/27-31/03/27,01/06/27-30/06/27,01/11/27-19/12/27",0,0,0
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,"01/07/27-31/10/27,20/12/27-31/12/27",0,0,0
+5,Ngorongoro Oldeani Mountain Lodge (Standard Room) (K),Karatu,01/04/27-31/05/27,0,0,0
 6,Neptune Ngorongoro Luxury Lodge (K),Karatu,01/01/26-28/02/26,694,928,1252.8
 6,Neptune Ngorongoro Luxury Lodge (K),Karatu,01/03/26-31/05/26,436,584,788.4
 6,Neptune Ngorongoro Luxury Lodge (K),Karatu,01/06/26-31/10/26,792,1058,1428.3
 6,Neptune Ngorongoro Luxury Lodge (K),Karatu,01/11/26-17/12/26,466,624,842.4
 6,Neptune Ngorongoro Luxury Lodge (K),Karatu,18/12/26-31/12/26,928,1240,1674
+6,Neptune Ngorongoro Luxury Lodge (K),Karatu,01/01/27-28/02/27,0,0,0
+6,Neptune Ngorongoro Luxury Lodge (K),Karatu,01/03/27-31/05/27,0,0,0
+6,Neptune Ngorongoro Luxury Lodge (K),Karatu,01/06/27-31/10/27,0,0,0
+6,Neptune Ngorongoro Luxury Lodge (K),Karatu,01/11/27-17/12/27,0,0,0
+6,Neptune Ngorongoro Luxury Lodge (K),Karatu,18/12/27-31/12/27,0,0,0
 6,Gibb's Farm (Cottages) (K),Karatu,"01/01/26-31/03/26,01/09/26-31/10/26",702,936,1404
 6,Gibb's Farm (Cottages) (K),Karatu,"01/06/26-31/08/26,19/12/26-31/12/26",768,1024,1536
 6,Gibb's Farm (Cottages) (K),Karatu,"01/04/26-31/05/26,01/11/26-18/12/26",585,780,1170
+6,Gibb's Farm (Cottages) (K),Karatu,"01/01/27-31/03/27,01/09/27-31/10/27",0,0,0
+6,Gibb's Farm (Cottages) (K),Karatu,"01/06/27-31/08/27,19/12/27-31/12/27",0,0,0
+6,Gibb's Farm (Cottages) (K),Karatu,"01/04/27-31/05/27,01/11/27-18/12/27",0,0,0
 ,,,,,,
-1,Tukaone Camp Serengeti,Central Serengeti,"01/01/26-31/03/26,01/06/26-31/10/26,01/12/26-31/12/26",232,384,543
-1,Tukaone Camp Serengeti,Central Serengeti,"01/04/26-31/05/26,01/11/26-30/11/26",212,324,456
-1,Kilima Valley Tented Lodge,Central Serengeti,01/01/26-31/12/26,247,394,546
-2,"Tanzania Bush Camp, Central Serengeti",Central Serengeti,"01/01/26-28/02/26,01/06/26-31/10/26,16/12/26-31/12/26",272,464,666
-2,"Tanzania Bush Camp, Central Serengeti",Central Serengeti,"01/03/26-31/05/26,01/11/26-15/12/26",262,444,636
-2,Osero Serengeti Tented Camp,Central Serengeti,"01/01/26-31/01/26,01/06/26-30/06/26",222,434,630
-2,Osero Serengeti Tented Camp,Central Serengeti,"01/02/26-28/02/26,01/07/26-31/10/26,16/12/26-31/12/26",267,478,675
-2,Osero Serengeti Tented Camp,Central Serengeti,"01/03/26-31/05/26,01/11/26-15/12/26",202,384,546
-2,Zawadi Serengeti Camp,Central Serengeti,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-31/10/26,01/12/26-31/12/26",262,424,606
-2,Zawadi Serengeti Camp,Central Serengeti,01/07/26-31/08/26,342,484,651
-2,Zawadi Serengeti Camp,Central Serengeti,"01/03/26-31/05/26,01/11/26-30/11/26",232,404,576
-3,Serengeti Pure Tented Camp,Central Serengeti,"01/01/26-31/03/26,01/06/26-31/10/26,15/12/26-31/12/26",277,524,696
-3,Serengeti Pure Tented Camp,Central Serengeti,"01/04/26-31/05/26,01/11/26-14/12/26",212,404,576
-3,Sound of Silence Serengeti Tented Camp,Central Serengeti,"01/01/26-31/03/26,15/09/26-14/12/26",264,444,666
-3,Sound of Silence Serengeti Tented Camp,Central Serengeti,"01/06/26-14/09/26,15/12/26-31/12/26",277,504,696
-3,Sound of Silence Serengeti Tented Camp,Central Serengeti,01/04/26-31/05/26,257.5,434,651
-3,Suenos De Africa Luxury Camp,Central Serengeti,"01/01/26-28/02/26,01/06/26-31/10/26,20/12/26-31/12/26",272,504,756
-3,Suenos De Africa Luxury Camp,Central Serengeti,"01/03/26-31/05/26,01/11/26-19/12/26",242,444,666
-4,The Singing Grass Serengeti Bush Camp,Central Serengeti,"01/01/26-28/02/26,01/06/26-30/06/26,01/09/26-31/10/26,01/12/26-15/12/26",437,639,886
-4,The Singing Grass Serengeti Bush Camp,Central Serengeti,"01/07/26-31/08/26,16/12/26-31/12/26",512,739,1081
-4,The Singing Grass Serengeti Bush Camp,Central Serengeti,"01/03/26-31/05/26,01/11/26-30/11/26",400,579,814
-4,Lahia Tented Lodge (Tents),Central Serengeti,"01/01/26-31/03/26,01/06/26-31/10/26,16/12/26-31/12/26",535,784,1045
-4,Lahia Tented Lodge (Tents),Central Serengeti,01/11/26-15/12/26,463,688,922
-4,Lahia Tented Lodge (Tents),Central Serengeti,01/04/26-31/105/26,390,590,796
-4,Malaika Seronera Luxury Camp (Luxury Tent),Central Serengeti,"01/01/26-31/03/26,01/06/26-31/10/26,15/12/26-31/12/26",442,744,1026
-4,Malaika Seronera Luxury Camp (Luxury Tent),Central Serengeti,"01/04/26-31/05/26,01/11/26-14/12/26",272,524,699
-5,"Ole Serai Luxury Camp, Turner Springs",Central Serengeti,"01/01/26-31/03/26,01/06/26-30/06/26,01/11/26-19/12/26",823,1094,1548
-5,"Ole Serai Luxury Camp, Turner Springs",Central Serengeti,"01/07/26-31/10/26,20/12/26-31/12/26",893,1182,1671.2
-5,"Ole Serai Luxury Camp, Turner Springs",Central Serengeti,01/04/26-31/05/26,576,782,1111.2
-5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,"01/01/26-28/02/26,01/09/26-31/10/26",767,1024,1407
-5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,"01/06/26-31/08/26,22/12/26-31/12/26",942,1234,1690.5
-5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,"01/03/26-31/03/26,01/11/26-21/12/26",507,699,968.25
-5,Melia Serengeti Lodge (Lagoon View),Central Serengeti,01/04/26-31/05/26,467,649,900.75
-5,Serengeti Explorer by Elewana,Central Serengeti,"01/06/26-31/10/26,20/12/26-31/12/26",765,1180,1632
-5,Serengeti Explorer by Elewana,Central Serengeti,01/01/26-28/02/26,677,1004,1436
-5,Serengeti Explorer by Elewana,Central Serengeti,"01/03/26-31/03/26,01/11/26-19/12/26",572,794,1198
-5,Serengeti Explorer by Elewana,Central Serengeti,01/04/26-31/05/26,520,690,1079
-6,Four Seasons Safari Lodge (Horizon),Central Serengeti,"01/01/26-28/02/26,01/06/26-31/10/26,22/12/26-31/12/26",1517,1669,2251
-6,Four Seasons Safari Lodge (Horizon),Central Serengeti,"01/03/26-31/03/26,01/11/26-21/12/26",1217,1369,1951
-6,Four Seasons Safari Lodge (Horizon),Central Serengeti,01/04/26-31/05/26,917,1064,1646
-1,"Sero Tented Camp, Kogatende",North Serengeti,01/07/26-31/10/26,252,464,651
-1,"Osinon Migration Tented Camp, Kogatende",North Serengeti,01/07/26-31/10/26,252,464,696
-2,"Tanzania Bush Camp, North Serengeti",North Serengeti,01/06/26-31/10/26,302,524,756
-2,"Pure Migration Camp, Kogatende",North Serengeti,15/06/26-31/10/26,287,524,759
-2,"Mara Savannah Camp, Kogatende",North Serengeti,01/07/26-31/10/26,334,524,687
-3,Untamed Kogatende Migration Camp,North Serengeti,01/06/26-31/10/26,334,588,909
-3,"Angata Migration Camp, Kogatende",North Serengeti,01/07/26-31/10/26,391,619,736
-4,"Nyikani Migration Camp, Kogatende",North Serengeti,01/07/26-31/10/26,512,744,1116
-4,"Esirai Migration Camp, Kogatende",North Serengeti,01/06/26-31/10/26,490,802,1203
-5,"Nasikia Migration Camp, Kogatende",North Serengeti,01/06/26-31/10/26,457,824,1191
-5,Malaika Mara River Luxury Camp (Luxury Tent),North Serengeti,01/06/26-31/10/26,532,856,1182
-5,Mara Under Canvas,North Serengeti,01/06/26-31/10/26,648,932,1234
-6,Mara Mara Tented Lodge,North Serengeti,01/06/26-31/10/26,908,1280,1675
-6,Lemala Mara Camp,North Serengeti,01/06/26-30/06/26,313,626,732
-6,Lemala Mara Camp,North Serengeti,01/07/26-30/09/26,907,1320,1461
-6,Lemala Mara Camp,North Serengeti,01/10/26-31/10/26,474,948,1071
-6,"Ole Serai Luxury Camp, Kogatende",North Serengeti,01/07/26-31/10/26,1142,1494,2108
-1,"Sero Tented Camp, Ndutu",Ndutu,01/01/26-31/03/26,252,464,651
-1,"Osinon Migration Tented Camp, Ndutu",Ndutu,01/01/26-31/03/26,252,464,696
-1,"Ndutu Savannah Camp, Ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-15/12/26",302,494,651
-2,"Pure Migration Camp, Ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",287,524,759
-2,"Tanzania Bush Camp, Ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",302,524,756
-3,"Nyikani Migration Camp, Ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",292,584,876
-3,Untamed Ndutu Migration Camp,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",354,614,921
-3,"Angata Migration Camp, Ndutu",Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",391,619,736
-4,Lake Ndutu Luxury Tented Lodge,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",528,812,1169
-4,Nasikia Migration Camp,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",457,824,1191
-5,Karibu Woodlans Camp,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",507,874,1311
-5,Masek Tented Lodge,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",711,1018,1342
-6,Lemala Ndutu Camp,Ndutu,"01/01/26-31/03/26,01/12/26-31/12/26",907,1320,1461
-1,Africa Safari Lake Natron (Safari Comfort),Lake Natron,"01/01/26-14/03/26,16/05/26-31/12/26",147,218,296
-1,Africa Safari Lake Natron (Safari Comfort),Lake Natron,15/03/26-14/05/26,134,192,256
-2,Maasai Giraffe Eco Lodge,Lake Natron,"01/01/26-30/06/26,01/11/26-31/12/26",165.5,247,358.5
-2,Maasai Giraffe Eco Lodge,Lake Natron,01/07/26-31/10/26,176.5,279,403.5
-2,Lengai Safari Lodge,Lake Natron,"01/01/26-31/03/26,01/06/26-31/12/26",184.5,339,473.5
-2,Lengai Safari Lodge,Lake Natron,01/04/26-31/05/26,159.5,299,428.5
-3,Natron River Camp (Standard Room),Lake Natron,"01/01/26-31/03/26,01/06/26-31/12/26",174.5,306,418.5
-3,Natron River Camp (Standard Room),Lake Natron,0104/26-31/05/26,139.5,239,328.5
-4,Natron River Camp (Standard Room) (1),Lake Natron,"01/01/26-31/03/26,01/06/26-31/12/26",174.5,306,418.5
-4,Natron River Camp (Standard Room) (1),Lake Natron,0104/26-31/05/26,139.5,239,328.5
-5,Lake Natron Camp (Luxury Tent),Lake Natron,"01/01/26-31/01/26,01/03/26-31/05/26,01/11/26-31/12/26",449.5,639,953.5
-5,Lake Natron Camp (Luxury Tent),Lake Natron,"01/06/26-31/10/26,01/02/26-28/02/26",379.5,499,743.5
-6,Lake Natron Camp (Luxury Tent) (1),Lake Natron,"01/01/26-31/01/26,01/03/26-31/05/26,01/11/26-31/12/26",449.5,639,953.5
-6,Lake Natron Camp (Luxury Tent) (1),Lake Natron,"01/06/26-31/10/26,01/02/26-28/02/26",379.5,499,743.5
-1,Keys Hotel (African Cottages) - HB,Moshi,01/01/26-31/12/26,85,115,150
-2,Honey Badger Lodge - HB,Moshi,"01/01/26-31/03/26,01/07/26-31/08/26,01/12/26-31/12/26",90,140,190
-2,Honey Badger Lodge - HB,Moshi,"01/04/26-30/06/26,01/09/26-30/11/26",80,120,160
-3,Chanya Lodge (Deluxe Room) - HB,Moshi,"01/01/26-31/03/26,01/06/26-31/12/26",112,162,225
-3,Chanya Lodge (Deluxe Room) - HB,Moshi,01/04/26-31/05/26,100,138,195
-3,Ameg Lodge Kilimanjaro (Standard Room) - HB,Moshi,01/01/26-31/12/26,97,160,260
-4,Chanya Lodge (Deluxe Room) - HB (1),Moshi,"01/01/26-31/03/26,01/06/26-31/12/26",112,162,225
-4,Chanya Lodge (Deluxe Room) - HB (1),Moshi,01/04/26-31/05/26,100,138,195
-4,Ameg Lodge Kilimanjaro (Standard Room) - HB (1),Moshi,01/01/26-31/12/26,97,160,260
-5,Pink Flamingo Boutique Hotel (Comfort Room) - HB,Moshi,01/01/26-31/12/26,216,256,348
-6,Pink Flamingo Boutique Hotel (Comfort Room) - HB (1),Moshi,01/01/26-31/12/26,216,256,348
-1,Summit Safari Lodge - HB,Arusha,01/01/26-31/12/26,75,100,145
-1,Venus Premier Hotel (Standard Room) - HB,Arusha,01/01/26-31/12/26,95,120,215
-2,Olerai Lodge - HB,Arusha,"01/01/26-31/03/26,01/06/26-31/12/26",155,220,301
-2,Olerai Lodge - HB,Arusha,01/04/26-31/05/26,110,160,240
-2,Kibo Palace Hotel (Executive Room) - HB,Arusha,"01/01/26-31/03/26,01/06/26-31/12/26",195,245,320
-2,Kibo Palace Hotel (Executive Room) - HB,Arusha,01/04/26-31/05/26,165,215,290
-3,Mount Meru Game Lodge - HB,Arusha,"01/01/26-14/03/26,15/06/26-31/120/26",180,280,360
-3,Mount Meru Game Lodge - HB,Arusha,"15/03/26-14/06/26,01/11/26-14/12/26",130,187,246
-3,Four Points by Sheraton (Traditional Queen) - HB,Arusha,01/01/26-31/12/26,231,297,528
-4,Mount Meru Game Lodge - HB (1),Arusha,"01/01/26-14/03/26,15/06/26-31/120/26",180,280,360
-4,Mount Meru Game Lodge - HB (1),Arusha,"15/03/26-14/06/26,01/11/26-14/12/26",130,187,246
-4,Four Points by Sheraton (Traditional Queen) - HB (1),Arusha,01/01/26-31/12/26,231,297,528
-5,Rivertrees Country Inn (Garden Room) - HB,Arusha,"01/01/26-14/03/26,18/05/26-14/06/26",246,348,474
-5,Rivertrees Country Inn (Garden Room) - HB,Arusha,"15/06/26-31/10/26,21/12/26-31/12/26",282,396,546
-5,Rivertrees Country Inn (Garden Room) - HB,Arusha,"01/11/26-20/12/26,15/03/26-17/05/26",158,236,330
-5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,"01/01/26-28/02/26,01/09/26-31/10/26",283,381,664
-5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,"01/03/26-31/03/26,01/11/26-20/12/26",263,351,614
-5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,01/04/26-31/05/26,233,316,549
-5,Gran Melia Arusha (Deluxe City View) - HB,Arusha,"01/06/26-31/08/26,21/12/26-31/12/26",338,446,784
-6,Arusha Coffee Lodge (Plantation Room) - HB,Arusha,"01/01/26-28/02/26,01/06/26-31/10/26,20/12/26-31/12/26",456,638,749
-6,Arusha Coffee Lodge (Plantation Room) - HB,Arusha,"01/03/26-31/03/26,01/11/26-19/12/26",373,526,624
-6,Arusha Coffee Lodge (Plantation Room) - HB,Arusha,01/04/26-31/05/26,303,432,519

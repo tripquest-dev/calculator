@@ -356,7 +356,7 @@ export default function SafariPricingTool() {
         `Hotel API error for Day ${day.day}:`,
         err.response?.data || err.message
       );
-      const fallbackFormattedDate = format(targetDate, "yyyy-MM-dd");
+      const fallbackFormattedDate = format(targetDate, "dd-MM-yyyy");
       if (err.response?.status === 400) {
         try {
           const res = await axios.post(
@@ -569,52 +569,23 @@ export default function SafariPricingTool() {
           },
         ];
       } else {
-        const allHotels = Object.values(dayHotelInfo).flat();
-        const uniqueClasses = [
-          ...new Set(
-            allHotels
-              .filter((hotel) =>
-                formData.itinerary.some((day) =>
-                  dayHotelInfo[day.day]?.some(
-                    (h) => h.hotel === hotel.hotel && h.class === hotel.class
-                  )
-                )
-              )
-              .map((hotel) => hotel.class)
-              .slice(0, 6)
-          ),
-        ];
-        classPrices = uniqueClasses.map((hotelClass) => {
-          const hotelTotal = formData.itinerary.reduce((sum, day, index) => {
-            if (index === formData.itinerary.length - 1) return sum;
-            const hotelsForDay = dayHotelInfo[day.day] || [];
-            const classHotel = hotelsForDay.find((h) => h.class === hotelClass);
-            return sum + (classHotel ? classHotel.totalPrice : 0);
-          }, 0);
-          const hotelsByDay = formData.itinerary
-            .filter((_, index) => index < formData.itinerary.length - 1)
-            .reduce((acc, day, index) => {
-              const hotelsForDay = dayHotelInfo[day.day] || [];
-              const classHotel = hotelsForDay.find(
-                (h) => h.class === hotelClass
-              );
-              if (
-                classHotel &&
-                day.hotelLocation !== "No accommodation needed"
-              ) {
-                acc[day.day] = classHotel.hotel;
-              }
-              console.log("HOTEL CLASS", hotelClass);
-              return acc;
-            }, {});
-          return {
-            hotelClass,
-            hotelTotal,
-            total: feeTotal + hotelTotal,
-            feeTotal,
-            hotelsByDay,
-          };
-        });
+  
+        const categoryTotals = {};
+        Object.values(dayHotelInfo).forEach((dayHotels) => {
+  dayHotels.forEach(({ category, totalPrice }) => {
+    categoryTotals[category] =
+      (categoryTotals[category] || 0) + totalPrice;
+  });
+});
+
+       classPrices = Object.entries(categoryTotals).map(
+  ([category, hotelTotal]) => ({
+    hotelClass: category,
+    hotelTotal,
+    total: hotelTotal + feeTotal,
+    feeTotal,
+  })
+);
       }
 
       const duration = parseInt(formData.duration) || 1;
@@ -1346,41 +1317,53 @@ export default function SafariPricingTool() {
                         )}
                       </div>
                     )}
-                  {index !== formData.itinerary.length - 1 &&
-                    !manualHotelSearch &&
-                    dayHotelInfo[day.day]?.length > 0 && (
-                      <div className="mt-4">
-                        <div className="font-semibold text-sky-600 mb-2">
-                          Suggested Hotels for {day.hotelLocation}:
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                          {dayHotelInfo[day.day].map(
-                            (
-                              { hotel, totalPrice, class: hotelClass },
-                              cardIndex
-                            ) => (
-                              <div
-                                key={`${day.day}-${cardIndex}`}
-                                className="card bg-gray-50 border border-gray-200 shadow-md"
-                              >
-                                <div className="card-body p-4">
-                                  <h4 className="card-title text-sm font-semibold text-sky-600">
-                                    {hotel}
-                                  </h4>
-                                  <p className="text-sm text-gray-600">
-                                    Class: {hotelClass}
-                                    {/* {console.log("HOTEL CLASS", hotelClass)} */}
-                                  </p>
-                                  <p className="text-sm text-gray-600">
-                                    Price: ${totalPrice.toLocaleString()}
-                                  </p>
-                                </div>
-                              </div>
-                            )
-                          )}
-                        </div>
-                      </div>
-                    )}
+          {index !== formData.itinerary.length - 1 &&
+  !manualHotelSearch &&
+  dayHotelInfo[day.day]?.length > 0 && (
+    <div className="mt-4">
+      <div className="font-semibold text-sky-600 mb-2">
+        Suggested Hotels for {day.hotelLocation}
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        {dayHotelInfo[day.day].map(
+          ({ category, hotel, totalPrice, roomDetails }) => (
+            <div
+              key={`${day.day}-${category}`}
+              className="card bg-gray-50 border border-gray-200 shadow-md"
+            >
+              <div className="card-body p-4">
+                <h4 className="text-sm font-semibold text-sky-600">
+                  {hotel}
+                </h4>
+
+                <p className="text-xs text-gray-500 mb-1">
+                  {category} Category
+                </p>
+
+                <p className="text-sm text-gray-700">
+                  Price: ${totalPrice.toLocaleString()}
+                </p>
+
+                {roomDetails?.length > 0 && (
+                  <div className="text-xs text-gray-600 mt-2">
+                    Rooms:
+                    {roomDetails.map((room, i) => (
+                      <span key={i} className="ml-1">
+                        {room.roomType} * {room.roomCount}
+                        {i < roomDetails.length - 1 ? "," : ""}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          )
+        )}
+      </div>
+    </div>
+  )}
+
                   {index !== formData.itinerary.length - 1 &&
                     day.hotelLocation === "No accommodation needed" && (
                       <div className="mt-4 text-sm text-gray-600">
